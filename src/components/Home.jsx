@@ -24,11 +24,11 @@ const Home = () => {
 
                 <div className='flex mt-4'>
                     <div className='w-1.5 bg-[#8B5CF6]'></div>
-                    <h3 className='text-[28px] font-semibold ml-3 text-gray-300'><TypingText text="Frontend Developer" /></h3>
+                    <h3 className='text-[28px] font-semibold ml-3 text-gray-300'><TypingText text="MERN Stack Developer" /></h3>
                 </div>
 
                 <div>
-                    <p className='text-[18px] mt-6 text-gray-200'>I'm passionate about building clean, responsive, and interactive web experiences. I use React, JavaScript, Tailwind CSS, and modern web technologies to turn ideas into engaging digital experiences.</p>
+                    <p className='text-[18px] mt-6 text-gray-200'>I'm a passionate MERN Stack Developer focused on building modern, responsive, and interactive web applications. I use MongoDB, Express.js, React, and Node.js to turn ideas into scalable and engaging digital experiences.</p>
                 </div>
 
                 <div className='flex gap-12 mt-10 items-center'>
