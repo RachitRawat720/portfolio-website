@@ -11,10 +11,14 @@ import node_img from '../assets/node-img.png'
 import express_img from '../assets/express-img.png'
 import mongoDB_img from '../assets/mongoDB-img.png'
 
+import { motion } from 'framer-motion'
+
 const Home = () => {
     return (
         <div className='flex relative px-10 py-8 gap-5 bg-[linear-gradient(135deg,#080D1F_0%,#101A35_35%,#172554_65%,#24164F_100%)]'>
-            <div className='w-1/2'>
+
+            <motion.div initial={{opacity: 0, x: -300}} whileInView={{opacity: 1, x: 0}} transition={{duration: 2}} viewport={{ once: true}}
+            className='w-1/2'>
                 <div className='flex'>
                         <img src={hi} className='h-7 w-9 mt-2'/>
                     <h3 className='text-[25px] ml-2 bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#EC4899] bg-clip-text text-transparent'>Hello, I'm </h3>
@@ -45,11 +49,12 @@ const Home = () => {
 
                     <a href='https://github.com/RachitRawat720' target='_blank' rel="noopener noreferrer" className='group block'><div className='w-11 h-11 border-2 border-[#3e536a] bg-linear-to-br from-[#2b3b4c] to-[#212e3f] rounded-md flex items-center justify-center transition-transform duration-300 ease-in-out group-hover:scale-150'><img src={github_logo} className='w-7 h-7 rounded-md' alt="" /></div></a>
                 </div>
-            </div>
+            </motion.div>
 
-            <div className='w-1/2'>
+            <motion.div initial={{opacity: 0, x: 400}} whileInView={{opacity: 1, x: 0}} transition={{duration: 2}} viewport={{ once: true}}
+            className='w-1/2'>
                 <img src={profile_pic} className='mt-20 rounded-4xl w-full h-auto mask-[radial-gradient(ellipse_at_center,black_55%,transparent_100%)]'/>
-            </div>
+            </motion.div>
 
             <div className='absolute h-20 w-20 top-34 left-175 overflow-hidden rounded-lg transition-transform duration-500 hover:rotate-180'>
                 <img src={react_img} alt="" className='h-full w-full'/>

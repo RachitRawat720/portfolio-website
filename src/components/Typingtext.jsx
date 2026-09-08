@@ -38,7 +38,7 @@ const TypingText = ({ text }) => {
         return () => clearTimeout(timeout);
     }, [index, isDeleting, text]);
 
-    return <span>{displayText}</span>;
+    return <h1 className="min-h-10.5">{displayText}</h1>;
 };
 
 export default TypingText;
