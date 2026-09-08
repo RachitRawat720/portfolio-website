@@ -27,7 +27,7 @@ const Skills = () => {
                     <h1 className='text-[26px] text-[#F8FAFC] font-semibold flex itemsj-center justify-center'>Frontend</h1>
                     <div className='grid grid-cols-2 mt-5 gap-y-5 ml-5'>
                         
-                        <p className='text-[#A78BFA] border-2 border-[#8B5CF6] w-fit px-5 rounded-2xl hover:text-[#FFFFFF] hover:bg-[#695694]/50'>React</p>
+                        <p className='text-[#A78BFA] border-2 border-[#8B5CF6] w-fit px-5 rounded-2xl hover:text-[#FFFFFF] hover:bg-[#695694]/50'>React.js</p>
 
                         <p className='text-[#A78BFA] border-2 border-[#8B5CF6] w-fit px-5 rounded-2xl hover:text-[#FFFFFF] hover:bg-[#695694]/50'>JavaScript</p>
 
@@ -104,20 +104,65 @@ const Skills = () => {
                     </div>
             </motion.div>
 
-            <motion.div initial={{opacity: 0, y: -300}} whileInView={{opacity: 1, y: 0}}
-                transition={{duration: 2, delay: 2}} viewport={{once: true, amount: 0.9}}
-                className='flex flex-col items-center justify-center w-full mt-30'>
-                <h1 className='text-[40px] font-bold bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#EC4899] bg-clip-text text-transparent'>MY PROFICIENCY</h1>
-                <div className='bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#EC4899]  h-1 w-30 rounded-4xl'></div>
-                <h3 className='text-[25px] text-gray-300 mt-10'>Skills Levels</h3>
-
-                <motion.div>
-                    <div className='flex mt-25 gap-10'>
-                        <p>React</p>
-                        <div className='w-100 h-5 rounded-2xl bg-green-500'></div>
-                    </div>
+            <div className='flex flex-col items-center justify-center w-full mt-30'>
+                <motion.div initial={{opacity: 0, y: -300}} whileInView={{opacity: 1, y: 0}}
+                transition={{duration: 2, delay: 2}} viewport={{once: true, amount: 0.9}}>
+                    <h1 className='text-[40px] font-bold bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#EC4899] bg-clip-text text-transparent'>MY PROFICIENCY</h1>
+                    <div className='bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#EC4899]  h-1 w-30 rounded-4xl'></div>
+                    <h3 className='text-[25px] text-gray-300 mt-10'>Skills Levels</h3>
                 </motion.div>
-            </motion.div>
+
+                <div initial={{opacity: 0, y: -300}} whileInView={{opacity: 1, y: 0}} transition={{duration: 2, delay: 2}} viewport={{once: true, amount: 0.9}}>
+                    <div className='flex items-center justify-center mt-25 gap-10'>
+                        <p className='text-[20px] text-gray-300'>React.js</p>
+                        <div className='w-120 h-6 rounded-2xl border-4 border-[#8B5CF6]'>
+                            <div className='w-100 h-full rounded-l-2xl  bg-[#995778]'></div>
+                        </div>
+                    </div>
+
+                    <div className='flex items-center justify-center mt-10 gap-10'>
+                        <p className='text-[20px] text-gray-300'>JavaScript</p>
+                        <div className='w-120 h-6 rounded-2xl border-4 border-[#8B5CF6]'>
+                            <div className='w-90 h-full rounded-l-2xl  bg-[#995778]'></div>
+                        </div>
+                    </div>
+
+                    <div className='flex items-center justify-center mt-10 gap-10'>
+                        <p className='text-[20px] text-gray-300'>Tailwind CSS</p>
+                        <div className='w-120 h-6 rounded-2xl border-4 border-[#8B5CF6]'>
+                            <div className='w-100 h-full rounded-l-2xl  bg-[#995778]'></div>
+                        </div>
+                    </div>
+
+                    <div className='flex items-center justify-center mt-10 gap-10'>
+                        <p className='text-[20px] text-gray-300'>Node.js</p>
+                        <div className='w-120 h-6 rounded-2xl border-4 border-[#8B5CF6]'>
+                            <div className='w-100 h-full rounded-l-2xl  bg-[#995778]'></div>
+                        </div>
+                    </div>
+
+                    <div className='flex items-center justify-center mt-10 gap-10'>
+                        <p className='text-[20px] text-gray-300'>Express.js</p>
+                        <div className='w-120 h-6 rounded-2xl border-4 border-[#8B5CF6]'>
+                            <div className='w-100 h-full rounded-l-2xl  bg-[#995778]'></div>
+                        </div>
+                    </div>
+
+                    <div className='flex items-center justify-center mt-10 gap-10'>
+                        <p className='text-[20px] text-gray-300'>MongoDB</p>
+                        <div className='w-120 h-6 rounded-2xl border-4 border-[#8B5CF6]'>
+                            <div className='w-100 h-full rounded-l-2xl  bg-[#995778]'></div>
+                        </div>
+                    </div>
+
+                    <div className='flex items-center justify-center mt-10 gap-10'>
+                        <p className='text-[20px] text-gray-300'>MySQL</p>
+                        <div className='w-120 h-6 rounded-2xl border-4 border-[#8B5CF6]'>
+                            <div className='w-100 h-full rounded-l-2xl  bg-[#995778]'></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
