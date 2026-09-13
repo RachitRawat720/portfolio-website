@@ -18,8 +18,8 @@ import { motion } from 'framer-motion'
 
 const about = () => {
     return (
-        <div className='px-10 py-8 bg-[linear-gradient(135deg,#080D1F_0%,#101A35_35%,#172554_65%,#24164F_100%)]'>
-            <motion.div initial={{opacity: 0, y: -200}} whileInView={{opacity: 1, y: 0}} transition={{duration: 2}} viewport={{ once: true}}
+        <div className='px-10 py-20 overflow-hidden bg-[linear-gradient(135deg,#080D1F_0%,#101A35_35%,#172554_65%,#24164F_100%)]'>
+            <motion.div initial={{opacity: 0, y: -200, scale: 0.4}} whileInView={{opacity: 1, y: 0, scale: 1}} transition={{duration: 2}} viewport={{ once: true, amount: 0.8}}
             className='flex flex-col justify-center items-center py-30 '>
                 <h1 className='text-[40px] font-bold bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2] bg-clip-text text-transparent'>GET TO KNOW ME BETTER</h1>
 
@@ -29,17 +29,17 @@ const about = () => {
             </motion.div>
 
             <div className='flex gap-15 p-4 relative'>
-                <motion.div initial={{opacity: 0, x: -200}} whileInView={{opacity: 1, x: 0}} transition={{duration: 2}} viewport={{ once: true, amount: 0.4 }} className='w-[40%] overflow-hidden p-3 border-[#3B82F6] border-2 rounded-2xl'>
+                <motion.div initial={{opacity: 0, x: -200, scale: 0.4}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{ once: true, amount: 0.8 }} className='w-[40%] overflow-hidden p-3 border-[#3B82F6] border-2 rounded-2xl'>
                     <img src={img} alt="" className='rounded-2xl'/>
                 </motion.div>
 
-                <motion.div initial={{opacity: 0, x: -200}} whileInView={{opacity: 1, x: 0}} transition={{duration: 2}} viewport={{ once: true }}
+                <motion.div initial={{opacity: 0, x: -100, y: -100, scale: 0.4}} whileInView={{opacity: 1,x: 0, y: 0, scale: 1}} transition={{duration: 2}} viewport={{ once: true }}
                 className='absolute top-72 left-25 bg-[#171a59d2] px-8 py-0 rounded-xl'>
                     <h3 className='font-semibold text-white text-[20px]'>Rachit Singh Rawat</h3>
                     <h4 className='text-green-500 text-[16px]'>Available for opportunities</h4>
                 </motion.div>
 
-                <motion.div className='w-[60%]' initial={{opacity: 0, x: 300}} whileInView={{ opacity: 1, x: 0 }} transition={{duration: 2}} viewport={{ once: true, amount: 0.4 }}>
+                <motion.div className='w-[60%]' initial={{opacity: 0, x: 300, scale: 0.4}} whileInView={{ opacity: 1, x: 0, scale: 1 }} transition={{duration: 2}} viewport={{ once: true, amount: 0.4 }}>
 
                     
                     <h2 className='text-[28px] font-semibold bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#EC4899] bg-clip-text text-transparent mt-4'><TypingText text='Full Stack Developer (MERN Stack)' /></h2><br />
@@ -70,9 +70,9 @@ const about = () => {
                 </motion.div>
             </div>
 
-            <div className='flex justify-evenly items-center mt-40'>
-                <motion.div initial={{opacity: 0, x: -300}} whileInView={{opacity: 1, x: 0}} transition={{duration: 2}} viewport={{ once: true, amount: 0.4 }} className='border-[#3B82F6] border-2 rounded-lg flex pt-10 px-6 gap-5 h-65 
-                bg-[#111B36]'>
+            <div className='flex justify-center items-center mt-40 gap-50'>
+                <motion.div initial={{opacity: 0, x: -300, y: 100, scale: 0.3}} whileInView={{opacity: 1, x: 0,y: 0, scale: 1}} transition={{duration: 2}} viewport={{ once: true, amount: 0.4 }} className='border-[#3B82F6] border-2 rounded-lg flex p-5 py-8.5 gap-5 
+                bg-[#111B36] w-full h-full'>
                     <div className='flex p-2 h-12 rounded-md justify-center bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2]'>
                         <FontAwesomeIcon icon={faGraduationCap} color='white' size='2x'/>
                     </div>
@@ -94,8 +94,8 @@ const about = () => {
                     </div>
                 </motion.div>
 
-                <motion.div initial={{opacity: 0, x: 300}} whileInView={{opacity: 1, x: 0}} transition={{duration: 2}} viewport={{ once: true, amount: 0.4 }}
-                className='border-[#3B82F6] bg-[#111B36] border-2 rounded-lg flex p-5 gap-5 h-65'>
+                <motion.div initial={{opacity: 0, x: 300, y: 100, scale: 0.3}} whileInView={{opacity: 1, x: 0, y: 0, scale: 1}} transition={{duration: 2}} viewport={{ once: true, amount: 0.4 }}
+                className='border-[#3B82F6] bg-[#111B36] border-2 rounded-lg flex p-5 gap-5 w-full h-full'>
                     <div className='flex p-2 h-12 rounded-md justify-center bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2]'>
                         <FontAwesomeIcon icon={faBriefcase} color='white' size='2x'/>
                     </div>

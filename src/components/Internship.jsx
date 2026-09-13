@@ -125,7 +125,7 @@ const Internship = () => {
             </motion.div>
 
             <div className='flex gap-10 items-center'>
-                <motion.div initial={{opacity: 0, x: -100, scale: 0.5}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.7}}
+                <motion.div initial={{opacity: 0, x: -100, scale: 0.5}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.8}}
                 className='rounded-2xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5 mt-10 w-[33%]'>
                     <div className='flex flex-col px-5 py-8 rounded-2xl bg-[#0f1731]'>
                         <div className='flex gap-5 items-center'>
@@ -142,7 +142,7 @@ const Internship = () => {
                     </div>
                 </motion.div>
 
-                <motion.div initial={{opacity: 0, y:0, scale: 0.3}} whileInView={{opacity: 1, y: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.7}}
+                <motion.div initial={{opacity: 0, y:0, scale: 0.3}} whileInView={{opacity: 1, y: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.8}}
                 className='rounded-2xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5 mt-10 w-[33%]'>
                     <div className='flex flex-col px-5 py-8 rounded-2xl bg-[#0f1731]'>
                         <div className='flex gap-5 items-center'>
@@ -159,7 +159,7 @@ const Internship = () => {
                     </div>
                 </motion.div>
 
-                <motion.div initial={{opacity: 0, x: 100, scale: 0.5}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.7}}
+                <motion.div initial={{opacity: 0, x: 100, scale: 0.5}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.8}}
                 className='rounded-2xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5 mt-10 w-[33%]'>
                     <div className='flex flex-col px-5 py-8 rounded-2xl bg-[#0f1731]'>
                         <div className='flex gap-5 items-center'>

@@ -15,11 +15,12 @@ import { motion } from 'framer-motion'
 
 const Home = () => {
     return (
-        <div className='flex relative px-10 py-8 gap-5 bg-[linear-gradient(135deg,#080D1F_0%,#101A35_35%,#172554_65%,#24164F_100%)]'>
+        <div className='flex relative px-10 overflow-hidden py-8 gap-5 bg-[linear-gradient(135deg,#080D1F_0%,#101A35_35%,#172554_65%,#24164F_100%)]'>
 
-            <motion.div initial={{opacity: 0, x: -300}} whileInView={{opacity: 1, x: 0}} transition={{duration: 2}} viewport={{ once: true}}
+            <motion.div initial={{opacity: 0, x: -300, scale: 0.3}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{ once: true}}
             className='w-1/2'>
-                <div className='flex'>
+                <div initial={{opacity: 0, x: -300, scale: 0.3}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{ once: true}}
+                className='flex'>
                         <img src={hi} className='h-7 w-9 mt-2'/>
                     <h3 className='text-[25px] ml-2 bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#EC4899] bg-clip-text text-transparent'>Hello, I'm </h3>
                 </div>
@@ -51,26 +52,27 @@ const Home = () => {
                 </div>
             </motion.div>
 
-            <motion.div initial={{opacity: 0, x: 400}} whileInView={{opacity: 1, x: 0}} transition={{duration: 2}} viewport={{ once: true}}
+            <motion.div initial={{opacity: 0, x: 400, scale: 0.3}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{ once: true}}
             className='w-1/2'>
                 <img src={profile_pic} className='mt-20 rounded-4xl w-full h-auto mask-[radial-gradient(ellipse_at_center,black_55%,transparent_100%)]'/>
+
+                <div className='absolute h-20 w-20 top-34 left-175 overflow-hidden rounded-lg transition-transform duration-500 hover:rotate-180'>
+                    <img src={react_img} alt="" className='h-full w-full'/>
+                </div>
+
+                <div className='absolute h-20 w-20 top-80 left-165 overflow-hidden rounded-lg transition-transform duration-500 hover:rotate-180'>
+                    <img src={node_img} alt="" className='h-full w-full'/>
+                </div>
+
+                <div className='absolute h-20 w-20 top-45 left-275 overflow-hidden rounded-lg transition-transform duration-500 hover:rotate-180'>
+                    <img src={express_img} alt="" className='h-full w-full'/>
+                </div>
+
+                <div className='absolute h-20 w-20 top-95 left-275 overflow-hidden rounded-lg transition-transform duration-500 hover:rotate-180'>
+                    <img src={mongoDB_img} alt="" className='h-full w-full'/>
+                </div>
             </motion.div>
 
-            <div className='absolute h-20 w-20 top-34 left-175 overflow-hidden rounded-lg transition-transform duration-500 hover:rotate-180'>
-                <img src={react_img} alt="" className='h-full w-full'/>
-            </div>
-
-            <div className='absolute h-20 w-20 top-80 left-165 overflow-hidden rounded-lg transition-transform duration-500 hover:rotate-180'>
-                <img src={node_img} alt="" className='h-full w-full'/>
-            </div>
-
-            <div className='absolute h-20 w-20 top-45 left-275 overflow-hidden rounded-lg transition-transform duration-500 hover:rotate-180'>
-                <img src={express_img} alt="" className='h-full w-full'/>
-            </div>
-
-            <div className='absolute h-20 w-20 top-95 left-275 overflow-hidden rounded-lg transition-transform duration-500 hover:rotate-180'>
-                <img src={mongoDB_img} alt="" className='h-full w-full'/>
-            </div>
         </div>
     )
 }
