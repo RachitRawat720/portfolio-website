@@ -18,7 +18,7 @@ import { faEye, faArrowRight, faRocket } from '@fortawesome/free-solid-svg-icons
 
 const Internship = () => {
     return (
-        <div className='p-10 bg-[linear-gradient(135deg,#080D1F_0%,#101A35_35%,#172554_65%,#24164F_100%)]'>
+        <div className='p-10 overflow-hidden bg-[linear-gradient(135deg,#080D1F_0%,#101A35_35%,#172554_65%,#24164F_100%)]'>
             <motion.div initial={{opacity: 0, y: -200, scale: 0.4}} whileInView={{opacity: 1, y: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true}}
             className='flex flex-col justify-center items-center py-25'>
                 <h1 className='text-[50px] font-bold bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2] bg-clip-text text-transparent'>INTERNSHIP</h1>
@@ -26,7 +26,7 @@ const Internship = () => {
                 <h3 className='mt-10 text-[18px] text-gray-300'>Turning knowledge into real-world impact.</h3>
             </motion.div>
 
-            <motion.div initial={{opacity: 0, y: -200, scale: 0.4}} whileInView={{opacity: 1, y: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.7}}
+            <motion.div initial={{opacity: 0, y: 100, scale: 0.4}} whileInView={{opacity: 1, y: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.9}}
             className='rounded-2xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5 mt-10'>
                 <div className='flex rounded-2xl bg-[#0f1731] p-10'>
                     <div className='flex gap-5 w-[50%] pr-10'>
@@ -125,7 +125,7 @@ const Internship = () => {
             </motion.div>
 
             <div className='flex gap-10 items-center'>
-                <motion.div initial={{opacity: 0, x: -100, scale: 0.5}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2, delay: 1}} viewport={{once: true, amount: 0.7}}
+                <motion.div initial={{opacity: 0, x: -100, scale: 0.5}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.7}}
                 className='rounded-2xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5 mt-10 w-[33%]'>
                     <div className='flex flex-col px-5 py-8 rounded-2xl bg-[#0f1731]'>
                         <div className='flex gap-5 items-center'>
@@ -142,7 +142,7 @@ const Internship = () => {
                     </div>
                 </motion.div>
 
-                <motion.div initial={{opacity: 0, y: -100, scale: 0.5}} whileInView={{opacity: 1, y: 0, scale: 1}} transition={{duration: 2, delay: 1}} viewport={{once: true, amount: 0.7}}
+                <motion.div initial={{opacity: 0, y:0, scale: 0.3}} whileInView={{opacity: 1, y: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.7}}
                 className='rounded-2xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5 mt-10 w-[33%]'>
                     <div className='flex flex-col px-5 py-8 rounded-2xl bg-[#0f1731]'>
                         <div className='flex gap-5 items-center'>
@@ -159,7 +159,7 @@ const Internship = () => {
                     </div>
                 </motion.div>
 
-                <motion.div initial={{opacity: 0, x: 100, scale: 0.5}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2, delay: 1}} viewport={{once: true, amount: 0.7}}
+                <motion.div initial={{opacity: 0, x: 100, scale: 0.5}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.7}}
                 className='rounded-2xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5 mt-10 w-[33%]'>
                     <div className='flex flex-col px-5 py-8 rounded-2xl bg-[#0f1731]'>
                         <div className='flex gap-5 items-center'>
@@ -180,7 +180,7 @@ const Internship = () => {
 
             <div className='flex gap-10 items-center mt-20 pt-20 py-10'>
 
-                <motion.div initial={{opacity: 0, x: -200, scale: 0.5}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.7}}
+                <motion.div initial={{opacity: 0, x: -200, y: 100, scale: 0.5}} whileInView={{opacity: 1, x: 0, y: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.7}}
                 className='rounded-2xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5 w-full'>
                     <div className='flex pl-4 pr-10 py-4 rounded-2xl bg-[#0f1731] gap-3'>
                         <div className='h-15 w-17 rounded-lg overflow-hidden'>
@@ -207,7 +207,7 @@ const Internship = () => {
                     </div>
                 </motion.div>
 
-                <motion.div initial={{opacity: 0, x: 200, scale: 0.5}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.7}}
+                <motion.div initial={{opacity: 0, x: 200, y: 100, scale: 0.5}} whileInView={{opacity: 1, x: 0, y: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.7}}
                 className='rounded-2xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5 w-full'>
                     <div className='flex pl-4 pr-10 py-4 rounded-2xl bg-[#0f1731] gap-3'>
                         <div className='flex justify-center items-center p-2'>
