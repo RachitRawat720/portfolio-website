@@ -3,6 +3,9 @@ import { motion } from 'framer-motion'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faComment, faEnvelope, faLocationDot, faPaperPlane, faTag, faUser} from '@fortawesome/free-solid-svg-icons'
 import { faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons'
+import linkedin_logo from '../assets/linkedIn_logo.png'
+import github_logo from '../assets/github_logo.jpg'
+import email_logo from '../assets/email_logo.jpg'
 
 const Contact = () => {
     return (
@@ -146,7 +149,7 @@ const Contact = () => {
                                         <div className='flex mt-6'><FontAwesomeIcon icon={faComment} className='text-[20px]' color='#8e9bad'/></div>
 
                                         <div className='flex flex-col gap-2 w-full pr-4 pb-3'>
-                                            <h3 className='text-[16px] text-white font-bold'>Message</h3>
+                                            <h3 className='text-[16px] text-white font-bold ml-2'>Message</h3>
                                             <textarea placeholder='write your message here' required className='text-[#8e9bad] font-bold border-none w-full px-2 py-1' rows={3}></textarea>
                                         </div>
                                     </div>
@@ -158,10 +161,47 @@ const Contact = () => {
 
                                 </div>
                             </form>
-
                         </div>
                 </motion.div>
             </div>
+
+            <motion.div initial={{opacity: 0, y: 200, scale: 0.3}} whileInView={{opacity: 1, y: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.7}}
+            className='flex flex-col'>
+                <div className='flex items-center justify-center gap-4 pt-40'>
+                    <div className='flex items-center justify-center h-0.5 w-40 bg-[#3239b9d2] rounded-full'></div>
+
+                    <h3 className='text-[25px] font-bold bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2] bg-clip-text text-transparent'>FIND ME ONLINE</h3>
+                    
+
+                    <div className=' flex items-center justify-center h-0.5 w-40 bg-[#3239b9d2] rounded-full'></div>
+                </div>
+
+                <div className='flex gap-8 justify-center items-center pt-5'>
+                    <div className='flex flex-col justify-center items-center gap-4'>
+                        <a href='https://www.linkedin.com/in/rachit-singh-rawat/' target='_blank' rel="noopener noreferrer" className='group block '><div className='w-11 h-11 border-2 border-[#3e536a] bg-linear-to-br from-[#2b3b4c] to-[#212e3f] rounded-md flex justify-center items-center transition-transform duration-300 ease-in-out group-hover:scale-150'><img src={linkedin_logo} className='w-7 h-7 rounded-md' alt="" /></div></a>
+
+                        <p className='text-white text-[14px] font-bold'>LinkedIn</p>
+                    </div>
+
+                    <div className='flex flex-col justify-center items-center gap-4'>
+                        <a href='https://github.com/RachitRawat720' target='_blank' rel="noopener noreferrer" className='group block'><div className='w-11 h-11 border-2 border-[#3e536a] bg-linear-to-br from-[#2b3b4c] to-[#212e3f] rounded-md flex items-center justify-center transition-transform duration-300 ease-in-out group-hover:scale-150'><img src={github_logo} className='w-7 h-7 rounded-md' alt="" /></div></a>
+                        
+                        <p className='text-white text-[14px] font-bold'>GitHub</p>
+                    </div>
+
+                    <div className='flex flex-col justify-center items-center gap-4'>
+                        <a href='mailto:rachitrawat720@gmail.com' target='_blank' rel="noopener noreferrer" className='group block'><div className='w-13 h-11 border-2 border-[#3e536a] bg-linear-to-br from-[#2b3b4c] to-[#212e3f] rounded-md flex items-center justify-center transition-transform duration-300 ease-in-out group-hover:scale-150'><img src={email_logo} className='w-9 h-7 rounded-md' alt="" /></div></a>
+
+                        <p className='text-white text-[14px] font-bold'>Email</p>
+                    </div>
+                </div>
+            </motion.div>
+
+            <motion.div initial={{opacity: 0, y: 100, scale: 0.3}} whileInView={{opacity: 1, y: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.7}} 
+            className='flex flex-col justify-center items-center mt-20'>
+                <h2 className='text-[35px] font-bold text-[#a5b0be]'>Thanks for stopping by.</h2>
+                <h3 className='text-[20px] text-[#8099c1] font-bold'>Let's create something great together</h3>
+            </motion.div>
         </div>
     )
 }
