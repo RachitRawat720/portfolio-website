@@ -1,7 +1,8 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faComment, faEnvelope, faLocationDot, faPaperPlane, faTag, faUser} from '@fortawesome/free-solid-svg-icons'
+import { faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons'
 
 const Contact = () => {
     return (
@@ -16,38 +17,148 @@ const Contact = () => {
             </motion.div>
 
 
-            <div className='flex'>
-                <motion.div initial={{opacity: 0, x: 200, y: 100, scale: 0.5}} whileInView={{opacity: 1, x: 0, y: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.7}}
-                className='rounded-2xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5 w-full'>
-                        <div className='flex flex-col p-5 rounded-2xl bg-[#0f1731] gap-3'>
+            <div className='flex gap-10 mt-15'>
+                <motion.div initial={{opacity: 0, x: -200, scale: 0.3}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.7}}
+                className='rounded-2xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5 w-full '>
+                        <div className='flex flex-col px-5 py-3 rounded-2xl bg-[#0f1731]'>
                             
-                            <h2 className='bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#FF4D6D] bg-clip-text text-transparent text-[35px] font-bold'>GET IN TOUCH</h2>
+                            <h2 className='bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#FF4D6D] bg-clip-text text-transparent text-[20px] font-bold'>GET IN TOUCH</h2>
 
-                            <h3 className='text-white font-bold text-[26px]'>Let's create something great together</h3>
+                            <h3 className='text-white font-bold text-[24px] -mt-2'>Let's create something great together</h3>
 
-                            <p className='text-[#8e9bad] text-[16px] font-semibold'>I am always open to discussing new opportunities, interesting projects, collaborations and ideas.
-                            <br />Feel free to reach out
+                            <p className='text-[#8e9bad] text-[16px] font-semibold mt-2'>I am always open to discussing new opportunities, interesting projects, collaborations and ideas.
                             </p>
 
-                            <div className='flex flex-col'>
-                                <div className='flex gap-10'>
-                                    <div className='flex justify-center items-center p-3 rounded-[50%] border-[#3374b0] border-2 bg-[#4a4f54]'>
-                                        <FontAwesomeIcon icon={faEnvelope} color='#8B5CF6' className='text-[20px]'/>
+                            <p className='text-[#8e9bad] text-[16px] font-semibold mt-1'>Feel free to reach out</p>
+
+                            <div className='flex flex-col gap-2 mt-4'>
+                                <div className='flex gap-5'>
+                                    <div className='flex justify-center items-center px-2 rounded-[50%] border-[#3374b0] border-2 bg-blue-300 '>
+                                        <FontAwesomeIcon icon={faEnvelope} color='#9333ea' className='text-[24px]'/>
                                     </div>
 
-                                    <div>
+                                    <div className='flex'>
+                                        <div className='flex flex-col'>
+                                            <h3 className='text-[16px] text-white font-bold'>Email</h3>
+                                            <h3 className='text-[14px] text-[#8e9bad] font-semibold'>rachitrawat720@gmail.com</h3>
+                                        </div>
 
+                                        <div></div>
                                     </div>
                                 </div>
+
+                                <div className='flex gap-5'>
+                                    <div className='flex justify-center items-center px-2 rounded-[50%] border-[#3374b0] border-2 bg-blue-300 '>
+                                        <FontAwesomeIcon icon={faLinkedinIn} color='#9333ea' className='text-[24px]'/>
+                                    </div>
+
+                                    <div className='flex'>
+                                        <div className='flex flex-col'>
+                                            <h3 className='text-[16px] text-white font-bold'>LinkedIn</h3>
+                                            <h3 className='text-[14px] text-[#8e9bad] font-semibold'>Let's connect professionally</h3>
+                                        </div>
+
+                                        <div></div>
+                                    </div>
+                                </div>
+
+                                <div className='flex gap-5'>
+                                    <div className='flex justify-center items-center px-2 rounded-[50%] border-[#3374b0] border-2 bg-blue-300 '>
+                                        <FontAwesomeIcon icon={faGithub} color='#9333ea' className='text-[24px]'/>
+                                    </div>
+
+                                    <div className='flex'>
+                                        <div className='flex flex-col'>
+                                            <h3 className='text-[16px] text-white font-bold'>GitHub</h3>
+                                            <h3 className='text-[14px] text-[#8e9bad] font-semibold'>Explore my projects</h3>
+                                        </div>
+
+                                        <div></div>
+                                    </div>
+                                </div>
+
+                                <div className='flex gap-5'>
+                                    <div className='flex justify-center items-center px-2 rounded-[50%] border-[#3374b0] border-2 bg-blue-300 '>
+                                        <FontAwesomeIcon icon={faLocationDot} color='#9333ea' className='text-[24px]'/>
+                                    </div>
+
+                                    <div className='flex'>
+                                        <div className='flex flex-col'>
+                                            <h3 className='text-[16px] text-white font-bold'>Location</h3>
+                                            <h3 className='text-[14px] text-[#8e9bad] font-semibold'>India (Remote)</h3>
+                                        </div>
+
+                                        <div></div>
+                                    </div>
+                                </div>
+
                             </div>
+
+                            <div className='h-0.5 w-full bg-[#3239b9d2] rounded-full mt-8'></div>
+
+                            <p className='text-green-500 text-[18px] mt-4'>Available for opportunities</p>
+                            <p className='text-[#8e9bad] text-[15px] font-semibold mt-2'>I'm currently open to internships, full-time and freelance projects and collaborations</p>
 
                         </div>
                 </motion.div>
 
-                <motion.div initial={{opacity: 0, x: 200, y: 100, scale: 0.5}} whileInView={{opacity: 1, x: 0, y: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.7}}
+                <motion.div initial={{opacity: 0, x: 200, scale: 0.3}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.7}}
                     className='rounded-2xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5 w-full'>
-                        <div className='flex pl-4 pr-10 py-4 rounded-2xl bg-[#0f1731] gap-3'>
-                            
+                        <div className='flex flex-col pl-4 pr-10 py-4 rounded-2xl bg-[#0f1731]'>
+
+                            <h2 className='bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#FF4D6D] bg-clip-text text-transparent text-[20px] font-bold'>SEND A MESSAGE</h2>
+
+                            <h3 className='text-white font-bold text-[29px] -mt-2'>Get in touch</h3>
+
+                            <form action="">
+                                <div className='flex flex-col w-full justify-center items-center gap-5 mt-2'>
+
+                                    <div className='flex gap-5'>
+                                        <div className='flex justify-center items-center border-2 border-[#3239b9d2] px-4 py-2 rounded-xl gap-5'>
+                                            <div className='flex'><FontAwesomeIcon icon={faUser} className='text-[20px]' color='#8e9bad'/></div>
+
+                                            <div className='flex flex-col gap-2'>
+                                                <h3 className='text-[16px] text-white font-bold'>Your Name</h3>
+                                                <input type="text" placeholder='Rachit Singh Rawat' required className='text-[#8e9bad] font-bold border-none'/>
+                                            </div>
+                                        </div>
+
+                                        <div className='flex justify-center items-center border-2 border-[#3239b9d2] px-4 py-2 rounded-xl gap-5'>
+                                            <div className='flex'><FontAwesomeIcon icon={faEnvelope} className='text-[20px]' color='#8e9bad'/></div>
+
+                                            <div className='flex flex-col gap-2'>
+                                                <h3 className='text-[16px] text-white font-bold'>Your Email</h3>
+                                                <input type="text" placeholder='rachitrawat720@gmail.com' required className='text-[#8e9bad] font-bold border-none'/>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className='flex items-center w-full border-2 border-[#3239b9d2] px-4 py-2 rounded-xl gap-5'>
+                                        <div className='flex'><FontAwesomeIcon icon={faTag} className='text-[20px]' color='#8e9bad'/></div>
+
+                                        <div className='flex flex-col gap-2 w-full pr-2 pb-2'>
+                                            <h3 className='text-[16px] text-white font-bold'>Subject</h3>
+                                            <input type="text" placeholder='Project Enquiry' required className='text-[#8e9bad] font-bold border-none'/>
+                                        </div>
+                                    </div>
+
+                                    <div className='flex w-full border-2 border-[#3239b9d2] px-4 py-2 rounded-xl gap-5'>
+                                        <div className='flex mt-6'><FontAwesomeIcon icon={faComment} className='text-[20px]' color='#8e9bad'/></div>
+
+                                        <div className='flex flex-col gap-2 w-full pr-4 pb-3'>
+                                            <h3 className='text-[16px] text-white font-bold'>Message</h3>
+                                            <textarea placeholder='write your message here' required className='text-[#8e9bad] font-bold border-none w-full px-2 py-1' rows={3}></textarea>
+                                        </div>
+                                    </div>
+
+                                    <button className='flex justify-center items-center py-3 rounded-xl bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2] text-white font-semibold w-full gap-4'>
+                                        <FontAwesomeIcon icon={faPaperPlane} className='text-white text-[20px]' color='#8e9bad'/>
+                                        <p className='text-[16px]'>Send Message</p>
+                                    </button>
+
+                                </div>
+                            </form>
+
                         </div>
                 </motion.div>
             </div>
