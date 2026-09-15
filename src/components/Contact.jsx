@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faComment, faEnvelope, faLocationDot, faPaperPlane, faTag, faUser} from '@fortawesome/free-solid-svg-icons'
@@ -8,6 +8,63 @@ import github_logo from '../assets/github_logo.jpg'
 import email_logo from '../assets/email_logo.jpg'
 
 const Contact = () => {
+    const [loading, setLoading] = useState(false)
+    const [status, setStatus] = useState('')
+
+    const handleSubmit = async (event) => {
+        event.preventDefault()
+
+        setLoading(true)
+        setStatus('')
+
+        const formData = new FormData(event.target)
+
+        const email = formData.get('email')
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
+        if (!emailRegex.test(email)) {
+            setStatus('Please enter a valid email address.')
+            setLoading(false)
+            return
+        }
+
+        formData.append(
+            'access_key',
+            import.meta.env.VITE_FORM_DATA_ACCESS_KEY
+        )
+
+        const data = Object.fromEntries(formData)
+
+        try {
+            const response = await fetch(
+            'https://api.web3forms.com/submit',
+            {
+                method: 'POST',
+                headers: {
+                'Content-Type': 'application/json',
+                Accept: 'application/json'
+                },
+                body: JSON.stringify(data)
+            }
+            )
+
+            const result = await response.json()
+
+            if (result.success) {
+            setStatus('Message sent successfully!')
+
+            event.target.reset()
+            } else {
+            setStatus('Something went wrong. Please try again.')
+            }
+        } catch (error) {
+            setStatus('Something went wrong. Please try again.')
+        }
+
+        setLoading(false)
+    }
+
     return (
         <div className='px-10 py-20 overflow-hidden bg-[linear-gradient(135deg,#080D1F_0%,#101A35_35%,#172554_65%,#24164F_100%)]'>
             <motion.div initial={{opacity: 0, y: -200, scale: 0.4}} whileInView={{opacity: 1, y: 0, scale: 1}} transition={{duration: 2}} viewport={{ once: true, amount: 0.8}}
@@ -113,7 +170,7 @@ const Contact = () => {
 
                             <h3 className='text-white font-bold text-[29px] -mt-2'>Get in touch</h3>
 
-                            <form action="">
+                            <form onSubmit={handleSubmit}>
                                 <div className='flex flex-col w-full justify-center items-center gap-5 mt-2'>
 
                                     <div className='flex gap-5'>
@@ -122,7 +179,7 @@ const Contact = () => {
 
                                             <div className='flex flex-col gap-2'>
                                                 <h3 className='text-[16px] text-white font-bold'>Your Name</h3>
-                                                <input type="text" placeholder='Rachit Singh Rawat' required className='text-[#8e9bad] font-bold border-none'/>
+                                                <input type="text" name='name' placeholder='Rachit Singh Rawat' required className='text-[#8e9bad] font-bold border-none'/>
                                             </div>
                                         </div>
 
@@ -131,7 +188,7 @@ const Contact = () => {
 
                                             <div className='flex flex-col gap-2'>
                                                 <h3 className='text-[16px] text-white font-bold'>Your Email</h3>
-                                                <input type="text" placeholder='rachitrawat720@gmail.com' required className='text-[#8e9bad] font-bold border-none'/>
+                                                <input type="text" name='email' placeholder='rachitrawat720@gmail.com' required className='text-[#8e9bad] font-bold border-none'/>
                                             </div>
                                         </div>
                                     </div>
@@ -141,7 +198,7 @@ const Contact = () => {
 
                                         <div className='flex flex-col gap-2 w-full pr-2 pb-2'>
                                             <h3 className='text-[16px] text-white font-bold'>Subject</h3>
-                                            <input type="text" placeholder='Project Enquiry' required className='text-[#8e9bad] font-bold border-none'/>
+                                            <input type="text" name='subject' placeholder='Project Enquiry' required className='text-[#8e9bad] font-bold border-none'/>
                                         </div>
                                     </div>
 
@@ -150,15 +207,25 @@ const Contact = () => {
 
                                         <div className='flex flex-col gap-2 w-full pr-4 pb-3'>
                                             <h3 className='text-[16px] text-white font-bold ml-2'>Message</h3>
-                                            <textarea placeholder='write your message here' required className='text-[#8e9bad] font-bold border-none w-full px-2 py-1' rows={3}></textarea>
+                                            <textarea name='message' placeholder='write your message here' required className='text-[#8e9bad] font-bold border-none w-full px-2 py-1 resize-none overflow-y-auto' rows={3}></textarea>
                                         </div>
                                     </div>
 
-                                    <button className='flex justify-center items-center py-3 rounded-xl bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2] text-white font-semibold w-full gap-4'>
+                                    <button type='submit' disabled={loading} className='flex justify-center items-center py-3 rounded-xl bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2] text-white font-semibold w-full gap-4'>
                                         <FontAwesomeIcon icon={faPaperPlane} className='text-white text-[20px]' color='#8e9bad'/>
-                                        <p className='text-[16px]'>Send Message</p>
+                                        {loading ? 'Sending...' : 'Send Message'}
                                     </button>
-
+                                    {status && (
+                                        <p
+                                            className={`mt-1 text-center font-semibold ${
+                                            status.includes('successfully')
+                                                ? 'text-green-400'
+                                                : 'text-red-400'
+                                            }`}
+                                        >
+                                            {status}
+                                        </p>
+                                    )}
                                 </div>
                             </form>
                         </div>
