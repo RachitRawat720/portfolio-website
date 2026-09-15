@@ -77,9 +77,9 @@ const Contact = () => {
             </motion.div>
 
 
-            <div className='flex gap-10 mt-15'>
+            <div className='flex justify-center items-center gap-10 mt-15'>
                 <motion.div initial={{opacity: 0, x: -200, scale: 0.3}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.7}}
-                className='rounded-2xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5 w-full '>
+                className='rounded-2xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5'>
                         <div className='flex flex-col px-5 py-3 rounded-2xl bg-[#0f1731]'>
                             
                             <h2 className='bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#FF4D6D] bg-clip-text text-transparent text-[20px] font-bold'>GET IN TOUCH</h2>
@@ -157,13 +157,13 @@ const Contact = () => {
                             <div className='h-0.5 w-full bg-[#3239b9d2] rounded-full mt-8'></div>
 
                             <p className='text-green-500 text-[18px] mt-4'>Available for opportunities</p>
-                            <p className='text-[#8e9bad] text-[15px] font-semibold mt-2'>I'm currently open to internships, full-time and freelance projects and collaborations</p>
+                            <p className='text-[#8e9bad] text-[15px] font-semibold mt-2'>I'm currently open to internships, full-time, freelance projects and collaborations</p>
 
                         </div>
                 </motion.div>
 
                 <motion.div initial={{opacity: 0, x: 200, scale: 0.3}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.7}}
-                    className='rounded-2xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5 w-full'>
+                    className='rounded-2xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5'>
                         <div className='flex flex-col pl-4 pr-10 py-4 rounded-2xl bg-[#0f1731]'>
 
                             <h2 className='bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#FF4D6D] bg-clip-text text-transparent text-[20px] font-bold'>SEND A MESSAGE</h2>
@@ -217,7 +217,7 @@ const Contact = () => {
                                     </button>
                                     {status && (
                                         <p
-                                            className={`mt-1 text-center font-semibold ${
+                                            className={`text-center font-semibold text-[14px] ${
                                             status.includes('successfully')
                                                 ? 'text-green-400'
                                                 : 'text-red-400'

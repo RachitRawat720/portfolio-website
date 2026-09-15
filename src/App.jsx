@@ -8,31 +8,32 @@ import Skills from './components/Skills.jsx'
 import Projects from './components/Projects.jsx'
 import Internship from './components/Internship.jsx'
 import Contact from './components/Contact.jsx'
+import Footer from './components/footer.jsx'
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div><Navbar /><Home /></div>
+    element: <div><Navbar /><Home /><Footer /></div>
   },
   {
     path: "/about",
-    element: <div><Navbar /><About /></div>
+    element: <div><Navbar /><About /><Footer /></div>
   },
   {
     path: "/skills",
-    element: <div><Navbar /><Skills /></div>
+    element: <div><Navbar /><Skills /><Footer /></div>
   },
   {
     path: "/projects",
-    element: <div><Navbar /><Projects /></div>
+    element: <div><Navbar /><Projects /><Footer /></div>
   },
   {
     path: "/internship",
-    element: <div><Navbar /><Internship /></div>
+    element: <div><Navbar /><Internship /><Footer /></div>
   },
   {
     path: "/contact",
-    element: <div><Navbar /><Contact /></div>
+    element: <div><Navbar /><Contact /><Footer /></div>
   },
 ])
 
