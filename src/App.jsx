@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import ScrollToTop from './components/ScrollToTop'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import  Navbar  from './components/Navbar.jsx'
 import './App.css'
@@ -13,27 +14,27 @@ import Footer from './components/footer.jsx'
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div><Navbar /><Home /><Footer /></div>
+    element: <div><ScrollToTop /><Navbar /><Home /><Footer /></div>
   },
   {
     path: "/about",
-    element: <div><Navbar /><About /><Footer /></div>
+    element: <div><ScrollToTop /><Navbar /><About /><Footer /></div>
   },
   {
     path: "/skills",
-    element: <div><Navbar /><Skills /><Footer /></div>
+    element: <div><ScrollToTop /><Navbar /><Skills /><Footer /></div>
   },
   {
     path: "/projects",
-    element: <div><Navbar /><Projects /><Footer /></div>
+    element: <div><ScrollToTop /><Navbar /><Projects /><Footer /></div>
   },
   {
     path: "/internship",
-    element: <div><Navbar /><Internship /><Footer /></div>
+    element: <div><ScrollToTop /><Navbar /><Internship /><Footer /></div>
   },
   {
     path: "/contact",
-    element: <div><Navbar /><Contact /><Footer /></div>
+    element: <div><ScrollToTop /><Navbar /><Contact /><Footer /></div>
   },
 ])
 

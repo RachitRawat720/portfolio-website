@@ -178,7 +178,7 @@ const Internship = () => {
             </div>
 
 
-            <div className='flex gap-10 items-center mt-20 pt-20 py-10'>
+            <div className='flex gap-10 items-center mt-20 pt-20 py-10 mb-30'>
 
                 <motion.div initial={{opacity: 0, x: -200, y: 100, scale: 0.5}} whileInView={{opacity: 1, x: 0, y: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.7}}
                 className='rounded-2xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5 w-full'>
@@ -221,7 +221,6 @@ const Internship = () => {
                             </div>
 
                             <a href='/Projects'><button className='bg-linear-to-r from-[#1E40AF] via-[#4338CA] to-[#7C3AED] text-white rounded-md flex gap-2 justify-center items-center px-2 py-1 text-[16px] hover:cursor-pointer hover:scale-120'>Explore Projects<FontAwesomeIcon icon={faArrowRight} /></button></a>
-
                         </div>
                     </div>
                 </motion.div>

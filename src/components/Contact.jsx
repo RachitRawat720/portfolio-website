@@ -6,6 +6,7 @@ import { faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons'
 import linkedin_logo from '../assets/linkedIn_logo.png'
 import github_logo from '../assets/github_logo.jpg'
 import email_logo from '../assets/email_logo.jpg'
+import { faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
 const Contact = () => {
     const [loading, setLoading] = useState(false)
@@ -91,19 +92,19 @@ const Contact = () => {
 
                             <p className='text-[#8e9bad] text-[16px] font-semibold mt-1'>Feel free to reach out</p>
 
-                            <div className='flex flex-col gap-2 mt-4'>
-                                <div className='flex gap-5'>
+                            <div className='flex flex-col gap-2 mt-4 w-full'>
+                                <div className='flex gap-5 '>
                                     <div className='flex justify-center items-center px-2 rounded-[50%] border-[#3374b0] border-2 bg-blue-300 '>
                                         <FontAwesomeIcon icon={faEnvelope} color='#9333ea' className='text-[24px]'/>
                                     </div>
 
-                                    <div className='flex'>
+                                    <div className='flex justify-between w-full pr-5'>
                                         <div className='flex flex-col'>
-                                            <h3 className='text-[16px] text-white font-bold'>Email</h3>
-                                            <h3 className='text-[14px] text-[#8e9bad] font-semibold'>rachitrawat720@gmail.com</h3>
+                                            <p className='text-[16px] text-white font-bold'>Email</p>
+                                            <p className='text-[14px] text-[#8e9bad] font-semibold'>rachitrawat720@gmail.com</p>
                                         </div>
-
-                                        <div></div>
+                                        
+                                        <a href='mailto:rachitrawat720@gmail.com'  ><FontAwesomeIcon icon={faUpRightFromSquare} className='text-[20px] transition-transform duration-300 ease-in-out hover:scale-150' color='#8e9bad'/></a>
                                     </div>
                                 </div>
 
@@ -112,13 +113,13 @@ const Contact = () => {
                                         <FontAwesomeIcon icon={faLinkedinIn} color='#9333ea' className='text-[24px]'/>
                                     </div>
 
-                                    <div className='flex'>
+                                    <div className='flex justify-between w-full pr-5'>
                                         <div className='flex flex-col'>
-                                            <h3 className='text-[16px] text-white font-bold'>LinkedIn</h3>
-                                            <h3 className='text-[14px] text-[#8e9bad] font-semibold'>Let's connect professionally</h3>
+                                            <p className='text-[16px] text-white font-bold'>LinkedIn</p>
+                                            <p className='text-[14px] text-[#8e9bad] font-semibold'>Let's connect professionally</p>
                                         </div>
 
-                                        <div></div>
+                                        <a href='https://www.linkedin.com/in/rachit-singh-rawat/'  target='_blank' rel="noopener noreferrer"><FontAwesomeIcon icon={faUpRightFromSquare} className='text-[20px] transition-transform duration-300 ease-in-out hover:scale-150' color='#8e9bad'/></a>
                                     </div>
                                 </div>
 
@@ -127,13 +128,13 @@ const Contact = () => {
                                         <FontAwesomeIcon icon={faGithub} color='#9333ea' className='text-[24px]'/>
                                     </div>
 
-                                    <div className='flex'>
+                                    <div className='flex justify-between w-full pr-5'>
                                         <div className='flex flex-col'>
-                                            <h3 className='text-[16px] text-white font-bold'>GitHub</h3>
-                                            <h3 className='text-[14px] text-[#8e9bad] font-semibold'>Explore my projects</h3>
+                                            <p className='text-[16px] text-white font-bold'>GitHub</p>
+                                            <p className='text-[14px] text-[#8e9bad] font-semibold'>Explore my projects</p>
                                         </div>
 
-                                        <div></div>
+                                        <a href='https://github.com/RachitRawat720'  target='_blank' rel="noopener noreferrer"><FontAwesomeIcon icon={faUpRightFromSquare} className='text-[20px] transition-transform duration-300 ease-in-out hover:scale-150' color='#8e9bad'/></a>
                                     </div>
                                 </div>
 
@@ -142,13 +143,13 @@ const Contact = () => {
                                         <FontAwesomeIcon icon={faLocationDot} color='#9333ea' className='text-[24px]'/>
                                     </div>
 
-                                    <div className='flex'>
+                                    <div className='flex justify-between w-full pr-5'>
                                         <div className='flex flex-col'>
-                                            <h3 className='text-[16px] text-white font-bold'>Location</h3>
-                                            <h3 className='text-[14px] text-[#8e9bad] font-semibold'>India (Remote)</h3>
+                                            <p className='text-[16px] text-white font-bold'>Location</p>
+                                            <p className='text-[14px] text-[#8e9bad] font-semibold'>India (Remote)</p>
                                         </div>
 
-                                        <div></div>
+                                        <a href='https://www.google.com/maps/search/?api=1&query=Dehradun,Uttarakhand,India' target='_blank' rel='noopener'  ><FontAwesomeIcon icon={faUpRightFromSquare} className='text-[20px] transition-transform duration-300 ease-in-out hover:scale-150' color='#8e9bad'/></a>
                                     </div>
                                 </div>
 
@@ -265,7 +266,7 @@ const Contact = () => {
             </motion.div>
 
             <motion.div initial={{opacity: 0, y: 100, scale: 0.3}} whileInView={{opacity: 1, y: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.7}} 
-            className='flex flex-col justify-center items-center mt-20'>
+            className='flex flex-col justify-center items-center mt-20 mb-20'>
                 <h2 className='text-[35px] font-bold text-[#a5b0be]'>Thanks for stopping by.</h2>
                 <h3 className='text-[20px] text-[#8099c1] font-bold'>Let's create something great together</h3>
             </motion.div>

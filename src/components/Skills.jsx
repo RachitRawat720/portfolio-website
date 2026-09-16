@@ -147,7 +147,7 @@ const Skills = () => {
                     </motion.div>
 
                     <motion.div initial={{opacity: 0, x: 200, scale: 0.4}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.7}}
-                    className='flex flex-col gap-8'>
+                    className='flex flex-col gap-8 mb-40'>
                         <div className='flex gap-8 hover:scale-115'>
                             <p className='text-[20px] text-[#E2E8F0] font-medium'>Express.js</p>
                             <div className='w-100 h-7 rounded-full bg-[#1E293B] border border-[#334155] overflow-hidden'>

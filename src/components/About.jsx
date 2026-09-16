@@ -70,7 +70,7 @@ const about = () => {
                 </motion.div>
             </div>
 
-            <div className='flex justify-center items-center mt-40 gap-50'>
+            <div className='flex justify-center items-center mt-40 gap-50 mb-40'>
                 <motion.div initial={{opacity: 0, x: -300, y: 100, scale: 0.3}} whileInView={{opacity: 1, x: 0,y: 0, scale: 1}} transition={{duration: 2}} viewport={{ once: true, amount: 0.4 }} className='border-[#3B82F6] border-2 rounded-lg flex p-5 py-8.5 gap-5 
                 bg-[#111B36] w-full h-full'>
                     <div className='flex p-2 h-12 rounded-md justify-center bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2]'>
