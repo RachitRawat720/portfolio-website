@@ -1,6 +1,6 @@
 import React from 'react'
 import profile_pic from '../assets/profile_pic.png'
-import hi from '../assets/hi_img.jpg'
+import hi from '../assets/hi_img.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import TypingText from './Typingtext';
@@ -20,7 +20,7 @@ const Home = () => {
             <motion.div initial={{opacity: 0, x: -300, scale: 0.3}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{ once: true}}
             className='w-1/2'>
                 <div initial={{opacity: 0, x: -300, scale: 0.3}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{ once: true}}
-                className='flex'>
+                className='flex overflow-hidden rounded-2xl'>
                         <img src={hi} className='h-7 w-9 mt-2'/>
                     <h3 className='text-[25px] ml-2 bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#EC4899] bg-clip-text text-transparent'>Hello, I'm </h3>
                 </div>

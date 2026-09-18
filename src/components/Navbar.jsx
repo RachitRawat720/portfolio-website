@@ -9,12 +9,17 @@ const Navbar = () => {
                 <img src={logo} className='w-full h-full'/>
             </div>
             <div className='text-white font-semibold w-full flex justify-evenly items-center text-2xl'>
-                <NavLink to={"/"} className={({isActive}) => `${isActive ? " px-4 py-1 rounded-4xl bg-white text-[#303E54]" : ""}`}>Home</NavLink>
-                <NavLink to={"/About"} className={({isActive}) => `${isActive ? " px-4 py-1 rounded-4xl bg-white text-[#303E54]" : ""}`}>About</NavLink>
-                <NavLink to={"/Skills"} className={({isActive}) => `${isActive ? " px-4 py-1 rounded-4xl bg-white text-[#303E54]" : ""}`}>Skills</NavLink>
-                <NavLink to={"/Projects"} className={({isActive}) => `${isActive ? " px-4 py-1 rounded-4xl bg-white text-[#303E54]" : ""}`}>Projects</NavLink>
-                <NavLink to={"/Internship"} className={({isActive}) => `${isActive ? " px-4 py-1 rounded-4xl bg-white text-[#303E54]" : ""}`}>Internship</NavLink>
-                <NavLink to={"/Contact"} className={({isActive}) => `${isActive ? " px-4 py-1 rounded-4xl bg-white text-[#303E54]" : ""}`}>Contact</NavLink>
+                <NavLink to={"/"} className={({isActive}) => `${isActive ? "text-cyan-300 border-2 border-cyan-400 rounded-full px-5 py-1" : "text-white text-[20px]"}`}>Home</NavLink>
+
+                <NavLink to={"/About"} className={({isActive}) => `${isActive ? "text-cyan-300 border-2 border-cyan-400 rounded-full px-5 py-1" : "text-white text-[20px]"}`}>About</NavLink>
+
+                <NavLink to={"/Skills"} className={({isActive}) => `${isActive ? "text-cyan-300 border-2 border-cyan-400 rounded-full px-5 py-1" : "text-white text-[20px]"}`}>Skills</NavLink>
+
+                <NavLink to={"/Projects"} className={({isActive}) => `${isActive ? "text-cyan-300 border-2 border-cyan-400 rounded-full px-5 py-1" : "text-white text-[20px]"}`}>Projects</NavLink>
+
+                <NavLink to={"/Internship"} className={({isActive}) => `${isActive ? "text-cyan-300 border-2 border-cyan-400 rounded-full px-5 py-1" : "text-white text-[20px]"}`}>Internship</NavLink>
+
+                <NavLink to={"/Contact"} className={({isActive}) => `${isActive ? "text-cyan-300 border-2 border-cyan-400 rounded-full px-5 py-1" : "text-white text-[20px]"}`}>Contact</NavLink>
             </div>
         </div>
     )
