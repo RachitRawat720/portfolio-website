@@ -15,6 +15,7 @@ import { faPen } from '@fortawesome/free-solid-svg-icons'
 
 import certficate_img from '../assets/certificate_img.png'
 import { faEye, faArrowRight, faRocket } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom'
 
 const Internship = () => {
     return (
@@ -220,7 +221,7 @@ const Internship = () => {
                                 <h4 className='text-[12px] text-[#8e9bad] font-semibold'>See what I've built.</h4>
                             </div>
 
-                            <a href='/Projects'><button className='bg-linear-to-r from-[#1E40AF] via-[#4338CA] to-[#7C3AED] text-white rounded-md flex gap-2 justify-center items-center px-2 py-1 text-[16px] transition-transform duration-200 ease-in-out hover:cursor-pointer hover:scale-120'>Explore Projects<FontAwesomeIcon icon={faArrowRight} /></button></a>
+                            <Link to='/projects'><button className='bg-linear-to-r from-[#1E40AF] via-[#4338CA] to-[#7C3AED] text-white rounded-md flex gap-2 justify-center items-center px-2 py-1 text-[16px] transition-transform duration-200 ease-in-out hover:cursor-pointer hover:scale-120'>Explore Projects<FontAwesomeIcon icon={faArrowRight} /></button></Link>
                         </div>
                     </div>
                 </motion.div>

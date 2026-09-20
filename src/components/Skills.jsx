@@ -66,7 +66,7 @@ const Skills = () => {
                         <h1 className='text-[26px] text-[#F8FAFC] font-semibold flex items-center justify-center'>Databases</h1>
                         <div className='grid grid-cols-2 mt-5 gap-5 ml-5'>
                             
-                            <p className='text-[#A78BFA] border-2 border-[#8B5CF6] w-fit px-5 rounded-2xl hover:text-[#FFFFFF] hover:bg-[#695694]/50'>MondoDB</p>
+                            <p className='text-[#A78BFA] border-2 border-[#8B5CF6] w-fit px-5 rounded-2xl hover:text-[#FFFFFF] hover:bg-[#695694]/50'>MongoDB</p>
 
                             <p className='text-[#A78BFA] border-2 border-[#8B5CF6] w-fit px-5 rounded-2xl hover:text-[#FFFFFF] hover:bg-[#695694]/50'>MySQL</p>
                         </div>
@@ -98,7 +98,7 @@ const Skills = () => {
                 <motion.div initial={{opacity: 0, scale: 0.3}} whileInView={{opacity: 1, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.8}}
                 className='rounded-2xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5 mt-10 w-130 h-70'>
                     <div className='flex flex-col items-center justify-start rounded-2xl bg-[#0f1731] p-10 w-full h-full'>
-                        <h1 className='text-[26px] text-[#F8FAFC] font-semibold flex items-center justify-center'>Databases</h1>
+                        <h1 className='text-[26px] text-[#F8FAFC] font-semibold flex items-center justify-center'>Tools and Platforms</h1>
                         <div className='grid grid-cols-2 mt-5 gap-5 ml-5'>
                             
                             <p className='text-[#A78BFA] border-2 border-[#8B5CF6] w-fit px-5 rounded-2xl hover:text-[#FFFFFF] hover:bg-[#695694]/50'>Git</p>

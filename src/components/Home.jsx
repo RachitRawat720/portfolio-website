@@ -10,7 +10,7 @@ import react_img from '../assets/react-img.jpg'
 import node_img from '../assets/node-img.png'
 import express_img from '../assets/express-img.png'
 import mongoDB_img from '../assets/mongoDB-img.png'
-
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion'
 
 const Home = () => {
@@ -33,15 +33,20 @@ const Home = () => {
                 </div>
 
                 <div>
-                    <p className='text-[18px] mt-6 text-gray-200'>I'm a passionate MERN Stack Developer focused on building modern, responsive, and interactive web applications. I use MongoDB, Express.js, React, and Node.js to turn ideas into scalable and engaging digital experiences.</p>
+                    <p className='text-[18px] mt-6 text-gray-200'>I build responsive and user-focused web applications using React, Node.js, Express.js and MongoDB, with a focus on clean UI, scalable APIs and real-world problem solving.</p>
                 </div>
 
                 <div className='flex gap-12 mt-10 items-center'>
-                    <a href='/Projects'><button className='bg-linear-to-r from-[#1E40AF] via-[#4338CA] to-[#7C3AED] text-white px-1 py-1 rounded-md flex gap-2 justify-center items-center w-40 h-13 text-[16px] hover:cursor-pointer transition-transform duration-300 ease-in-out hover:-translate-y-3'>View My Work<FontAwesomeIcon icon={faArrowRight} /></button></a>
+                    <Link to='/projects'>
+                        <button className='bg-linear-to-r from-[#1E40AF] via-[#4338CA] to-[#7C3AED] text-white px-1 py-1 rounded-md flex gap-2 justify-center items-center w-40 h-13 text-[16px] hover:cursor-pointer transition-transform duration-300 ease-in-out hover:-translate-y-3'>View My Work<FontAwesomeIcon icon={faArrowRight} /></button>
+                    </Link>
+                    
+                    <Link to='/contact'>
+                        <button className='border-2 border-[#7C3AED] text-white px-1 py-1 rounded-md gap-2 flex justify-center items-center w-40 h-13 text-[16px] hover:bg-linear-to-r from-[#1E40AF] via-[#4338CA] to-[#7C3AED] hover:border-none hover:cursor-pointer transition-transform duration-300 ease-in-out hover:-translate-y-3'>Contact Me<FontAwesomeIcon icon= {faEnvelope}></FontAwesomeIcon></button>
+                    </Link>
 
-                    <a href='/Contact'><button className='border-2 border-[#7C3AED] text-white px-1 py-1 rounded-md gap-2 flex justify-center items-center w-40 h-13 text-[16px] hover:bg-linear-to-r from-[#1E40AF] via-[#4338CA] to-[#7C3AED] hover:border-none hover:cursor-pointer transition-transform duration-300 ease-in-out hover:-translate-y-3'>Contact Me<FontAwesomeIcon icon= {faEnvelope}></FontAwesomeIcon></button></a>
-
-                    <button className='border-2 border-[#7C3AED] text-white px-1 py-1 rounded-md gap-2 flex justify-center items-center w-30 h-10 text-[13px] hover:bg-linear-to-r from-[#1E40AF] via-[#4338CA] to-[#7C3AED] hover:border-none hover:cursor-pointer transition-transform duration-300 ease-in-out hover:-translate-y-3'>View Resume<FontAwesomeIcon icon={faArrowRight}/></button>
+                    <a href="/resume.pdf" target="_blank" rel="noopener noreferrer"><button className='border-2 border-[#7C3AED] text-white px-1 py-1 rounded-md gap-2 flex justify-center items-center w-30 h-10 text-[13px] hover:bg-linear-to-r from-[#1E40AF] via-[#4338CA] to-[#7C3AED] hover:border-none hover:cursor-pointer transition-transform duration-300 ease-in-out hover:-translate-y-3'>View Resume<FontAwesomeIcon icon={faArrowRight}/></button>
+                    </a>
                 </div>
 
                 

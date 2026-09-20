@@ -53,14 +53,14 @@ const Contact = () => {
             const result = await response.json()
 
             if (result.success) {
-            setStatus('Message sent successfully!')
+            setStatus('✓ Message sent successfully!')
 
             event.target.reset()
             } else {
-            setStatus('Something went wrong. Please try again.')
+            setStatus('✕ Unable to send message. Please try again.')
             }
         } catch (error) {
-            setStatus('Something went wrong. Please try again.')
+            setStatus('✕ Unable to send message. Please try again.')
         }
 
         setLoading(false)
@@ -189,7 +189,7 @@ const Contact = () => {
 
                                             <div className='flex flex-col gap-2'>
                                                 <h3 className='text-[14px] text-white font-bold pl-2'>Your Email</h3>
-                                                <input type="text" name='email' placeholder='rachitrawat720@gmail.com' required className='text-[#8e9bad] font-semibold border-none text-[14px] pl-2'/>
+                                                <input type="email" name='email' placeholder='rachitrawat720@gmail.com' required className='text-[#8e9bad] font-semibold border-none text-[14px] pl-2'/>
                                             </div>
                                         </div>
                                     </div>

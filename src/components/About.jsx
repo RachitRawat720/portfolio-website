@@ -46,7 +46,7 @@ const about = () => {
 
                     <div className='flex flex-col'>
                         <p className='text-gray-300 text-[16px]'>
-                        I am a pasionate Full Stack Developer, specializing in the MERN Stack. I enjoy building responsive, user-focused web applications and solving real-world problems through technology.
+                        I am a passionate Full Stack Developer, specializing in the MERN Stack. I enjoy building responsive, user-focused web applications and solving real-world problems through technology.
                         </p>
 
                         <p className='text-gray-300 text-[16px] mt-2'>
@@ -106,9 +106,9 @@ const about = () => {
                         <h3 className='text-[#9da8b5] text-[16px] font-bold mt-3'>Web Development Intern | Remote</h3>
                         <h3 className='text-[#9da8b5] text-[14px]'>InAmigos Foundation</h3>
                         <ul className='mt-2 list-disc marker:text-[#3B82F6] text-[#9da8b5] text-[12px]'>
-                            <li>worked on NGO awareness web page</li>
-                            <li>Analyze UI/UX and content organization</li>
-                            <li>Designed website context and interface layouts <br></br>using figma</li>
+                            <li>Developed an NGO awareness webpage using HTML and CSS.</li>
+                            <li>Analyzed UI/UX structure and improved content organization.</li>
+                            <li>Designed website layouts and interface components using Figma.</li>
                         </ul>
 
                         <div className='mt-6 flex items-center gap-2'>
