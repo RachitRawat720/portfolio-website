@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 const Skills = () => {
     return (
-        <div className='p-10 overflow-hidden bg-[linear-gradient(135deg,#080D1F_0%,#101A35_35%,#172554_65%,#24164F_100%)]'>
+        <div className='py-20 overflow-hidden bg-[linear-gradient(135deg,#080D1F_0%,#101A35_35%,#172554_65%,#24164F_100%)]'>
             <motion.div initial={{opacity: 0, y:-200, scale: 0.4}} whileInView={{opacity: 1, y: 0, scale: 1}} transition={{ duration: 1}} viewport={{once: true}}
             className='flex flex-col p-12 justify-center items-center'>
                 <h1 className='text-[50px] font-bold bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2] bg-clip-text text-transparent'>MY SKILLS</h1>
@@ -20,91 +20,106 @@ const Skills = () => {
                 </p>
             </motion.div>
 
-            <div className='flex mt-40 justify-center items-center gap-40'>
-                <motion.div initial={{opacity: 0, x: -200, scale: 0.4}} whileInView={{opacity: 1, x: 0, scale: 1}}
-                transition={{duration: 2}} viewport={{once: true, amount: 0.8}}
-                className='border-2 border-[#3B82F6] bg-[#111B36] px-10 py-5 rounded-xl w-100'>
-                    <h1 className='text-[26px] text-[#F8FAFC] font-semibold flex itemsj-center justify-center'>Frontend</h1>
-                    <div className='grid grid-cols-2 mt-5 gap-y-5 ml-5'>
-                        
-                        <p className='text-[#A78BFA] border-2 border-[#8B5CF6] w-fit px-5 rounded-2xl hover:text-[#FFFFFF] hover:bg-[#695694]/50'>React.js</p>
+            <div className='flex gap-30 items-center justify-center mt-40'>
+                <motion.div initial={{opacity: 0, x: -200, scale: 0.4}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.8}}
+                className='rounded-2xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5 w-100 h-65'>
+                    <div className='flex flex-col items-center justify-start rounded-2xl bg-[#0f1731] p-10 w-full h-full'>
+                        <h1 className='text-[26px] text-[#F8FAFC] font-semibold flex items-center justify-center'>Frontend</h1>
+                        <div className='grid grid-cols-2 mt-5 gap-5 ml-5'>
+                            
+                            <p className='text-[#A78BFA] border-2 border-[#8B5CF6] w-fit px-5 rounded-2xl hover:text-[#FFFFFF] hover:bg-[#695694]/50'>React.js</p>
 
-                        <p className='text-[#A78BFA] border-2 border-[#8B5CF6] w-fit px-5 rounded-2xl hover:text-[#FFFFFF] hover:bg-[#695694]/50'>JavaScript</p>
+                            <p className='text-[#A78BFA] border-2 border-[#8B5CF6] w-fit px-5 rounded-2xl hover:text-[#FFFFFF] hover:bg-[#695694]/50'>JavaScript</p>
 
-                        <p className='text-[#A78BFA] border-2 border-[#8B5CF6] w-fit px-5 rounded-2xl hover:text-[#FFFFFF] hover:bg-[#695694]/50'>Tailwind CSS</p>
+                            <p className='text-[#A78BFA] border-2 border-[#8B5CF6] w-fit px-5 rounded-2xl hover:text-[#FFFFFF] hover:bg-[#695694]/50'>Tailwind CSS</p>
 
-                        <p className='text-[#A78BFA] border-2 border-[#8B5CF6] w-fit px-5 rounded-2xl hover:text-[#FFFFFF] hover:bg-[#695694]/50'>HTML5</p>
+                            <p className='text-[#A78BFA] border-2 border-[#8B5CF6] w-fit px-5 rounded-2xl hover:text-[#FFFFFF] hover:bg-[#695694]/50'>HTML5</p>
 
-                        <p className='text-[#A78BFA] border-2 border-[#8B5CF6] w-fit px-5 rounded-2xl hover:text-[#FFFFFF] hover:bg-[#695694]/50'>CSS3</p>
-
+                            <p className='text-[#A78BFA] border-2 border-[#8B5CF6] w-fit px-5 rounded-2xl hover:text-[#FFFFFF] hover:bg-[#695694]/50'>CSS3</p>
+                        </div>
                     </div>
                 </motion.div>
 
-                <motion.div initial={{opacity: 0, x: 200, scale: 0.4}} whileInView={{opacity: 1, x: 0, scale: 1}}
-                transition={{duration: 2}} viewport={{once: true, amount: 0.8}}
-                className='border-2 border-[#3B82F6] bg-[#111B36] px-10 py-5 rounded-xl w-100 h-56'>
-                    <h1 className='text-[26px] text-[#F8FAFC] font-semibold flex itemsj-center justify-center'>Backend</h1>
-                    <div className='grid grid-cols-2 mt-5 gap-y-5 ml-5'>
-                        
-                        <p className='text-[#A78BFA] border-2 border-[#8B5CF6] w-fit px-5 rounded-2xl hover:text-[#FFFFFF] hover:bg-[#695694]/50'>Node.js</p>
+            
 
-                        <p className='text-[#A78BFA] border-2 border-[#8B5CF6] w-fit px-5 rounded-2xl hover:text-[#FFFFFF] hover:bg-[#695694]/50'>Express.js</p>
+                <motion.div initial={{opacity: 0, x: 200, scale: 0.4}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.8}}
+                className='rounded-2xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5 w-100 h-65'>
+                    <div className='flex flex-col items-center justify-start rounded-2xl bg-[#0f1731] p-10 w-full h-full'>
+                        <h1 className='text-[26px] text-[#F8FAFC] font-semibold flex items-center justify-center'>Backend</h1>
+                        <div className='grid grid-cols-2 mt-5 gap-5 ml-5'>
+                            
+                            <p className='text-[#A78BFA] border-2 border-[#8B5CF6] w-fit px-5 rounded-2xl hover:text-[#FFFFFF] hover:bg-[#695694]/50'>Node.js</p>
 
-                        <p className='text-[#A78BFA] border-2 border-[#8B5CF6] w-fit px-5 rounded-2xl hover:text-[#FFFFFF] hover:bg-[#695694]/50'>REST APIs</p>
-                    </div>
-                </motion.div>
-            </div>
+                            <p className='text-[#A78BFA] border-2 border-[#8B5CF6] w-fit px-5 rounded-2xl hover:text-[#FFFFFF] hover:bg-[#695694]/50'>Express.js</p>
 
-            <div className='flex mt-40 justify-center items-center gap-40'>
-                <motion.div initial={{opacity: 0, x: -200, scale: 0.4}} whileInView={{opacity: 1, x: 0, scale: 1}}
-                transition={{duration: 2}} viewport={{once: true, amount: 0.8}}
-                className='border-2 border-[#3B82F6] bg-[#111B36] px-10 py-5 rounded-xl w-100 h-56'>
-                    <h1 className='text-[26px] text-[#F8FAFC] font-semibold flex itemsj-center justify-center'>Databases</h1>
-                    <div className='grid grid-cols-2 mt-5 gap-y-5 ml-5'>
-                        
-                        <p className='text-[#A78BFA] border-2 border-[#8B5CF6] w-fit px-5 rounded-2xl hover:text-[#FFFFFF] hover:bg-[#695694]/50'>MondoDB</p>
-
-                        <p className='text-[#A78BFA] border-2 border-[#8B5CF6] w-fit px-5 rounded-2xl hover:text-[#FFFFFF] hover:bg-[#695694]/50'>MySQL</p>
-
-                    </div>
-                </motion.div>
-
-                <motion.div initial={{opacity: 0, x: 200, scale: 0.4}} whileInView={{opacity: 1, x: 0, scale: 1}}
-                transition={{duration: 2}} viewport={{once: true, amount: 0.8}}
-                className='border-2 border-[#3B82F6] bg-[#111B36] px-10 py-5 rounded-xl w-100 h-56'>
-                    <h1 className='text-[26px] text-[#F8FAFC] font-semibold flex itemsj-center justify-center'>Programming Languages</h1>
-                    <div className='grid grid-cols-2 mt-5 gap-y-5 ml-5'>
-                        
-                        <p className='text-[#A78BFA] border-2 border-[#8B5CF6] w-fit px-5 rounded-2xl hover:text-[#FFFFFF] hover:bg-[#695694]/50'>JavaScript</p>
-
-                        <p className='text-[#A78BFA] border-2 border-[#8B5CF6] w-fit px-5 rounded-2xl hover:text-[#FFFFFF] hover:bg-[#695694]/50'>Python</p>
-
-                        <p className='text-[#A78BFA] border-2 border-[#8B5CF6] w-fit px-5 rounded-2xl hover:text-[#FFFFFF] hover:bg-[#695694]/50'>C++</p>
-
-                        <p className='text-[#A78BFA] border-2 border-[#8B5CF6] w-fit px-8 rounded-2xl hover:text-[#FFFFFF] hover:bg-[#695694]/50'>C</p>
+                            <p className='text-[#A78BFA] border-2 border-[#8B5CF6] w-fit px-5 rounded-2xl hover:text-[#FFFFFF] hover:bg-[#695694]/50'>REST APIs</p>
+                        </div>
                     </div>
                 </motion.div>
             </div>
+                
+            
+            <div className='flex gap-30 items-center justify-center mt-40'>
+                <motion.div initial={{opacity: 0, x: -200, scale: 0.4}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.8}}
+                className='rounded-2xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5 mt-10 w-100 h-65'>
+                    <div className='flex flex-col items-center justify-start rounded-2xl bg-[#0f1731] p-10 w-full h-full'>
+                        <h1 className='text-[26px] text-[#F8FAFC] font-semibold flex items-center justify-center'>Databases</h1>
+                        <div className='grid grid-cols-2 mt-5 gap-5 ml-5'>
+                            
+                            <p className='text-[#A78BFA] border-2 border-[#8B5CF6] w-fit px-5 rounded-2xl hover:text-[#FFFFFF] hover:bg-[#695694]/50'>MondoDB</p>
 
-            <div className='flex items-center justify-center'>
-                <motion.div initial={{opacity: 0, y: 100, scale: 0.4}} whileInView={{opacity: 1, y: 0, scale: 1}}
-                transition={{duration: 2}} viewport={{once: true, amount: 0.4}}
-                className='border-2 border-[#3B82F6] bg-[#111B36] px-10 py-5 rounded-xl w-130 h-60 mt-40 flex flex-col'>
-                    <h1 className='text-[26px] text-[#F8FAFC] font-semibold flex itemsj-center justify-center'>Development Tools</h1>
-                    <div className='grid grid-cols-2 mt-5 gap-5'>
-                        
-                        <p className='text-[#A78BFA] border-2 border-[#8B5CF6] w-fit px-5 rounded-2xl hover:text-[#FFFFFF] hover:bg-[#695694]/50'>Git</p>
+                            <p className='text-[#A78BFA] border-2 border-[#8B5CF6] w-fit px-5 rounded-2xl hover:text-[#FFFFFF] hover:bg-[#695694]/50'>MySQL</p>
+                        </div>
+                    </div>
+                </motion.div>
 
-                        <p className='text-[#A78BFA] border-2 border-[#8B5CF6] w-fit px-5 rounded-2xl hover:text-[#FFFFFF] hover:bg-[#695694]/50'>GitHub</p>
 
-                        <p className='text-[#A78BFA] border-2 border-[#8B5CF6] w-fit px-5 rounded-2xl hover:text-[#FFFFFF] hover:bg-[#695694]/50'>Postman</p>
+                <motion.div initial={{opacity: 0, x: 200, scale: 0.4}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.8}}
+                className='rounded-2xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5 mt-10 w-100 h-65'>
+                    <div className='flex flex-col items-center justify-start rounded-2xl bg-[#0f1731] p-10 w-full h-full'>
+                        <h1 className='text-[26px] text-[#F8FAFC] font-semibold flex items-center justify-center'>Programming Languages</h1>
+                        <div className='grid grid-cols-2 mt-5 gap-5 ml-5'>
 
-                        <p className='text-[#A78BFA] border-2 border-[#8B5CF6] w-fit px-5 rounded-2xl hover:text-[#FFFFFF] hover:bg-[#695694]/50'>MongoDB Compass</p>
+                            <p className='text-[#A78BFA] border-2 border-[#8B5CF6] w-fit px-5 rounded-2xl hover:text-[#FFFFFF] hover:bg-[#695694]/50'>JavaScript</p>
 
-                        <p className='text-[#A78BFA] border-2 border-[#8B5CF6] w-fit px-5 rounded-2xl hover:text-[#FFFFFF] hover:bg-[#695694]/50'>Vercel</p>
+                            <p className='text-[#A78BFA] border-2 border-[#8B5CF6] w-fit px-5 rounded-2xl hover:text-[#FFFFFF] hover:bg-[#695694]/50'>Python</p>
+
+                            <p className='text-[#A78BFA] border-2 border-[#8B5CF6] w-fit px-5 rounded-2xl hover:text-[#FFFFFF] hover:bg-[#695694]/50'>C++</p>
+
+                            <p className='text-[#A78BFA] border-2 border-[#8B5CF6] w-fit px-8 rounded-2xl hover:text-[#FFFFFF] hover:bg-[#695694]/50'>C</p>
+                            
+                        </div>
                     </div>
                 </motion.div>
             </div>
+                
+
+            <div className='flex justify-center items-center mt-40'>
+                <motion.div initial={{opacity: 0, scale: 0.3}} whileInView={{opacity: 1, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.8}}
+                className='rounded-2xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5 mt-10 w-130 h-70'>
+                    <div className='flex flex-col items-center justify-start rounded-2xl bg-[#0f1731] p-10 w-full h-full'>
+                        <h1 className='text-[26px] text-[#F8FAFC] font-semibold flex items-center justify-center'>Databases</h1>
+                        <div className='grid grid-cols-2 mt-5 gap-5 ml-5'>
+                            
+                            <p className='text-[#A78BFA] border-2 border-[#8B5CF6] w-fit px-5 rounded-2xl hover:text-[#FFFFFF] hover:bg-[#695694]/50'>Git</p>
+
+                            <p className='text-[#A78BFA] border-2 border-[#8B5CF6] w-fit px-5 rounded-2xl hover:text-[#FFFFFF] hover:bg-[#695694]/50'>GitHub</p>
+
+                            <p className='text-[#A78BFA] border-2 border-[#8B5CF6] w-fit px-5 rounded-2xl hover:text-[#FFFFFF] hover:bg-[#695694]/50'>Postman</p>
+
+                            <p className='text-[#A78BFA] border-2 border-[#8B5CF6] w-fit px-5 rounded-2xl hover:text-[#FFFFFF] hover:bg-[#695694]/50'>MongoDB Compass</p>
+
+                            <p className='text-[#A78BFA] border-2 border-[#8B5CF6] w-fit px-5 rounded-2xl hover:text-[#FFFFFF] hover:bg-[#695694]/50'>Vercel</p>
+
+                        </div>
+                    </div>
+                </motion.div>
+            </div>
+                
+            
+
+                
+                
 
             <div className='flex flex-col items-center justify-center w-full mt-30'>
                 <motion.div initial={{opacity: 0, y: 200, scale: 0.4}} whileInView={{opacity: 1, y: 0, scale: 1}}
@@ -115,7 +130,7 @@ const Skills = () => {
                 </motion.div>
 
                 <div className='flex gap-15 justify-between pt-40 pb-20'>
-                    <motion.div initial={{opacity: 0, x: -200, scale: 0.4}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.7}}
+                    <motion.div initial={{opacity: 0, x: -200, scale: 0.4}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.5}}
                     className='flex flex-col gap-8'>
                         <div className='flex gap-15 hover:scale-115'>
                             <p className='text-[20px] text-[#E2E8F0] font-medium'>React.js</p>
@@ -146,8 +161,8 @@ const Skills = () => {
                         </div>
                     </motion.div>
 
-                    <motion.div initial={{opacity: 0, x: 200, scale: 0.4}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.7}}
-                    className='flex flex-col gap-8 mb-40'>
+                    <motion.div initial={{opacity: 0, x: 200, scale: 0.4}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.8}}
+                    className='flex flex-col gap-8 mb-20'>
                         <div className='flex gap-8 hover:scale-115'>
                             <p className='text-[20px] text-[#E2E8F0] font-medium'>Express.js</p>
                             <div className='w-100 h-7 rounded-full bg-[#1E293B] border border-[#334155] overflow-hidden'>

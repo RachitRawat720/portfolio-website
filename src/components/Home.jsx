@@ -15,13 +15,13 @@ import { motion } from 'framer-motion'
 
 const Home = () => {
     return (
-        <div className='flex relative px-10 overflow-hidden py-8 gap-5 bg-[linear-gradient(135deg,#080D1F_0%,#101A35_35%,#172554_65%,#24164F_100%)] pb-40'>
+        <div className='flex relative px-10 overflow-hidden py-8 gap-5 bg-[linear-gradient(135deg,#080D1F_0%,#101A35_35%,#172554_65%,#24164F_100%)] pb-30'>
 
             <motion.div initial={{opacity: 0, x: -300, scale: 0.3}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{ once: true}}
             className='w-1/2'>
                 <div initial={{opacity: 0, x: -300, scale: 0.3}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{ once: true}}
-                className='flex overflow-hidden rounded-2xl'>
-                        <img src={hi} className='h-7 w-9 mt-2'/>
+                className='flex overflow-hidden '>
+                        <img src={hi} className='h-7 w-9 mt-2 rounded-4xl'/>
                     <h3 className='text-[25px] ml-2 bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#EC4899] bg-clip-text text-transparent'>Hello, I'm </h3>
                 </div>
 
