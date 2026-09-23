@@ -6,10 +6,11 @@ import './App.css'
 import Home from './components/Home.jsx'
 import About from './components/About.jsx'
 import Skills from './components/Skills.jsx'
-import Projects from './components/Projects.jsx'
+import Projects from './components/projects/Projects.jsx'
 import Internship from './components/Internship.jsx'
 import Contact from './components/Contact.jsx'
 import Footer from './components/footer.jsx'
+import Custom_Notes_Saver from './components/projects/custom_notes_saver.jsx'
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
     path: "/contact",
     element: <div><ScrollToTop /><Navbar /><Contact /><Footer /></div>
   },
+  {
+    path: "/projects/custom_notes_saver",
+    element: <div><ScrollToTop /><Navbar /><Custom_Notes_Saver /><Footer /></div>
+  }
 ])
 
 function App() {
