@@ -2,12 +2,12 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import { faArrowUpRightFromSquare, faArrowRight, faFileLines, faStar, faCircleCheck, faUserPen, faLightbulb, faGear, faMobileScreen, faServer, faArrowLeft } from '@fortawesome/free-solid-svg-icons'
+import { faArrowUpRightFromSquare, faArrowRight, faFileLines, faStar, faCircleCheck, faUserPen, faLightbulb, faGear, faMobileScreen, faServer, faArrowLeft, faChartLine } from '@fortawesome/free-solid-svg-icons'
 import { motion } from 'framer-motion'
-import ss1 from '../../assets/ss1.png'
-import ss2 from '../../assets/ss2.png'
-import ss3 from '../../assets/ss3.png'
-import ss4 from '../../assets/ss4.png'
+import ss1 from '../../assets/custom notes saver/ss1.png'
+import ss2 from '../../assets/custom notes saver/ss2.png'
+import ss3 from '../../assets/custom notes saver/ss3.png'
+import ss4 from '../../assets/custom notes saver/ss4.png'
 
 
 const custom_notes_saver = () => {
@@ -224,7 +224,7 @@ const custom_notes_saver = () => {
                 className='rounded-xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5'>
                     <div className='h-full flex flex-col px-5 py-8 rounded-xl bg-[#0f1731]'>
                         <div className='flex gap-5 items-center'>
-                            <div><FontAwesomeIcon icon={faFileLines} className='text-[28px] text-[#4242be]'/></div>
+                            <div><FontAwesomeIcon icon={faChartLine} className='text-[28px] text-[#4242be]'/></div>
                             <div>
                                 <p className='text-white text-[18px] font-bold'>What I Learned</p>
                                 <div className='mt-1 h-1 w-25 rounded-full bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2]'></div>

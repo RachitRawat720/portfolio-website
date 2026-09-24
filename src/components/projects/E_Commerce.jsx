@@ -2,14 +2,14 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import { faArrowUpRightFromSquare, faArrowRight, faFileLines, faStar, faCircleCheck, faUserPen, faLightbulb, faGear, faMobileScreen, faServer, faArrowLeft } from '@fortawesome/free-solid-svg-icons'
+import { faArrowUpRightFromSquare, faArrowRight, faFileLines, faStar, faCircleCheck, faUserPen, faLightbulb, faGear, faMobileScreen, faServer, faArrowLeft, faChartLine } from '@fortawesome/free-solid-svg-icons'
 import { motion } from 'framer-motion'
-import Home_ss from '../../assets/Home_ss.png'
-import Shop_ss from '../../assets/Shop_ss.png'
-import About_ss from '../../assets/About_ss.png'
-import Contact_ss from '../../assets/Contact_ss.png'
-import Cart_ss from '../../assets/Cart_ss.png'
-import Product_Details_ss from '../../assets/Product_Details_ss.png'
+import Home_ss from '../../assets/E-commerce/Home_ss.png'
+import Shop_ss from '../../assets/E-commerce/Shop_ss.png'
+import About_ss from '../../assets/E-commerce/About_ss.png'
+import Contact_ss from '../../assets/E-commerce/Contact_ss.png'
+import Cart_ss from '../../assets/E-commerce/Cart_ss.png'
+import Product_Details_ss from '../../assets/E-commerce/Product_Details_ss.png'
 
 const E_Commerce = () => {
     return (
@@ -236,7 +236,7 @@ const E_Commerce = () => {
                 className='rounded-xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5'>
                     <div className='h-full flex flex-col px-5 py-8 rounded-xl bg-[#0f1731]'>
                         <div className='flex gap-5 items-center'>
-                            <div><FontAwesomeIcon icon={faFileLines} className='text-[28px] text-[#4242be]'/></div>
+                            <div><FontAwesomeIcon icon={faChartLine} className='text-[28px] text-[#4242be]'/></div>
                             <div>
                                 <p className='text-white text-[18px] font-bold'>What I Learned</p>
                                 <div className='mt-1 h-1 w-25 rounded-full bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2]'></div>
