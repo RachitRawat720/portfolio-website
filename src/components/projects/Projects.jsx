@@ -60,11 +60,11 @@ const Projects = () => {
                     </div>
 
                     <div className='flex gap-15'>
-                        <a href='https://github.com/RachitRawat720/custom-notes-saver' target='_blank' rel='noopener noreferrer'><button className='bg-linear-to-r from-[#1E40AF] via-[#4338CA] to-[#7C3AED] text-white rounded-4xl flex gap-3 px-4 py-2 justify-center items-center text-[16px] hover:cursor-pointer transition-transform duration-300 ease-in-out hover:scale-130'><FontAwesomeIcon icon={faGithub} className='text-[20px]'/>View My Work</button></a>
+                        <a href='https://github.com/RachitRawat720/portfolio-website' target='_blank' rel='noopener noreferrer'><button className='bg-linear-to-r from-[#1E40AF] via-[#4338CA] to-[#7C3AED] text-white rounded-4xl flex gap-3 px-4 py-2 justify-center items-center text-[16px] hover:cursor-pointer transition-transform duration-300 ease-in-out hover:scale-130'><FontAwesomeIcon icon={faGithub} className='text-[20px]'/>View My Work</button></a>
 
-                        <a href='/Projects' target='_blank' rel='noopener noreferrer'><button className='bg-linear-to-r from-[#1E40AF] via-[#4338CA] to-[#7C3AED] text-white rounded-4xl flex gap-3 px-6 py-2 justify-center items-center text-[16px] hover:cursor-pointer transition-transform duration-300 ease-in-out hover:scale-130'>Live Demo<FontAwesomeIcon icon={faArrowUpRightFromSquare} /></button></a>
+                        <a href='' target='_blank' rel='noopener noreferrer'><button className='bg-linear-to-r from-[#1E40AF] via-[#4338CA] to-[#7C3AED] text-white rounded-4xl flex gap-3 px-6 py-2 justify-center items-center text-[16px] hover:cursor-pointer transition-transform duration-300 ease-in-out hover:scale-130'>Live Demo<FontAwesomeIcon icon={faArrowUpRightFromSquare} /></button></a>
 
-                        <a href='/Projects'><button className='bg-linear-to-r from-[#1E40AF] via-[#4338CA] to-[#7C3AED] text-white rounded-4xl flex gap-3 px-8 py-2 justify-center items-center text-[16px] hover:cursor-pointer transition-transform duration-300 ease-in-out hover:scale-130'>Details<FontAwesomeIcon icon={faArrowRight} /></button></a>
+                        <Link to='/projects/portfolio-website'><button className='bg-linear-to-r from-[#1E40AF] via-[#4338CA] to-[#7C3AED] text-white rounded-4xl flex gap-3 px-8 py-2 justify-center items-center text-[16px] hover:cursor-pointer transition-transform duration-300 ease-in-out hover:scale-130'>Details<FontAwesomeIcon icon={faArrowRight} /></button></Link>
                     </div>
                 </div>
             </motion.div>
@@ -109,7 +109,7 @@ const Projects = () => {
 
                         <a href='https://custom-notes-saver.vercel.app/' target='_blank' rel='noopener noreferrer'><button className='bg-linear-to-r from-[#1E40AF] via-[#4338CA] to-[#7C3AED] text-white rounded-4xl flex gap-3 px-6 py-2 justify-center items-center text-[16px] hover:cursor-pointer transition-transform duration-300 ease-in-out hover:scale-130'>Live Demo<FontAwesomeIcon icon={faArrowUpRightFromSquare} /></button></a>
 
-                        <Link to = '/projects/custom_notes_saver'><button className='bg-linear-to-r from-[#1E40AF] via-[#4338CA] to-[#7C3AED] text-white rounded-4xl flex gap-3 px-8 py-2 justify-center items-center text-[16px] hover:cursor-pointer transition-transform duration-300 ease-in-out hover:scale-130'>Details<FontAwesomeIcon icon={faArrowRight} /></button></Link>
+                        <Link to = '/projects/custom-notes-saver'><button className='bg-linear-to-r from-[#1E40AF] via-[#4338CA] to-[#7C3AED] text-white rounded-4xl flex gap-3 px-8 py-2 justify-center items-center text-[16px] hover:cursor-pointer transition-transform duration-300 ease-in-out hover:scale-130'>Details<FontAwesomeIcon icon={faArrowRight} /></button></Link>
                     </div>
                 </div>
             </motion.div>

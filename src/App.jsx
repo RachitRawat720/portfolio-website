@@ -12,6 +12,7 @@ import Contact from './components/Contact.jsx'
 import Footer from './components/footer.jsx'
 import Custom_Notes_Saver from './components/projects/custom_notes_saver.jsx'
 import E_Commerce from './components/projects/E_Commerce.jsx'
+import Portfolio_Website from './components/projects/Portfolio_Website.jsx'
 
 const router = createBrowserRouter([
   {
@@ -39,12 +40,16 @@ const router = createBrowserRouter([
     element: <div><ScrollToTop /><Navbar /><Contact /><Footer /></div>
   },
   {
-    path: "/projects/custom_notes_saver",
+    path: "/projects/custom-notes-saver",
     element: <div><ScrollToTop /><Navbar /><Custom_Notes_Saver /><Footer /></div>
   },
   {
     path: "/projects/e-commerce",
     element: <div><ScrollToTop /><Navbar /><E_Commerce /><Footer /></div>
+  },
+  {
+    path: "/projects/portfolio-website",
+    element: <div><ScrollToTop /><Navbar /><Portfolio_Website /><Footer /></div>
   }
 ])
 
