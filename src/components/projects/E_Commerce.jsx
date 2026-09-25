@@ -38,7 +38,7 @@ const E_Commerce = () => {
             </motion.div>
 
             <div>
-                <motion.div initial={{opacity: 0, scale: 0.2, x: -500}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.8}}>
+                <motion.div initial={{opacity: 0, scale: 0.2, x: -500}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.2}}>
                     <h2 className='text-[35px] font-bold text-white pl-40'>Screenshots</h2>
                     <div className='ml-40 mt-1 h-1 w-25 rounded-full bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2]'></div>
                 </motion.div>
@@ -282,6 +282,8 @@ const E_Commerce = () => {
                 </motion.div>
             </div>
 
+            <Link to = '/projects' className='mt-15 w-fit border-2 border-white text-white hover:text-black hover:bg-white transition-colors duration-200 rounded-4xl flex gap-1 px-2 py-1 justify-center items-center text-[12px] hover:cursor-pointer font-semibold'><FontAwesomeIcon icon={faArrowLeft} />Back to Projects</Link>
+            
         </div>
     )
 }

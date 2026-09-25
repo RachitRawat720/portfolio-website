@@ -13,6 +13,7 @@ import Footer from './components/footer.jsx'
 import Custom_Notes_Saver from './components/projects/custom_notes_saver.jsx'
 import E_Commerce from './components/projects/E_Commerce.jsx'
 import Portfolio_Website from './components/projects/Portfolio_Website.jsx'
+import Top from './components/MoveToTop.jsx'
 
 const router = createBrowserRouter([
   {

@@ -7,6 +7,7 @@ import linkedin_logo from '../assets/linkedIn_logo.png'
 import github_logo from '../assets/github_logo.jpg'
 import email_logo from '../assets/email_logo.jpg'
 import { faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+import MoveToTop from './MoveToTop';
 
 const Contact = () => {
     const [loading, setLoading] = useState(false)
@@ -67,7 +68,7 @@ const Contact = () => {
     }
 
     return (
-        <div className='px-10 py-20 overflow-hidden bg-[linear-gradient(135deg,#080D1F_0%,#101A35_35%,#172554_65%,#24164F_100%)]'>
+        <div className='px-10 pb-10 pt-20 overflow-hidden bg-[linear-gradient(135deg,#080D1F_0%,#101A35_35%,#172554_65%,#24164F_100%)]'>
             <motion.div initial={{opacity: 0, y: -200, scale: 0.4}} whileInView={{opacity: 1, y: 0, scale: 1}} transition={{duration: 2}} viewport={{ once: true, amount: 0.8}}
             className='flex flex-col justify-center items-center py-30 '>
                 <h1 className='text-[50px] font-bold bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2] bg-clip-text text-transparent'>CONTACT ME</h1>
@@ -270,6 +271,8 @@ const Contact = () => {
                 <h2 className='text-[35px] font-bold text-[#a5b0be]'>Thanks for stopping by.</h2>
                 <h3 className='text-[20px] text-[#8099c1] font-bold'>Let's create something great together</h3>
             </motion.div>
+
+            <MoveToTop />
         </div>
     )
 }

@@ -17,6 +17,8 @@ import certficate_img from '../assets/certificate_img.png'
 import { faEye, faArrowRight, faRocket } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
 
+import MoveToTop from './MoveToTop'
+
 const Internship = () => {
     return (
         <div className='p-10 overflow-hidden bg-[linear-gradient(135deg,#080D1F_0%,#101A35_35%,#172554_65%,#24164F_100%)]'>
@@ -179,7 +181,7 @@ const Internship = () => {
             </div>
 
 
-            <div className='flex gap-10 items-center mt-20 pt-20 py-10 mb-30'>
+            <div className='flex gap-10 items-center mt-20 pt-20 py-10'>
 
                 <motion.div initial={{opacity: 0, x: -200, y: 100, scale: 0.5}} whileInView={{opacity: 1, x: 0, y: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.7}}
                 className='rounded-2xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5 w-full'>
@@ -227,6 +229,7 @@ const Internship = () => {
                 </motion.div>
             </div>
 
+            <MoveToTop />
         </div>
     )
 }

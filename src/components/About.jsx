@@ -15,10 +15,11 @@ import { faBriefcase } from '@fortawesome/free-solid-svg-icons'
 import { faCalendarDays } from '@fortawesome/free-solid-svg-icons'
 
 import { motion } from 'framer-motion'
+import MoveToTop from './MoveToTop'
 
 const about = () => {
     return (
-        <div className='px-10 py-20 overflow-hidden bg-[linear-gradient(135deg,#080D1F_0%,#101A35_35%,#172554_65%,#24164F_100%)]'>
+        <div className='px-10 pt-20 pb-10 overflow-hidden bg-[linear-gradient(135deg,#080D1F_0%,#101A35_35%,#172554_65%,#24164F_100%)]'>
             <motion.div initial={{opacity: 0, y: -200, scale: 0.4}} whileInView={{opacity: 1, y: 0, scale: 1}} transition={{duration: 2}} viewport={{ once: true, amount: 0.8}}
             className='flex flex-col justify-center items-center py-30 '>
                 <h1 className='text-[40px] font-bold bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2] bg-clip-text text-transparent'>GET TO KNOW ME BETTER</h1>
@@ -119,6 +120,8 @@ const about = () => {
                     
                 </motion.div>
             </div>
+
+            <MoveToTop />
         </div>
     )
 }
