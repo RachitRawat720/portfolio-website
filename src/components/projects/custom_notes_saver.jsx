@@ -8,11 +8,12 @@ import ss1 from '../../assets/custom notes saver/ss1.png'
 import ss2 from '../../assets/custom notes saver/ss2.png'
 import ss3 from '../../assets/custom notes saver/ss3.png'
 import ss4 from '../../assets/custom notes saver/ss4.png'
+import MoveToTop from '../MoveToTop'
 
 
 const custom_notes_saver = () => {
     return (
-        <div className='px-10 overflow-hidden py-8 gap-5 bg-[linear-gradient(135deg,#080D1F_0%,#101A35_35%,#172554_65%,#24164F_100%)] pb-40'>
+        <div className='px-10 overflow-hidden py-8 gap-5 bg-[linear-gradient(135deg,#080D1F_0%,#101A35_35%,#172554_65%,#24164F_100%)] pb-10'>
             
             <motion.div initial={{opacity: 0, x: -500, y: -100, scale: 0.3}} whileInView={{opacity: 1, x: 0, y: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true}}
             className='flex flex-col ml-40 pt-20 pb-40'>
@@ -150,7 +151,7 @@ const custom_notes_saver = () => {
                 </motion.div>
             </div>
 
-            <div className='grid grid-cols-3 gap-10 mt-50'>
+            <div className='grid grid-cols-3 gap-10 mt-50 pb-20'>
 
                 <motion.div initial={{opacity: 0, x: -100, scale: 0.5}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.8}}
                 className='rounded-xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5'>
@@ -271,8 +272,10 @@ const custom_notes_saver = () => {
                 </motion.div>
             </div>
             
-            <Link to = '/projects' className='mt-15 w-fit border-2 border-white text-white hover:text-black hover:bg-white transition-colors duration-200 rounded-4xl flex gap-1 px-2 py-1 justify-center items-center text-[12px] hover:cursor-pointer font-semibold'><FontAwesomeIcon icon={faArrowLeft} />Back to Projects</Link>
-            
+            <div className='flex gap-5 items-center justify-center'>
+                <Link to = '/projects' className='mt-15 w-fit border-2 border-white text-white hover:text-black hover:bg-white transition-colors duration-200 rounded-4xl flex gap-1 px-4 py-2 justify-center items-center text-[15px] hover:cursor-pointer font-semibold'><FontAwesomeIcon icon={faArrowLeft} />Back to Projects</Link>
+                <MoveToTop />
+            </div>
         </div>
     )
 }
