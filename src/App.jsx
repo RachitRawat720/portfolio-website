@@ -14,6 +14,7 @@ import Custom_Notes_Saver from './components/projects/custom_notes_saver.jsx'
 import E_Commerce from './components/projects/E_Commerce.jsx'
 import Portfolio_Website from './components/projects/Portfolio_Website.jsx'
 import Top from './components/MoveToTop.jsx'
+import Menu from './components/Menu.jsx'
 
 const router = createBrowserRouter([
   {
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
   {
     path: "/projects/portfolio-website",
     element: <div><ScrollToTop /><Navbar /><Portfolio_Website /><Footer /></div>
+  },
+  {
+    path: "/menu",
+    element: <div><Menu /></div>
   }
 ])
 

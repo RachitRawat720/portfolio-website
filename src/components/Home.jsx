@@ -16,9 +16,9 @@ import MoveToTop from './MoveToTop';
 
 const Home = () => {
     return (
-        <div className='flex flex-col relative px-10 overflow-hidden py-8 gap-5 bg-[linear-gradient(135deg,#080D1F_0%,#101A35_35%,#172554_65%,#24164F_100%)] pb-10'>
+        <div className='flex flex-col px-10 overflow-hidden py-8 gap-5 bg-[linear-gradient(135deg,#080D1F_0%,#101A35_35%,#172554_65%,#24164F_100%)] pb-10'>
 
-            <div className='flex'>
+            <div className='flex gap-10'>
                 <motion.div initial={{opacity: 0, x: -300, scale: 0.3}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{ once: true}}
                 className='w-1/2'>
                     <div initial={{opacity: 0, x: -300, scale: 0.3}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{ once: true}}
@@ -60,22 +60,22 @@ const Home = () => {
                 </motion.div>
 
                 <motion.div initial={{opacity: 0, x: 400, scale: 0.3}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{ once: true}}
-                className='w-1/2'>
+                className='w-1/2 relative'>
                     <img src={profile_pic} className='mt-20 rounded-4xl w-full h-auto mask-[radial-gradient(ellipse_at_center,black_55%,transparent_100%)]'/>
 
-                    <div className='absolute h-20 w-20 top-34 left-175 overflow-hidden rounded-lg transition-transform duration-500 hover:rotate-180'>
+                    <div className='absolute h-[12%] w-[12%] top-[18%] left-[10%] overflow-hidden rounded-lg transition-transform duration-500 hover:rotate-180'>
                         <img src={react_img} alt="" className='h-full w-full'/>
                     </div>
 
-                    <div className='absolute h-20 w-20 top-80 left-165 overflow-hidden rounded-lg transition-transform duration-500 hover:rotate-180'>
+                    <div className='absolute h-[12%] w-[12%] top-[24%] left-[80%] overflow-hidden rounded-lg transition-transform duration-500 hover:rotate-180'>
                         <img src={node_img} alt="" className='h-full w-full'/>
                     </div>
 
-                    <div className='absolute h-20 w-20 top-45 left-275 overflow-hidden rounded-lg transition-transform duration-500 hover:rotate-180'>
+                    <div className='absolute h-[12%] w-[12%] top-[55%] left-[5%] overflow-hidden rounded-lg transition-transform duration-500 hover:rotate-180'>
                         <img src={express_img} alt="" className='h-full w-full'/>
                     </div>
 
-                    <div className='absolute h-20 w-20 top-95 left-275 overflow-hidden rounded-lg transition-transform duration-500 hover:rotate-180'>
+                    <div className='absolute h-[12%] w-[12%] top-[60%] left-[80%] overflow-hidden rounded-lg transition-transform duration-500 hover:rotate-180'>
                         <img src={mongoDB_img} alt="" className='h-full w-full'/>
                     </div>
                 </motion.div>
