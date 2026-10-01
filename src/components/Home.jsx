@@ -1,4 +1,5 @@
 import React from 'react'
+import { useEffect, useState } from 'react';
 import profile_pic from '../assets/profile_pic.png'
 import hi from '../assets/hi_img.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -15,13 +16,69 @@ import { motion } from 'framer-motion'
 import MoveToTop from './MoveToTop';
 
 const Home = () => {
+
+    const [screenSize, setScreenSize] = useState(() => {
+        if(window.innerWidth < 640) return 'extraSmall'
+        if(window.innerWidth < 768) return 'small'
+        if(window.innerWidth < 1024) return 'medium'
+        if(window.innerWidth < 1280) return 'large'
+        return 'extraLarge'
+    })
+
+    useEffect(() => {
+        const handleResize = () => {
+            if(window.innerWidth < 640){
+                setScreenSize('extraSmall')
+            }
+            else if(window.innerWidth < 768){
+                setScreenSize('small')
+            }
+            else if(window.innerWidth < 1024){
+                setScreenSize('medium')
+            }
+            else if(window.innerWidth < 1280){
+                setScreenSize('large')
+            }
+            else{
+                setScreenSize('extraLarge')
+            }
+        }
+
+        window.addEventListener('resize', handleResize)
+
+        return () => window.removeEventListener('resize', handleResize)
+    }, [])
+
     return (
         <div className='flex flex-col px-7 xs:px-10 sm:px-15 md:px-20 overflow-hidden py-8 gap-5 bg-[linear-gradient(135deg,#080D1F_0%,#101A35_35%,#172554_65%,#24164F_100%)] pb-10'>
 
             <div className='flex flex-col gap-8 xs:gap-10 md:gap-15 lg:flex-row-reverse lg:gap-20 lg:mt-10'>
 
-                <motion.div initial={{opacity: 0, x: 400, scale: 0.3}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{ once: true}}
-                className='flex justify-center items-start lg:items-center lg:w-[50%]'>
+                <motion.div
+                    initial = {{
+                        opacity: 0,
+                        x:  screenSize === 'extraLarge'? 200 :
+                            screenSize === 'large'? 200 :"",
+                            
+                        scale: 0.3
+                    }}
+                    whileInView = {{
+                        opacity: 1,
+                        x: 0,
+                        scale: 1
+                    }}
+                    transition  = {{
+                        duration: 2,
+                        ease: 'easeInOut'
+                    }}
+                    viewport={{ 
+                        once: true,
+                        amount: 
+                            screenSize === 'medium'? 0.8 : 
+                            screenSize === 'small'? 0.8 :
+                            screenSize === 'extraSmall'? 0.8 : ""
+                    }}
+                    className='flex justify-center items-start lg:items-center lg:w-[50%]'>
                     <div className='flex items-center justify-center w-[90%] sm:w-[80%] lg:w-full relative xs:mt-8 sm:mt-12 md:mt-15 lg:mt-0'>
                         <img src={profile_pic} className='rounded-4xl w-full mid:w-full h-auto mask-[radial-gradient(ellipse_at_center,black_55%,transparent_100%)]'/>
 
@@ -43,8 +100,31 @@ const Home = () => {
                     </div>
                 </motion.div>
 
-                <motion.div initial={{opacity: 0, x: -300, scale: 0.3}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{ once: true}}
-                className='flex flex-col items-start w-full lg:w-[50%]'>
+                <motion.div 
+                    initial = {{
+                        opacity: 0,
+                        x:  screenSize === 'extraLarge'? -200 :
+                            screenSize === 'large'? -200 :"",
+                        scale: 0.3
+                    }}
+                    whileInView = {{
+                        opacity: 1,
+                        x: 0,
+                        scale: 1
+                    }}
+                    transition  = {{
+                        duration: 2,
+                        ease: 'easeInOut'
+                    }}
+                    viewport={{ 
+                        once: true,
+                        amount: 
+                            screenSize === 'medium'? 0.8 :
+                            screenSize === 'small'? 0.8 :
+                            screenSize === 'extraSmall'? 0.8 : ""
+                    }}
+                    className='flex flex-col items-start w-full lg:w-[50%]'>
+
                     <div initial={{opacity: 0, x: -300, scale: 0.3}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{ once: true}}
                     className='flex jusitfy-center items-center overflow-hidden'>
                             <img src={hi} className='h-3 w-4 sm:h-4 sm:w-6 md:h-4 md:w-6 lg:h-5 lg:w-7 xl:h-7 xl:w-9 rounded-4xl'/>

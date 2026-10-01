@@ -13,8 +13,8 @@ const Navbar = () => {
     
 
     return (
-        <div className='bg-[#303E54] flex justify-between items-center sticky top-0 left-0 z-99 px-15 md:px-3 md:h-20'>
-            <div className='w-18 h-14 sm:w-22 sm:h-18'>
+        <div className='bg-[#303E54] flex justify-between items-center sticky top-0 left-0 z-99 px-8 xs:px-15 md:px-3 h-16 xs:h-18 sm:h-20'>
+            <div className='w-18 h-12 xs:w-18 xs:h-14 sm:w-22 sm:h-18'>
                 <img src={logo} className='w-full h-full'/>
             </div>
 
@@ -35,7 +35,7 @@ const Navbar = () => {
             </div>
 
             <div className='md:hidden' onClick={() => setIsMenuOpen(true)}>
-                <FontAwesomeIcon icon={faBars} className='text-[30px] text-white'/>
+                <FontAwesomeIcon icon={faBars} className='text-[25px] sm:text-[30px] text-white'/>
             </div>
             
             <Menu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
