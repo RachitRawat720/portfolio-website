@@ -53,7 +53,7 @@ const about = () => {
     }, [])
 
     return (
-        <div className='px-10 pt-20 pb-10 overflow-hidden bg-[linear-gradient(135deg,#080D1F_0%,#101A35_35%,#172554_65%,#24164F_100%)]'>
+        <div className='px-10 pt-10 pb-10 overflow-hidden bg-[linear-gradient(135deg,#080D1F_0%,#101A35_35%,#172554_65%,#24164F_100%)]'>
             <motion.div
                 initial = {{
                     opacity: 0,
@@ -77,7 +77,7 @@ const about = () => {
                         screenSize === 'small'? 0.8 :
                         screenSize === 'extraSmall'? 0.8 : ""
                 }}
-                className='flex flex-col justify-center items-center pt-30 pb-35 '>
+                className='flex flex-col justify-center items-center pt-20 pb-25 sm:pt-30 sm:pb-35 md:pt-40 md:pb-50 '>
                 <h1 className='text-[18px] xs:text-[20px] sm:text-[24px] md:text-[30px] lg:text-[36px] xl:text-[40px] font-bold bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2] bg-clip-text text-transparent'>GET TO KNOW ME BETTER</h1>
 
                 <div className='h-1 w-18 xs:w-20 sm:w-30 md:w-40 bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2] rounded-4xl'></div>
@@ -85,47 +85,47 @@ const about = () => {
                 <h3 className='text-[9px] xs:text-[10px] sm:text-[12px] md:text-[15px] lg:text-[18px] xl:text-[20px] font-semibold text-gray-300 mt-4'>Building, learning, and turning ideas into web applications</h3>
             </motion.div>
 
-            <div className='flex justify-center items-center gap-15 p-4'>
-                <motion.div className='flex lg:w-[50%] xl:w-[40%] overflow-hidden p-3 border-[#3B82F6] border-2 rounded-2xl relative'>
+            <div className='flex flex-col lg:flex-row justify-center items-center gap-15'>
+                <motion.div className='flex w-full xs:w-[80%] sm:w-[70%] md:w-[55%] lg:w-[50%] xl:w-[40%] overflow-hidden p-1 sm:p-2 border-[#3B82F6] border-2 rounded-2xl relative'>
                     <img src={img} alt="profile image" className='rounded-2xl w-full h-auto'/>
-                    <motion.div className='absolute top-[80%] lg:left-[24%] xl:left-[20%] bg-[#171a59d2] lg:px-8 py-0 rounded-xl'>
-                        <h3 className='font-semibold text-white lg:text-[16px] xl:text-[20px]'>Rachit Singh Rawat</h3>
-                        <h4 className='text-green-500 lg:text-[12px] xl:text-[16px]'>Available for opportunities</h4>
+                    <motion.div className='flex flex-col items-center justify-center absolute top-[80%] left-[24%] sm:left-[28%] md:left-[26%] lg:left-[24%] xl:left-[20%] bg-[#171a59d2] px-4 lg:px-8 py-0 rounded-xl'>
+                        <h3 className='font-semibold text-white text-[14px] xs:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[20px]'>Rachit Singh Rawat</h3>
+                        <h4 className='text-green-500 text-[11px] xs:text-[11px] md:text-[12px] lg:text-[14px] xl:text-[16px]'>Available for opportunities</h4>
                     </motion.div>
                 </motion.div>
 
-                <motion.div className='w-[60%]'>
+                <motion.div className='w-full sm:w-[90%] lg:w-[50%] xl:w-[60%]'>
                     
-                    <h2 className='lg:text-[25px] xl:text-[28px] font-semibold bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#EC4899] bg-clip-text text-transparent xl:mt-4'><TypingText text='Full Stack Developer (MERN Stack)' /></h2><br />
+                    <h2 className='text-[18px] xs:text-[20px] sm:text-[23px] md:text-[26px] lg:text-[25px] xl:text-[28px] font-bold bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#EC4899] bg-clip-text text-transparent xl:mt-4'><TypingText text='Full Stack Developer (MERN Stack)' /></h2><br />
 
-                    <div className='flex flex-col'>
-                        <p className='text-gray-300 lg:text-[15px] xl:text-[16px]'>
+                    <div className='flex flex-col gap-3'>
+                        <p className='text-gray-300 font-medium text-[12px] xs:text-[13px] sm:text-[14px] md:text-[15px] xl:text-[16px]'>
                         I am a passionate Full Stack Developer, specializing in the MERN Stack. I enjoy building responsive, user-focused web applications and solving real-world problems through technology.
                         </p>
 
-                        <p className='text-gray-300 lg:text-[15px] xl:text-[16px] mt-2'>
+                        <p className='text-gray-300 font-medium text-[12px] xs:text-[13px] sm:text-[14px] md:text-[15px] xl:text-[16px]'>
                             I work with JavaScript, React.js, Node.js, Express.js, REST APIs, MongoDB and MySQL, along with Tailwind CSS, to create clean user interfaces and scalable backend services
                         </p>
 
-                        <p className='text-gray-300 lg:text-[15px] xl:text-[16px] mt-2'>
+                        <p className='text-gray-300 font-medium text-[12px] xs:text-[13px] sm:text-[14px] md:text-[15px] xl:text-[16px]'>
                             I'm always eager to learn new technologies, and take on challenging projects and grow as a developer while contributing to meaningful and impactful solutions.
                         </p>
                     </div>
 
-                    <div className='flex gap-8 lg:mt-6 xl:mt-8'>
-                        <img src={react_img} alt="" className='lg:h-13 lg:w-13 xl:h-15 xl:w-15 rounded-xl'/>
-                        <img src={node_img} alt="" className='lg:h-13 lg:w-13 xl:h-15 xl:w-15 rounded-xl'/>
-                        <img src={express_img} alt="" className='lg:h-13 lg:w-13 xl:h-15 xl:w-15 rounded-xl'/>
-                        <img src={mongoDB_img} alt="" className='lg:h-13 lg:w-13 xl:h-15 xl:w-15 rounded-xl'/>
-                        <img src={JavaScript_img} alt="" className='lg:h-13 lg:w-13 xl:h-15 xl:w-15 rounded-xl'/>
-                        <img src={tailwind_img} alt="" className='lg:h-13 lg:w-13 xl:h-15 xl:w-15 rounded-xl'/>
+                    <div className='flex gap-4 sm:gap-5 md:gap-8 mt-6 xl:mt-8'>
+                        <img src={react_img} alt="" className='h-10 w-10 sm:h-12 sm:w-12 md:h-15 md:w-15 lg:h-13 lg:w-13 xl:h-15 xl:w-15 rounded-xl'/>
+                        <img src={node_img} alt="" className='h-10 w-10 sm:h-12 sm:w-12 md:h-15 md:w-15 lg:h-13 lg:w-13 xl:h-15 xl:w-15 rounded-xl'/>
+                        <img src={express_img} alt="" className='h-10 w-10 sm:h-12 sm:w-12 md:h-15 md:w-15 lg:h-13 lg:w-13 xl:h-15 xl:w-15 rounded-xl'/>
+                        <img src={mongoDB_img} alt="" className='h-10 w-10 sm:h-12 sm:w-12 md:h-15 md:w-15 lg:h-13 lg:w-13 xl:h-15 xl:w-15 rounded-xl'/>
+                        <img src={JavaScript_img} alt="" className='h-10 w-10 sm:h-12 sm:w-12 md:h-15 md:w-15 lg:h-13 lg:w-13 xl:h-15 xl:w-15 rounded-xl'/>
+                        <img src={tailwind_img} alt="" className='h-10 w-10 sm:h-12 sm:w-12 md:h-15 md:w-15 lg:h-13 lg:w-13 xl:h-15 xl:w-15 rounded-xl'/>
                     </div>
                     
                 </motion.div>
             </div>
 
             <div className='flex justify-center items-center mt-40 gap-50 mb-20'>
-                <motion.div initial={{opacity: 0, x: -300, y: 100, scale: 0.3}} whileInView={{opacity: 1, x: 0,y: 0, scale: 1}} transition={{duration: 2}} viewport={{ once: true, amount: 0.4 }} className='border-[#3B82F6] border-2 rounded-lg flex p-5 py-8.5 gap-5 
+                <motion.div className='border-[#3B82F6] border-2 rounded-lg flex p-5 py-8.5 gap-5 
                 bg-[#111B36] w-full h-full'>
                     <div className='flex p-2 h-12 rounded-md justify-center bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2]'>
                         <FontAwesomeIcon icon={faGraduationCap} color='white' size='2x'/>
@@ -148,8 +148,7 @@ const about = () => {
                     </div>
                 </motion.div>
 
-                <motion.div initial={{opacity: 0, x: 300, y: 100, scale: 0.3}} whileInView={{opacity: 1, x: 0, y: 0, scale: 1}} transition={{duration: 2}} viewport={{ once: true, amount: 0.4 }}
-                className='border-[#3B82F6] bg-[#111B36] border-2 rounded-lg flex p-5 gap-5 w-full h-full'>
+                <motion.div className='border-[#3B82F6] bg-[#111B36] border-2 rounded-lg flex p-5 gap-5 w-full h-full'>
                     <div className='flex p-2 h-12 rounded-md justify-center bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2]'>
                         <FontAwesomeIcon icon={faBriefcase} color='white' size='2x'/>
                     </div>
