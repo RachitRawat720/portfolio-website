@@ -53,7 +53,7 @@ const about = () => {
     }, [])
 
     return (
-        <div className='px-10 pt-10 pb-10 overflow-hidden bg-[linear-gradient(135deg,#080D1F_0%,#101A35_35%,#172554_65%,#24164F_100%)]'>
+        <div className='px-5 sm:px-10 pt-10 pb-10 overflow-hidden bg-[linear-gradient(135deg,#080D1F_0%,#101A35_35%,#172554_65%,#24164F_100%)]'>
             <motion.div
                 initial = {{
                     opacity: 0,
@@ -78,11 +78,11 @@ const about = () => {
                         screenSize === 'extraSmall'? 0.8 : ""
                 }}
                 className='flex flex-col justify-center items-center pt-20 pb-25 sm:pt-30 sm:pb-35 md:pt-40 md:pb-50 '>
-                <h1 className='text-[18px] xs:text-[20px] sm:text-[24px] md:text-[30px] lg:text-[36px] xl:text-[40px] font-bold bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2] bg-clip-text text-transparent'>GET TO KNOW ME BETTER</h1>
+                <h1 className='text-[22px] xs:text-[26px] sm:text-[30px] md:text-[36px] lg:text-[40px] xl:text-[50px] font-bold bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2] bg-clip-text text-transparent'>GET TO KNOW ME BETTER</h1>
 
                 <div className='h-1 w-18 xs:w-20 sm:w-30 md:w-40 bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2] rounded-4xl'></div>
 
-                <h3 className='text-[9px] xs:text-[10px] sm:text-[12px] md:text-[15px] lg:text-[18px] xl:text-[20px] font-semibold text-gray-300 mt-4'>Building, learning, and turning ideas into web applications</h3>
+                <h3 className='text-[10px] xs:text-[12px] sm:text-[14px] md:text-[17px] lg:text-[20px] xl:text-[22px] font-semibold text-gray-300 mt-4'>Building, learning, and turning ideas into web applications</h3>
             </motion.div>
 
             <div className='flex flex-col lg:flex-row justify-center items-center gap-15'>
@@ -124,49 +124,48 @@ const about = () => {
                 </motion.div>
             </div>
 
-            <div className='flex justify-center items-center mt-40 gap-50 mb-20'>
-                <motion.div className='border-[#3B82F6] border-2 rounded-lg flex p-5 py-8.5 gap-5 
-                bg-[#111B36] w-full h-full'>
-                    <div className='flex p-2 h-12 rounded-md justify-center bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2]'>
-                        <FontAwesomeIcon icon={faGraduationCap} color='white' size='2x'/>
+            <div className='flex flex-col lg:flex-row justify-center items-center mt-30 xs:mt-30 sm:mt-40 mb-10 gap-25 xs:gap-30 lg:gap-25 xl:gap-60'>
+                <motion.div className='border-[#3B82F6] border-2 rounded-lg flex px-5 py-7 gap-2 xs:gap-5 bg-[#111B36]'>
+                    <div className='flex p-1 md:p-2 h-6 xs:h-7 sm:h-8 md:h-10 xl:h-12 rounded-md justify-center items-start bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2]'>
+                        <FontAwesomeIcon icon={faGraduationCap} color='white' className='text-[16px] xs:text-[18px] sm:text-[20px] md:text-[25px] xl:text-[30px]'/>
                     </div>
 
                     <div className='flex flex-col'>
-                        <h2 className='font-bold text-[26px] text-white'>Education</h2>
+                        <h2 className='font-bold text-[18px] xs:text-[19px] sm:text-[22px] md:text-[24px] xl:text-[26px] text-white'>Education</h2>
                         
-                        <h3 className='text-[#9da8b5] text-[16px] font-bold mt-3'>B.Tech in Computer Science & Engineering</h3>
-                        <h3 className='text-[#9da8b5] text-[16px] font-bold'>(Artificial Intelligence & Machine Learning)</h3>
-                        <p className='text-[#9da8b5] mt-2 text-[12px]'>Govind Ballabh Institute of Engineering & Technology</p>
-                        <p className='text-[#9da8b5] text-[12px]'>Ghurdauri, Pauri Garhwal, Uttarakhand</p>
+                        <h3 className='text-[#9da8b5] text-[12px] xs:text-[14px] sm:text-[15px] xl:text-[16px] font-bold mt-3'>B.Tech in Computer Science & Engineering</h3>
+                        <h3 className='text-[#9da8b5] text-[12px] xs:text-[14px] sm:text-[15px] xl:text-[16px] font-bold'>(Artificial Intelligence & Machine Learning)</h3>
+                        <p className='text-[#9da8b5] text-[11px] mt-2 xs:text-[12px]'>Govind Ballabh Institute of Engineering & Technology</p>
+                        <p className='text-[#9da8b5] text-[11px] xs:text-[12px]'>Ghurdauri, Pauri Garhwal, Uttarakhand</p>
 
-                        <div className='mt-6 flex items-center gap-2'>
-                            <FontAwesomeIcon icon={faCalendarDays} color='white' size='1x'/>
-                            <p className='text-[14px] text-white'>2022 - 2026</p>
-                            <p className='text-[14px] text-white'>|</p>
-                            <p className='text-white text-[14px]'>CGPA - 7.96</p>
+                        <div className='mt-3 sm:mt-6 flex items-center gap-2'>
+                            <FontAwesomeIcon icon={faCalendarDays} color='white' className='text-[18px]'/>
+                            <p className='text-[11px] xs:text-[13px] sm:text-[14px] text-white font-semibold'>2022 - 2026</p>
+                            <p className='text-[11px] xs:text-[13px] sm:text-[14px] text-white font-semibold'>|</p>
+                            <p className='text-[12px] xs:text-[13px] sm:text-[14px] text-white font-semibold'>CGPA - 7.96</p>
                         </div>
                     </div>
                 </motion.div>
 
-                <motion.div className='border-[#3B82F6] bg-[#111B36] border-2 rounded-lg flex p-5 gap-5 w-full h-full'>
-                    <div className='flex p-2 h-12 rounded-md justify-center bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2]'>
-                        <FontAwesomeIcon icon={faBriefcase} color='white' size='2x'/>
+                <motion.div className='border-[#3B82F6] bg-[#111B36] border-2 rounded-lg flex p-5 gap-2 xs:gap-5'>
+                    <div className='flex p-1 md:p-2 h-6 xs:h-7 sm:h-8 md:h-10 xl:h-12 rounded-md justify-center bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2]'>
+                        <FontAwesomeIcon icon={faBriefcase} color='white' className='text-[16px] xs:text-[18px] sm:text-[20px] md:text-[25px] xl:text-[30px]'/>
                     </div>
                         
                     <div className='flex flex-col'>
-                        <h2 className='font-bold text-[26px] text-white'>Internship Experience</h2>
+                        <h2 className='font-bold text-[18px] xs:text-[19px] sm:text-[22px] md:text-[24px] xl:text-[26px] text-white'>Internship Experience</h2>
                             
-                        <h3 className='text-[#9da8b5] text-[16px] font-bold mt-3'>Web Development Intern | Remote</h3>
-                        <h3 className='text-[#9da8b5] text-[14px]'>InAmigos Foundation</h3>
-                        <ul className='mt-2 list-disc marker:text-[#3B82F6] text-[#9da8b5] text-[12px]'>
+                        <h3 className='text-[#9da8b5] xs:text-[14px] text-[16px] font-bold mt-3'>Web Development Intern | Remote</h3>
+                        <h3 className='text-[#9da8b5] xs:text-[14px] text-[14px] font-bold'>InAmigos Foundation</h3>
+                        <ul className='mt-2 list-disc marker:text-[#3B82F6] text-[#9da8b5] text-[11px] xs:text-[13px]'>
                             <li>Developed an NGO awareness webpage using HTML and CSS.</li>
                             <li>Analyzed UI/UX structure and improved content organization.</li>
                             <li>Designed website layouts and interface components using Figma.</li>
                         </ul>
 
-                        <div className='mt-6 flex items-center gap-2'>
-                            <FontAwesomeIcon icon={faCalendarDays} color='white' size='1x'/>
-                            <p className='text-[14px] text-white'>Jul 2026 - Aug 2026</p>
+                        <div className='mt-3 sm:mt-6 flex items-center gap-2'>
+                            <FontAwesomeIcon icon={faCalendarDays} color='white' className='text-[18px]'/>
+                            <p className='text-[12px] xs:text-[13px] sm:text-[14px] text-white font-semibold'>Jul 2026 - Aug 2026</p>
                         </div>
                     </div>
                     
