@@ -125,7 +125,7 @@ const about = () => {
             </div>
 
             <div className='flex flex-col lg:flex-row justify-center items-center mt-30 xs:mt-30 sm:mt-40 mb-10 gap-25 xs:gap-30 lg:gap-25 xl:gap-60'>
-                <motion.div className='border-[#3B82F6] border-2 rounded-lg flex px-5 py-7 gap-2 xs:gap-5 bg-[#111B36]'>
+                <motion.div className='border-[#3B82F6] border-2 rounded-lg flex px-5 xs:px-11 lg:px-5 py-7 gap-2 xs:gap-5 bg-[#111B36]'>
                     <div className='flex p-1 md:p-2 h-6 xs:h-7 sm:h-8 md:h-10 xl:h-12 rounded-md justify-center items-start bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2]'>
                         <FontAwesomeIcon icon={faGraduationCap} color='white' className='text-[16px] xs:text-[18px] sm:text-[20px] md:text-[25px] xl:text-[30px]'/>
                     </div>
@@ -155,8 +155,8 @@ const about = () => {
                     <div className='flex flex-col'>
                         <h2 className='font-bold text-[18px] xs:text-[19px] sm:text-[22px] md:text-[24px] xl:text-[26px] text-white'>Internship Experience</h2>
                             
-                        <h3 className='text-[#9da8b5] xs:text-[14px] text-[16px] font-bold mt-3'>Web Development Intern | Remote</h3>
-                        <h3 className='text-[#9da8b5] xs:text-[14px] text-[14px] font-bold'>InAmigos Foundation</h3>
+                        <h3 className='text-[#9da8b5] text-[12px] xs:text-[14px] sm:text-[16px] font-bold mt-3'>Web Development Intern | Remote</h3>
+                        <h3 className='text-[#9da8b5] text-[12px] xs:text-[14px] font-bold'>InAmigos Foundation</h3>
                         <ul className='mt-2 list-disc marker:text-[#3B82F6] text-[#9da8b5] text-[11px] xs:text-[13px]'>
                             <li>Developed an NGO awareness webpage using HTML and CSS.</li>
                             <li>Analyzed UI/UX structure and improved content organization.</li>
