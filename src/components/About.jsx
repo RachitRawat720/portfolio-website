@@ -58,7 +58,8 @@ const about = () => {
                 initial = {{
                     opacity: 0,
                     y:  screenSize === 'extraLarge'? -200 :
-                        screenSize === 'large'? -200 : "",
+                        screenSize === 'large'? -200 : 
+                        screenSize === 'medium'? -200 : "",
                     scale: 0.3
                 }}
                 whileInView = {{
@@ -84,12 +85,10 @@ const about = () => {
             <div className='flex flex-col lg:flex-row justify-center items-center gap-15'>
                 <motion.div
                     initial = {{
-                    opacity: 0,
-                    x:  screenSize === 'extraLarge'? -200 :
-                        screenSize === 'large'? -200 :
-                        screenSize === 'medium'? -200 :
-                        screenSize === 'small'? -150 : -100,
-                    scale: 0.3
+                        opacity: 0,
+                        x:  screenSize === 'extraLarge'? -200 :
+                            screenSize === 'large'? -200 : "",
+                        scale: 0.3
                     }}
                     whileInView = {{
                         opacity: 1,
@@ -104,7 +103,7 @@ const about = () => {
                         once: true,
                         amount: 0.8
                     }}
-                className='flex w-full xs:w-[80%] sm:w-[70%] md:w-[55%] lg:w-[50%] xl:w-[40%] overflow-hidden p-1 sm:p-2 border-[#3B82F6] border-2 rounded-2xl relative'>
+                className='flex justify-center items-center xs:w-[80%] sm:w-[70%] md:w-[55%] lg:w-[50%] xl:w-[40%] overflow-hidden p-1 sm:p-2 border-[#3B82F6] border-2 rounded-2xl relative'>
                     <img src={img} alt="profile image" className='rounded-2xl w-full h-auto'/>
                     <motion.div className='flex flex-col items-center justify-center absolute top-[80%] left-[24%] sm:left-[28%] md:left-[26%] lg:left-[24%] xl:left-[20%] bg-[#171a59d2] px-4 lg:px-8 py-0 rounded-xl'>
                         <h3 className='font-semibold text-white text-[14px] xs:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[20px]'>Rachit Singh Rawat</h3>
@@ -114,10 +113,10 @@ const about = () => {
 
                 <motion.div
                     initial = {{
-                    opacity: 0,
-                    x:  screenSize === 'extraLarge'? 200 :
-                        screenSize === 'large'? 200 : "",
-                    scale: 0.3
+                        opacity: 0,
+                        x:  screenSize === 'extraLarge'? 200 :
+                            screenSize === 'large'? 200 : "",
+                        scale: 0.3
                     }}
                     whileInView = {{
                         opacity: 1,
@@ -165,10 +164,10 @@ const about = () => {
             <div className='flex flex-col lg:flex-row justify-center items-center mt-30 xs:mt-30 sm:mt-40 mb-10 gap-25 xs:gap-30 lg:gap-25 xl:gap-60'>
                 <motion.div 
                     initial = {{
-                    opacity: 0,
-                    x:  screenSize === 'extraLarge'? -200 :
-                        screenSize === 'large'? -200 : "",
-                    scale: 0.3
+                        opacity: 0,
+                        x:  screenSize === 'extraLarge'? -200 :
+                            screenSize === 'large'? -200 : "",
+                        scale: 0.3
                     }}
                     whileInView = {{
                         opacity: 1,
@@ -208,10 +207,10 @@ const about = () => {
 
                 <motion.div
                     initial = {{
-                    opacity: 0,
-                    x:  screenSize === 'extraLarge'? 200 :
-                        screenSize === 'large'? 200 : "",
-                    scale: 0.3
+                        opacity: 0,
+                        x:  screenSize === 'extraLarge'? 200 :
+                            screenSize === 'large'? 200 : "",
+                        scale: 0.3
                     }}
                     whileInView = {{
                         opacity: 1,
