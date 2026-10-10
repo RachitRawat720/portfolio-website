@@ -79,7 +79,7 @@ const about = () => {
 
                 <div className='h-1 w-18 xs:w-20 sm:w-30 md:w-40 bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2] rounded-4xl'></div>
 
-                <h3 className='text-[10px] xs:text-[12px] sm:text-[14px] md:text-[17px] lg:text-[20px] xl:text-[22px] font-semibold text-gray-300 mt-4'>Building, learning, and turning ideas into web applications</h3>
+                <h3 className='text-[10px] xs:text-[12px] sm:text-[14px] md:text-[17px] lg:text-[19px] xl:text-[22px] font-semibold text-gray-300 mt-4'>Building, learning, and turning ideas into web applications</h3>
             </motion.div>
 
             <div className='flex flex-col lg:flex-row justify-center items-center gap-15'>
