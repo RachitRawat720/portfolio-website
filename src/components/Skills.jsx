@@ -39,7 +39,28 @@ const Skills = () => {
 
     return (
         <div className='pt-20 pb-10 overflow-hidden bg-[linear-gradient(135deg,#080D1F_0%,#101A35_35%,#172554_65%,#24164F_100%)]'>
-            <motion.div initial={{opacity: 0, y:-200, scale: 0.4}} whileInView={{opacity: 1, y: 0, scale: 1}} transition={{ duration: 1}} viewport={{once: true}}
+            <motion.div
+                initial = {{
+                    opacity: 0,
+                    y:  screenSize === 'extraLarge'? -200 : 
+                        screenSize === 'large'? -200 :
+                        screenSize === 'medium'? -200 :
+                        screenSize === 'small'? -200 : -100,
+                    scale: 0.3
+                }}
+                whileInView = {{
+                    opacity: 1,
+                    y: 0,
+                    scale: 1
+                }}
+                transition  = {{
+                    duration: 2,
+                    ease: 'easeInOut'
+                }}
+                viewport={{
+                    once: true
+                }}
+
             className='flex flex-col p-12 justify-center items-center'>
 
                 <h1 className='text-[32px] xs:text-[35px] sm:text-[40px] md:text-[42px] lg:text-[48px] xl:text-[50px] font-bold bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2] bg-clip-text text-transparent'>MY SKILLS</h1>
@@ -49,7 +70,29 @@ const Skills = () => {
                 <h3 className='text-[13px] xs:text-[14px] sm:text-[16px] md:text-[17px] lg:text-[20px] xl:text-[21px] font-semibold text-gray-300 mt-4 md:mt-6'>Technologies I Work With</h3>
             </motion.div>
 
-            <motion.div initial={{opacity: 0, y: -400, scale: 0.5}} whileInView={{opacity: 1, y: 0, scale: 1}} transition={{duration: 2, delay: 1}} viewport={{once: true}}
+            <motion.div 
+                initial = {{
+                    opacity: 0,
+                    y:  screenSize === 'extraLarge'? -400 : 
+                        screenSize === 'large'? -400 :
+                        screenSize === 'medium'? -400 :
+                        screenSize === 'small'? -350 : -300,
+                    scale: 0.3
+                }}
+                whileInView = {{
+                    opacity: 1,
+                    y: 0,
+                    scale: 1,
+                }}
+                transition  = {{
+                    duration: 2,
+                    ease: 'easeInOut',
+                    delay: 0.7
+                }}
+                viewport={{
+                    once: true
+                }}
+
             className='flex justify-center items-center mt-10 sm:mt-20 px-[10%] lg:px-40 xl:px-50'>
 
                 <p className='text-gray-300 text-[11px] xs:text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px]'>
@@ -60,7 +103,28 @@ const Skills = () => {
             </motion.div>
 
             <div className='flex flex-col lg:flex-row gap-20 lg:gap-20 xl:gap-30 items-center justify-center mt-40'>
-                <motion.div initial={{opacity: 0, x: -200, scale: 0.4}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.8}}
+                <motion.div 
+                    initial = {{
+                        opacity: 0,
+                        x:  screenSize === 'extraLarge'? -300 : 
+                            screenSize === 'large'? -200 :
+                            screenSize === 'medium'? -200 :
+                            screenSize === 'small'? -200 : -100,
+                        scale: 0.3
+                    }}
+                    whileInView = {{
+                        opacity: 1,
+                        x: 0,
+                        scale: 1
+                    }}
+                    transition  = {{
+                        duration: 2,
+                        ease: 'easeInOut'
+                    }}
+                    viewport={{
+                        once: true,
+                        amount: 0.9
+                    }}
                 className='rounded-2xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5 w-85 h-55 xs:w-100 xs:h-65'>
                     <div className='flex flex-col items-center justify-start rounded-2xl bg-[#0f1731] p-5 xs:p-10 w-full h-full'>
                         <h1 className='text-[22px] xs:text-[26px] text-[#F8FAFC] font-semibold flex items-center justify-center'>Frontend</h1>
@@ -79,9 +143,29 @@ const Skills = () => {
                     </div>
                 </motion.div>
 
-            
+                <motion.div 
+                    initial = {{
+                        opacity: 0,
+                        x:  screenSize === 'extraLarge'? 300 : 
+                            screenSize === 'large'? 200 :
+                            screenSize === 'medium'? 200 :
+                            screenSize === 'small'? 200 : 100,
+                        scale: 0.3
+                    }}
+                    whileInView = {{
+                        opacity: 1,
+                        x: 0,
+                        scale: 1
+                    }}
+                    transition  = {{
+                        duration: 2,
+                        ease: 'easeInOut'
+                    }}
+                    viewport={{
+                        once: true,
+                        amount: 0.9
+                    }}
 
-                <motion.div initial={{opacity: 0, x: 200, scale: 0.4}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.8}}
                 className='rounded-2xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5 w-85 h-55 xs:w-100 xs:h-65'>
                     <div className='flex flex-col items-center justify-start rounded-2xl bg-[#0f1731] p-5 xs:p-10 w-full h-full'>
                         <h1 className='text-[22px] xs:text-[26px] text-[#F8FAFC] font-semibold flex items-center justify-center'>Backend</h1>
@@ -99,7 +183,28 @@ const Skills = () => {
                 
             
             <div className='flex flex-col lg:flex-row gap-20 lg:gap-20 xl:gap-30 items-center justify-center mt-50'>
-                <motion.div initial={{opacity: 0, x: -200, scale: 0.4}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.8}}
+                <motion.div
+                    initial = {{
+                        opacity: 0,
+                        x:  screenSize === 'extraLarge'? -300 : 
+                            screenSize === 'large'? -200 :
+                            screenSize === 'medium'? -200 :
+                            screenSize === 'small'? -200 : -100,
+                        scale: 0.3
+                    }}
+                    whileInView = {{
+                        opacity: 1,
+                        x: 0,
+                        scale: 1
+                    }}
+                    transition  = {{
+                        duration: 2,
+                        ease: 'easeInOut'
+                    }}
+                    viewport={{
+                        once: true,
+                        amount: 0.9
+                    }}
                 className='rounded-2xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5 w-85 h-55 xs:w-100 xs:h-65'>
                     <div className='flex flex-col items-center justify-start rounded-2xl bg-[#0f1731] p-5 xs:p-10 w-full h-full'>
                         <h1 className='text-[22px] xs:text-[26px] text-[#F8FAFC] font-semibold flex items-center justify-center'>Databases</h1>
@@ -113,7 +218,29 @@ const Skills = () => {
                 </motion.div>
 
 
-                <motion.div initial={{opacity: 0, x: 200, scale: 0.4}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.8}}
+                <motion.div 
+                    initial = {{
+                        opacity: 0,
+                        x:  screenSize === 'extraLarge'? 300 : 
+                            screenSize === 'large'? 200 :
+                            screenSize === 'medium'? 200 :
+                            screenSize === 'small'? 200 : 100,
+                        scale: 0.3
+                    }}
+                    whileInView = {{
+                        opacity: 1,
+                        x: 0,
+                        scale: 1
+                    }}
+                    transition  = {{
+                        duration: 2,
+                        ease: 'easeInOut'
+                    }}
+                    viewport={{
+                        once: true,
+                        amount: 0.9
+                    }}
+
                 className='rounded-2xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5 w-85 h-55 xs:w-100 xs:h-65'>
                     <div className='flex flex-col items-center justify-start rounded-2xl bg-[#0f1731] p-5 xs:p-10 w-full h-full'>
                         <h1 className='text-[22px] xs:text-[26px] text-[#F8FAFC] font-semibold flex items-center justify-center'>Programming Languages</h1>
@@ -154,71 +281,129 @@ const Skills = () => {
                     </div>
                 </motion.div>
             </div>
-                
-            
 
-                
-                
+            <div className='flex flex-col items-center justify-center w-full mt-50'>
+                <motion.div 
+                    initial = {{
+                        opacity: 0,
+                        y: -100,
+                        scale: 0.3
+                    }}
+                    whileInView = {{
+                        opacity: 1,
+                        y: 0,
+                        scale: 1
+                    }}
+                    transition  = {{
+                        duration: 2,
+                        ease: 'easeInOut'
+                    }}
+                    viewport={{
+                        once: true,
+                        amount: 0.9
+                    }}
 
-            <div className='flex flex-col items-center justify-center w-full mt-30'>
-                <motion.div initial={{opacity: 0, y: 200, scale: 0.4}} whileInView={{opacity: 1, y: 0, scale: 1}}
-                transition={{duration: 2}} viewport={{once: true, amount: 0.1}} className='flex flex-col justify-center items-center'>
+                className='flex flex-col justify-center items-center'>
                     <h1 className='text-[24px] xs:text-[26px] sm:text-[30px] md:text-[32px] lg:text-[36px] xl:text-[40px] font-bold bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#EC4899] bg-clip-text text-transparent'>MY PROFICIENCY</h1>
                     <div className='bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#EC4899]  h-1 w-20 sm:w-24 md:w-26 lg:w-28 xl:w-30 rounded-4xl'></div>
                     <h3 className='text-[19px] xs:text-[20px] sm:text-[23px] md:text-[26px] lg:text-[28px] xl:text-[32px] text-gray-300 mt-5'>Skills Levels</h3>
                 </motion.div>
 
-                <div className='flex gap-15 justify-between pt-40 pb-20'>
-                    <motion.div initial={{opacity: 0, x: -200, scale: 0.4}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.5}}
+                <div className='flex flex-col lg:flex-row gap-20 lg:gap-10 xl:gap-15 items-center justify-center sm:justify-between pt-30 lg:pt-40 lg:pb-20 '>
+                    <motion.div 
+                        initial = {{
+                            opacity: 0,
+                            x:  screenSize === 'extraLarge'? -200 : 
+                                screenSize === 'large'? -200 :
+                                screenSize === 'medium'? -200 :
+                                screenSize === 'small'? -200 : -100,
+                            scale: 0.3
+                        }}
+                        whileInView = {{
+                            opacity: 1,
+                            x: 0,
+                            scale: 1
+                        }}
+                        transition  = {{
+                            duration: 2,
+                            ease: 'easeInOut'
+                        }}
+                        viewport={{
+                            once: true,
+                            amount: 0.9
+                        }}
+
                     className='flex flex-col gap-8'>
                         <div className='flex gap-15 hover:scale-115'>
-                            <p className='text-[20px] text-[#E2E8F0] font-medium'>React.js</p>
-                            <div className='w-100 h-7 rounded-full bg-[#1E293B] border border-[#334155] overflow-hidden'>
+                            <p className='text-[16px] xs:text-[18px] sm:text-[20px] text-[#E2E8F0] font-medium'>React.js</p>
+                            <div className='h-5 w-50 xs:h-6 sm:h-7 xs:w-65 sm:w-85 xl:w-100 rounded-full bg-[#1E293B] border border-[#334155] overflow-hidden'>
                                 <div className='w-[85%] h-full rounded-l-2xl bg-linear-to-r from-[#3B82F6] via-[#6366F1] to-[#8B5CF6] shadow-[0_0_12px_#6366F180]'></div>
                             </div>
                         </div>
 
                         <div className='flex gap-9 hover:scale-115'>
-                            <p className='text-[20px] text-[#E2E8F0] font-medium'>JavaScript</p>
-                            <div className='w-100 h-7 rounded-full bg-[#1E293B] border border-[#334155] overflow-hidden'>
+                            <p className='xs:text-[18px] sm:text-[20px] text-[#E2E8F0] font-medium'>JavaScript</p>
+                            <div className='h-5 w-50 xs:h-6 sm:h-7 xs:w-65 sm:w-85 xl:w-100 rounded-full bg-[#1E293B] border border-[#334155] overflow-hidden'>
                                 <div className='w-[90%] h-full rounded-l-2xl bg-linear-to-r from-[#3B82F6] via-[#6366F1] to-[#8B5CF6] shadow-[0_0_12px_#6366F180]'></div>
                             </div>
                         </div>
 
                         <div className='flex gap-4 hover:scale-115'>
-                            <p className='text-[20px] text-[#E2E8F0] font-medium'>Tailwind CSS</p>
-                            <div className='w-100 h-7 rounded-full bg-[#1E293B] border border-[#334155] overflow-hidden'>
+                            <p className='xs:text-[18px] sm:text-[20px] text-[#E2E8F0] font-medium'>Tailwind CSS</p>
+                            <div className='h-5 w-50 xs:h-6 sm:h-7 xs:w-65 sm:w-85 xl:w-100 rounded-full bg-[#1E293B] border border-[#334155] overflow-hidden'>
                                 <div className='w-[80%] h-full rounded-l-2xl bg-linear-to-r from-[#3B82F6] via-[#6366F1] to-[#8B5CF6] shadow-[0_0_12px_#6366F180]'></div>
                             </div>
                         </div>
 
                         <div className='flex gap-14 hover:scale-115'>
-                            <p className='text-[20px] text-[#E2E8F0] font-medium'>Node.js</p>
-                            <div className='w-100 h-7 rounded-full bg-[#1E293B] border border-[#334155] overflow-hidden'>
+                            <p className='xs:text-[18px] sm:text-[20px] text-[#E2E8F0] font-medium'>Node.js</p>
+                            <div className='h-5 w-50 xs:h-6 sm:h-7 xs:w-65 sm:w-85 xl:w-100 rounded-full bg-[#1E293B] border border-[#334155] overflow-hidden'>
                                 <div className='w-[80%] h-full rounded-l-2xl bg-linear-to-r from-[#3B82F6] via-[#6366F1] to-[#8B5CF6] shadow-[0_0_12px_#6366F180]'></div>
                             </div>
                         </div>
                     </motion.div>
 
-                    <motion.div initial={{opacity: 0, x: 200, scale: 0.4}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.8}}
+                    <motion.div 
+                        initial = {{
+                            opacity: 0,
+                            x:  screenSize === 'extraLarge'? 200 : 
+                                screenSize === 'large'? 200 :
+                                screenSize === 'medium'? 200 :
+                                screenSize === 'small'? 200 : 100,
+                            scale: 0.3
+                        }}
+                        whileInView = {{
+                            opacity: 1,
+                            x: 0,
+                            scale: 1
+                        }}
+                        transition  = {{
+                            duration: 2,
+                            ease: 'easeInOut'
+                        }}
+                        viewport={{
+                            once: true,
+                            amount: 0.9
+                        }}
+                        
                     className='flex flex-col gap-8 mb-20'>
                         <div className='flex gap-8 hover:scale-115'>
-                            <p className='text-[20px] text-[#E2E8F0] font-medium'>Express.js</p>
-                            <div className='w-100 h-7 rounded-full bg-[#1E293B] border border-[#334155] overflow-hidden'>
+                            <p className='xs:text-[18px] sm:text-[20px] text-[#E2E8F0] font-medium'>Express.js</p>
+                            <div className='h-5 w-50 xs:h-6 sm:h-7 xs:w-65 sm:w-85 xl:w-100 rounded-full bg-[#1E293B] border border-[#334155] overflow-hidden'>
                                 <div className='w-[85%] h-full rounded-l-2xl bg-linear-to-r from-[#3B82F6] via-[#6366F1] to-[#8B5CF6] shadow-[0_0_12px_#6366F180]'></div>
                             </div>
                         </div>
 
                         <div className='flex gap-7 hover:scale-115'>
-                            <p className='text-[20px] text-[#E2E8F0] font-medium'>MongoDB</p>
-                            <div className='w-100 h-7 rounded-full bg-[#1E293B] border border-[#334155] overflow-hidden'>
+                            <p className='xs:text-[18px] sm:text-[20px] text-[#E2E8F0] font-medium'>MongoDB</p>
+                            <div className='h-5 w-50 xs:h-6 sm:h-7 xs:w-65 sm:w-85 xl:w-100 rounded-full bg-[#1E293B] border border-[#334155] overflow-hidden'>
                                 <div className='w-[70%] h-full rounded-l-2xl bg-linear-to-r from-[#3B82F6] via-[#6366F1] to-[#8B5CF6] shadow-[0_0_12px_#6366F180]'></div>
                             </div>
                         </div>
 
                         <div className='flex gap-13 hover:scale-115'>
-                            <p className='text-[20px] text-[#E2E8F0] font-medium'>MySQL</p>
-                            <div className='w-100 h-7 rounded-full bg-[#1E293B] border border-[#334155] overflow-hidden'>
+                            <p className='xs:text-[18px] sm:text-[20px] text-[#E2E8F0] font-medium'>MySQL</p>
+                            <div className='h-5 w-50 xs:h-6 sm:h-7 xs:w-65 sm:w-85 xl:w-100 rounded-full bg-[#1E293B] border border-[#334155] overflow-hidden'>
                                 <div className='w-[60%] h-full rounded-l-2xl bg-linear-to-r from-[#3B82F6] via-[#6366F1] to-[#8B5CF6] shadow-[0_0_12px_#6366F180]'></div>
                             </div>
                         </div>
