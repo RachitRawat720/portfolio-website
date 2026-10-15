@@ -24,9 +24,12 @@ const Internship = () => {
         <div className='p-10 overflow-hidden bg-[linear-gradient(135deg,#080D1F_0%,#101A35_35%,#172554_65%,#24164F_100%)]'>
             <motion.div initial={{opacity: 0, y: -200, scale: 0.4}} whileInView={{opacity: 1, y: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true}}
             className='flex flex-col justify-center items-center py-25'>
-                <h1 className='text-[50px] font-bold bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2] bg-clip-text text-transparent'>INTERNSHIP</h1>
-                <div className='h-1 w-40 bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2] rounded-4xl'></div>
-                <h3 className='mt-10 text-[18px] text-gray-300'>Turning knowledge into real-world impact.</h3>
+
+                <h1 className='text-[32px] xs:text-[36px] sm:text-[40px] md:text-[42px] lg:text-[46px] xl:text-[50px] font-bold bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2] bg-clip-text text-transparent'>INTERNSHIP</h1>
+
+                <div className='h-1 w-15 xs:w-20 md:w-25 lg:w-30 xl:w-35 bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2] rounded-4xl'></div>
+
+                <h3 className='mt-6 md:mt-8 text-[12px] xs:text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[18px] text-gray-300 font-semibold'>Turning knowledge into real-world impact.</h3>
             </motion.div>
 
             <motion.div initial={{opacity: 0, y: 100, scale: 0.4}} whileInView={{opacity: 1, y: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.9}}
