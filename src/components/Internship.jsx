@@ -21,7 +21,7 @@ import MoveToTop from './MoveToTop'
 
 const Internship = () => {
     return (
-        <div className='p-10 overflow-hidden bg-[linear-gradient(135deg,#080D1F_0%,#101A35_35%,#172554_65%,#24164F_100%)]'>
+        <div className='p-6 sm:p-10 overflow-hidden bg-[linear-gradient(135deg,#080D1F_0%,#101A35_35%,#172554_65%,#24164F_100%)]'>
             <motion.div initial={{opacity: 0, y: -200, scale: 0.4}} whileInView={{opacity: 1, y: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true}}
             className='flex flex-col justify-center items-center py-25'>
 
@@ -34,10 +34,10 @@ const Internship = () => {
 
             <motion.div initial={{opacity: 0, y: 100, scale: 0.4}} whileInView={{opacity: 1, y: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.9}}
             className='rounded-2xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5 mt-10'>
-                <div className='flex rounded-2xl bg-[#0f1731] p-10'>
-                    <div className='flex gap-5 w-[50%] pr-10'>
+                <div className='flex flex-col gap-5 sm:gap-8 lg:gap-0 lg:flex-row rounded-2xl bg-[#0f1731] p-5 sm:p-10'>
+                    <div className='flex flex-col sm:flex-row gap-5 lg:w-[50%] pr-3 sm:pr-10'>
                         <div>
-                            <div className='h-30 w-24 overflow-hidden rounded-lg'>
+                            <div className='h-23 w-19 xs:h-25 xs:w-21 md:h-25 md:w-21 xl:h-30 xl:w-24 overflow-hidden rounded-lg'>
                                 <img src={inAmigos_logo} alt="" className='h-full w-full'/>
                             </div>
                         </div>
@@ -45,22 +45,22 @@ const Internship = () => {
                         <div className='flex flex-col'>
                             <div className='flex justify-center items-center gap-1 bg-blue-300/50 rounded-xl px-2 py-1 w-fit'>
                                 <FontAwesomeIcon icon={faLocationDot} color='white' />
-                                <p className='text-white text-[15px]'>Remote</p>
+                                <p className='text-white text-[12px] sm:text-[15px]'>Remote</p>
                             </div>
 
-                            <h2 className='text-[26px] text-white font-bold mt-4'>Web Development Intern</h2>
+                            <h2 className='text-[19px] xs:text-[20px] sm:text-[21px] md:text-[22px] xl:text-[26px] text-white font-bold mt-4'>Web Development Intern</h2>
 
-                            <h3 className='text-[23px] text-[#a3aab4] font-bold'>InAmigos Foundation (IAF)</h3>
+                            <h3 className='text-[16px] xs:text-[17px] sm:text-[18px] md:text-[19px] xl:text-[23px] text-[#a3aab4] font-bold'>InAmigos Foundation (IAF)</h3>
 
                             <div className='mt-3 flex items-center gap-2'>
-                                <FontAwesomeIcon icon={faCalendar} color='#8B5CF6' size='2x'/>
-                                <p className='text-[18px] text-[#8e9bad]'>Jul 2026 - Aug 2026</p>
+                                <FontAwesomeIcon icon={faCalendar} color='#8B5CF6' className='text-[18px] xs:text-[20px] sm:text-[22px] md:text-[24px] xl:text-[28px]'/>
+                                <p className='text-[13px] xs:text-[14px] sm:text-[15px] md:text-[16px] xl:text-[18px] text-[#8e9bad] font-semibold'>Jul 2026 - Aug 2026</p>
                             </div>
 
-                            <div className='h-0.5 w-full mt-5 bg-[#2d4f97] rounded-full'></div>
+                            <div className='h-0.5 w-full mt-5 bg-[#2d4f97] rounded-full hidden lg:block'></div>
 
-                            <div className='pr-1 py-6'>
-                                <p className='text-[16px] text-[#8e9bad]'>
+                            <div className='pr-1 py-3 sm:py-6'>
+                                <p className='text-[13px] sm:text-[14px] md:text-[15px] xl:text-[16px] text-[#8e9bad]'>
                                     Worked on web development and UI/UX improvement for an NGO focused website, contributing a better online presence and user experience for the organization
                                 </p>
                             </div>
@@ -68,54 +68,54 @@ const Internship = () => {
                         </div>
                     </div>
 
-                    <div className='self stretch w-0.5 rounded-full bg-[#2d4f97]'></div>
+                    <div className="h-0.5 w-full lg:h-auto lg:w-0.5 lg:self-stretch shrink-0 rounded-full bg-[#2d4f97]"></div>
 
-                    <div className='flex flex-col w-[50%] pl-10 gap-5'>
+                    <div className='flex flex-col lg:w-[50%] pl-2 sm:pl-10 gap-5'>
                         <div>
-                            <h2 className='text-[24px] font-semibold bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2] bg-clip-text text-transparent'>Key Contributions</h2>
+                            <h2 className='text-[18px] xs:text-[19px] sm:text-[21px] md:text-[22px] xl:text-[24px] font-semibold bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2] bg-clip-text text-transparent'>Key Contributions</h2>
 
                             <div className='flex mt-4 gap-3'>
-                                <FontAwesomeIcon icon={faCircleCheck} color='#3239b9d2' size='2x'/>
-                                <p className='text-[16px] text-[#8e9bad]'>
+                                <FontAwesomeIcon icon={faCircleCheck} color='#3239b9d2' className='text-[19px] xs:text-[21px] sm:text-[24px] md:text-[26px] xl:text-[30px]'/>
+                                <p className='text-[12px] xs:text-[13px] sm:text-[14px] xl:text-[16px] text-[#8e9bad]'>
                                     Developed an NGO awareness webpage using HTML and CSS to showcase organization mission and initiatives
                                 </p>
                             </div>
 
-                            <div className='flex mt-4 gap-3'>
-                                <FontAwesomeIcon icon={faCircleCheck} color='#3239b9d2' size='2x'/>
-                                <p className='text-[16px] text-[#8e9bad]'>
+                            <div className='flex mt-2 xl:mt-4 gap-3'>
+                                <FontAwesomeIcon icon={faCircleCheck} color='#3239b9d2' className='text-[19px] xs:text-[21px] sm:text-[24px] md:text-[26px] xl:text-[30px]'/>
+                                <p className='text-[12px] xs:text-[13px] sm:text-[14px] xl:text-[16px] text-[#8e9bad]'>
                                     Analysed the existing website and provided suggestions for the improving UI/UX, content organization and layout.
                                 </p>
                             </div>
 
-                            <div className='flex mt-4 gap-3'>
-                                <FontAwesomeIcon icon={faCircleCheck} color='#3239b9d2' size='2x'/>
-                                <p className='text-[16px] text-[#8e9bad]'>
+                            <div className='flex mt-2 xl:mt-4 gap-3'>
+                                <FontAwesomeIcon icon={faCircleCheck} color='#3239b9d2' className='text-[19px] xs:text-[21px] sm:text-[24px] md:text-[26px] xl:text-[30px]'/>
+                                <p className='text-[12px] xs:text-[13px] sm:text-[14px] xl:text-[16px] text-[#8e9bad]'>
                                     Design website feature concepts and interface layout using Figma
                                 </p>
                             </div>
                         </div>
 
                         <div className='w-full gap'>
-                            <h2 className='text-[20px] font-semibold bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2] bg-clip-text text-transparent'>Tech Stack</h2>
+                            <h2 className='text-[17px] xs:text-[18px] sm:text-[19px] md:text-[20px] font-semibold bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2] bg-clip-text text-transparent'>Tech Stack</h2>
 
-                            <div className='flex gap-8 mt-3'>
-                                <div className='flex gap-3 border-[#3374b0] border-2
-                                bg-[#4a81b4]/50 py-1 px-4 rounded-xl'>
-                                    <div className='h-6 w-5 overflow-hidden rounded-sm '><img src={html_logo} alt="" className='h-full w-full'/></div>
-                                    <p className='text-white'>HTML</p>
+                            <div className='flex gap-4 sm:gap-8 mt-3'>
+                                <div className='flex justify-center items-center gap-3 border-[#3374b0] border-2
+                                bg-[#4a81b4]/50 py-1 px-2 sm:px-4 rounded-xl'>
+                                    <div className='h-4 w-3 xs:h-5 xs:w-4 sm:h-6 sm:w-5 overflow-hidden rounded-sm '><img src={html_logo} alt="" className='h-full w-full'/></div>
+                                    <p className='text-white text-[12px] xs:text-[13px] sm:text-[16px]'>HTML</p>
                                 </div>
 
-                                <div className='flex gap-3 border-[#3374b0] border-2
-                                bg-[#4a81b4]/50 py-1 px-4 rounded-xl'>
-                                    <div className='h-6 w-5 overflow-hidden rounded-sm'><img src={css_logo} alt=""  className='h-full w-full'/></div>
-                                    <p className='text-white'>CSS</p>
+                                <div className='flex justify-center items-center  gap-3 border-[#3374b0] border-2
+                                bg-[#4a81b4]/50 py-1 px-2 sm:px-4 rounded-xl'>
+                                    <div className='h-4 w-3 xs:h-5 xs:w-4 sm:h-6 sm:w-5 overflow-hidden rounded-sm'><img src={css_logo} alt=""  className='h-full w-full'/></div>
+                                    <p className='text-white text-[12px] xs:text-[13px] sm:text-[16px]'>CSS</p>
                                 </div>
 
-                                <div className='flex gap-3 border-[#3374b0] border-2
-                                bg-[#4a81b4]/50 py-1 px-4 rounded-xl'>
-                                    <div className='h-6 w-5 overflow-hidden rounded-sm'><img src={figma_logo} alt=""  className='h-full w-full'/></div>
-                                    <p className='text-white'>Figma</p>
+                                <div className='flex justify-center items-center  gap-3 border-[#3374b0] border-2
+                                bg-[#4a81b4]/50 py-1 px-2 sm:px-4 rounded-xl'>
+                                    <div className='h-4 w-3 xs:h-5 xs:w-4 sm:h-6 sm:w-5 overflow-hidden rounded-sm'><img src={figma_logo} alt=""  className='h-full w-full'/></div>
+                                    <p className='text-white text-[12px] xs:text-[13px] sm:text-[16px]'>Figma</p>
                                 </div>
                             </div>
                         </div>
