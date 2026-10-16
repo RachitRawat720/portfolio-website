@@ -127,21 +127,21 @@ const Internship = () => {
             <motion.div initial={{opacity: 0, x: -200}} whileInView={{opacity: 1, x: 0}} transition={{duration: 2}} viewport={{once: true}}
             className='flex gap-4 mt-35 mb-5'>
                 <div className='w-1 bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600'></div>
-                <h3 className='text-white text-[35px] font-bold'>What I learned</h3>
+                <h3 className='text-white text-[24px] xs:text-[26px] sm:text-[28px] md:text-[30px] lg:text-[34px] xl:text-[36px] font-bold'>What I learned</h3>
             </motion.div>
 
-            <div className='flex gap-10 items-center'>
+            <div className='flex md:gap-5 lg:gap-10 items-center'>
                 <motion.div initial={{opacity: 0, x: -100, scale: 0.5}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.8}}
                 className='rounded-2xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5 mt-10 w-[33%]'>
-                    <div className='flex flex-col px-5 py-8 rounded-2xl bg-[#0f1731]'>
+                    <div className='flex flex-col gap-5 p-5 xl:p-8 rounded-2xl bg-[#0f1731]'>
                         <div className='flex gap-5 items-center'>
-                            <div className='p-2 rounded-[50%] border-[#3374b0] border-2
-                                bg-blue-300'><FontAwesomeIcon icon={faUserGroup} size='2x' color='#9333ea'/></div>
-                            <p className='text-[24px] font-semibold text-white'>Real Users</p>
+                            <div className='flex justify-center items-center p-2 rounded-[50%] border-[#3374b0] border-2
+                                bg-blue-300'><FontAwesomeIcon icon={faUserGroup} className='md:text-[14px] lg:text-[16px] xl:text-[20px]' color='#9333ea'/></div>
+                            <p className='md:text-[19px] lg:text-[22px] xl:text-[24px] font-semibold text-white'>Real Users</p>
                         </div>
 
                         <div>
-                            <p className='text-[18px] text-[#8e9bad] mt-5'>
+                            <p className='md:text-[14px] lg:text-[16px] xl:text-[18px] text-[#8e9bad]'>
                                 Understood how development decision affect real people and their experience.
                             </p>
                         </div>
@@ -150,15 +150,15 @@ const Internship = () => {
 
                 <motion.div initial={{opacity: 0, y:0, scale: 0.3}} whileInView={{opacity: 1, y: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.8}}
                 className='rounded-2xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5 mt-10 w-[33%]'>
-                    <div className='flex flex-col px-5 py-8 rounded-2xl bg-[#0f1731]'>
+                    <div className='flex flex-col gap-5 p-5 xl:p-8 rounded-2xl bg-[#0f1731]'>
                         <div className='flex gap-5 items-center'>
-                            <div className='p-2 rounded-[50%] border-[#3374b0] border-2
-                                bg-blue-300'><FontAwesomeIcon icon={faLightbulb} size='2x' color='#9333ea'/></div>
-                            <p className='text-[24px] font-semibold text-white'>UI/UX Thinking</p>
+                            <div className='flex justify-center items-center p-2 rounded-[50%] border-[#3374b0] border-2
+                                bg-blue-300'><FontAwesomeIcon icon={faLightbulb} className='md:text-[14px] lg:text-[18px] xl:text-[20px]' color='#9333ea'/></div>
+                            <p className='md:text-[19px] lg:text-[22px] text-[24px] font-semibold text-white'>UI/UX Thinking</p>
                         </div>
 
                         <div>
-                            <p className='text-[18px] text-[#8e9bad] mt-5'>
+                            <p className='md:text-[14px] lg:text-[16px] xl:text-[18px] text-[#8e9bad]'>
                                 Learned the importance of content structure, layout and user experience.
                             </p>
                         </div>
@@ -167,15 +167,15 @@ const Internship = () => {
 
                 <motion.div initial={{opacity: 0, x: 100, scale: 0.5}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.8}}
                 className='rounded-2xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5 mt-10 w-[33%]'>
-                    <div className='flex flex-col px-5 py-8 rounded-2xl bg-[#0f1731]'>
+                    <div className='flex flex-col gap-5 p-5 xl:p-8 rounded-2xl bg-[#0f1731]'>
                         <div className='flex gap-5 items-center'>
-                            <div className='p-2 rounded-[50%] border-[#3374b0] border-2
-                                bg-blue-300'><FontAwesomeIcon icon={faPen} size='2x' color='#9333ea'/></div>
-                            <p className='text-[24px] font-semibold text-white'>Design Process</p>
+                            <div className='flex justify-center items-center p-2 rounded-[50%] border-[#3374b0] border-2
+                                bg-blue-300'><FontAwesomeIcon icon={faPen} className='md:text-[14px] lg:text-[18px] xl:text-[20px]' color='#9333ea'/></div>
+                            <p className='md:text-[19px] lg:text-[22px] text-[24px] font-semibold text-white'>Design Process</p>
                         </div>
 
                         <div>
-                            <p className='text-[18px] text-[#8e9bad] mt-5'>
+                            <p className='md:text-[14px] lg:text-[16px] xl:text-[18px] text-[#8e9bad]'>
                                 Explore ideas and turned them into practical interface designs using Figma.
                             </p>
                         </div>
