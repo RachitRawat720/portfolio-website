@@ -184,30 +184,30 @@ const Internship = () => {
             </div>
 
 
-            <div className='flex gap-10 items-center mt-20 pt-20 py-10'>
+            <div className='flex flex-col w-full md:w-[80%] lg:flex-row lg:w-full gap-10 items-center mt-20 pt-20 py-10'>
 
                 <motion.div initial={{opacity: 0, x: -200, y: 100, scale: 0.5}} whileInView={{opacity: 1, x: 0, y: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.7}}
                 className='rounded-2xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5 w-full'>
-                    <div className='flex pl-4 pr-10 py-4 rounded-2xl bg-[#0f1731] gap-3'>
-                        <div className='h-15 w-17 rounded-lg overflow-hidden'>
+                    <div className='flex px-3 py-2 sm:px-5 sm:py-4 rounded-2xl bg-[#0f1731] gap-3'>
+                        <div className='h-10 w-12 xs:h-11 xs:w-13 sm:h-13 sm:w-15 xl:h-15 xl:w-17 rounded-lg overflow-hidden'>
                             <img src={certficate_img} alt="" className='h-full w-full'/>
                         </div>
 
-                        <div className='flex items-center justify-between w-full'>
+                        <div className='flex items-center justify-between w-full xs:pr-10 lg:pr-0'>
                             <div>
-                                <h3 className='text-[16px] text-white font-bold'>Internship Certificate</h3>
+                                <h3 className='text-[13px] sm:text-[15px] xl:text-[16px] text-white font-bold'>Internship Certificate</h3>
 
-                                <h4 className='text-[12px] text-[#8e9bad] font-semibold'>Web Development Intern</h4>
+                                <h4 className='text-[10px] sm:text-[11px] xl:text-[12px] text-[#8e9bad] font-semibold mt-1'>Web Development Intern</h4>
 
                                 <div className='flex flex-col'>
                                     <div className='w-2 h-full bg-white'></div>
-                                    <h4 className='text-[12px] text-[#8e9bad] font-semibold'>InAmigos Foundation</h4>
+                                    <h4 className='text-[9px] sm:text-[10px] lg:text-[12px] text-[#8e9bad] font-semibold'>InAmigos Foundation</h4>
                                 </div>
                                 
                             </div>
 
                             <a href='/certificate/internship-certificate.pdf' target='_blank' rel='noopener noreferrer'>
-                            <button className='bg-linear-to-r from-[#1E40AF] via-[#4338CA] to-[#7C3AED] text-white rounded-md flex gap-2 justify-center items-center px-2 py-1 text-[16px] transition-transform duration-200 ease-in-out hover:cursor-pointer hover:scale-120'><FontAwesomeIcon icon={faEye} />View Certificate</button></a>
+                            <button className='bg-linear-to-r from-[#1E40AF] via-[#4338CA] to-[#7C3AED] text-white rounded-md flex gap-2 justify-center items-center px-2 py-1 text-[11px] xs:text-[12px] sm:text-[14px] xl:text-[16px] transition-transform duration-200 ease-in-out hover:cursor-pointer hover:scale-110'><FontAwesomeIcon icon={faEye} />View Certificate</button></a>
 
                         </div>
                     </div>
@@ -215,18 +215,19 @@ const Internship = () => {
 
                 <motion.div initial={{opacity: 0, x: 200, y: 100, scale: 0.5}} whileInView={{opacity: 1, x: 0, y: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.7}}
                 className='rounded-2xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5 w-full'>
-                    <div className='flex pl-4 pr-10 py-4 rounded-2xl bg-[#0f1731] gap-3'>
-                        <div className='flex justify-center items-center p-2'>
-                            <FontAwesomeIcon icon={faRocket} size='3x' color='#E0115F'/>
+                    <div className='flex px-3 py-2 sm:px-5 sm:py-4 rounded-2xl bg-[#0f1731] gap-3'>
+                        <div className='flex justify-center items-center'>
+                            <FontAwesomeIcon icon={faRocket} className='text-[25px] xs:text-[30px] sm:text-[35px] xl:text-[40px]' color='#E0115F'/>
                         </div>
 
-                        <div className='flex items-center justify-between w-full'>
+                        <div className='flex items-center justify-between w-full xs:pr-10 lg:pr-0'>
                             <div>
-                                <h3 className='text-[16px] text-white font-bold'>Experience is just the begining</h3>
-                                <h4 className='text-[12px] text-[#8e9bad] font-semibold'>See what I've built.</h4>
+                                <h3 className='text-[13px] sm:text-[15px] xl:text-[16px] text-white font-bold'>Experience is just the</h3>
+                                <h3 className='text-[13px] sm:text-[15px] xl:text-[16px] text-white font-bold'>begining</h3>
+                                <h4 className='text-[10px] sm:text-[11px] xl:text-[12px] text-[#8e9bad] font-semibold mt-1'>See what I've built.</h4>
                             </div>
 
-                            <Link to='/projects'><button className='bg-linear-to-r from-[#1E40AF] via-[#4338CA] to-[#7C3AED] text-white rounded-md flex gap-2 justify-center items-center px-2 py-1 text-[16px] transition-transform duration-200 ease-in-out hover:cursor-pointer hover:scale-120'>Explore Projects<FontAwesomeIcon icon={faArrowRight} /></button></Link>
+                            <Link to='/projects'><button className='bg-linear-to-r from-[#1E40AF] via-[#4338CA] to-[#7C3AED] text-white rounded-md flex gap-2 justify-center items-center px-2 py-1 text-[11px] xs:text-[12px] sm:text-[14px] xl:text-[16px] transition-transform duration-200 ease-in-out hover:cursor-pointer hover:scale-110'>Explore Projects<FontAwesomeIcon icon={faArrowRight} /></button></Link>
                         </div>
                     </div>
                 </motion.div>
