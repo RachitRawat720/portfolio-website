@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import inAmigos_logo from '../assets/Internship_logo.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -20,9 +21,60 @@ import { Link } from 'react-router-dom'
 import MoveToTop from './MoveToTop'
 
 const Internship = () => {
+
+    const [screenSize, setScreenSize] = useState(() => {
+                if(window.innerWidth < 640) return 'extraSmall'
+                if(window.innerWidth < 768) return 'small'
+                if(window.innerWidth < 1024) return 'medium'
+                if(window.innerWidth < 1280) return 'large'
+                return 'extraLarge'
+            })
+            
+        useEffect(() => {
+            const handleResize = () => {
+                if(window.innerWidth < 640){
+                    setScreenSize('extraSmall')
+                }
+                else if(window.innerWidth < 768){
+                    setScreenSize('small')
+                }
+                else if(window.innerWidth < 1024){
+                    setScreenSize('medium')
+                }
+                else if(window.innerWidth < 1280){
+                    setScreenSize('large')
+                }
+                else{
+                    setScreenSize('extraLarge')
+                }
+            }
+            
+            window.addEventListener('resize', handleResize)
+            
+            return () => window.removeEventListener('resize', handleResize)
+        }, [])
+
     return (
         <div className='p-6 sm:p-10 overflow-hidden bg-[linear-gradient(135deg,#080D1F_0%,#101A35_35%,#172554_65%,#24164F_100%)]'>
-            <motion.div initial={{opacity: 0, y: -200, scale: 0.4}} whileInView={{opacity: 1, y: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true}}
+            <motion.div
+                initial = {{
+                    opacity: 0,
+                    y: -200,
+                    scale: 0.3
+                }}
+                whileInView = {{
+                    opacity: 1,
+                    y: 0,
+                    scale: 1
+                }}
+                transition  = {{
+                    duration: 2,
+                    ease: 'easeInOut'
+                }}
+                viewport={{
+                    once: true
+                }}
+                
             className='flex flex-col justify-center items-center py-25'>
 
                 <h1 className='text-[32px] xs:text-[36px] sm:text-[40px] md:text-[42px] lg:text-[46px] xl:text-[50px] font-bold bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2] bg-clip-text text-transparent'>INTERNSHIP</h1>
@@ -32,7 +84,24 @@ const Internship = () => {
                 <h3 className='mt-6 md:mt-8 text-[12px] xs:text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[18px] text-gray-300 font-semibold'>Turning knowledge into real-world impact.</h3>
             </motion.div>
 
-            <motion.div initial={{opacity: 0, y: 100, scale: 0.4}} whileInView={{opacity: 1, y: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.9}}
+            <motion.div
+                initial = {{
+                    opacity: 0,
+                    scale: 0.3
+                }}
+                whileInView = {{
+                    opacity: 1,
+                    scale: 1
+                }}
+                transition  = {{
+                    duration: 2,
+                    ease: 'easeInOut'
+                }}
+                viewport={{
+                    once: true,
+                    amount: 0.7
+                }}
+
             className='rounded-2xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5 mt-10'>
                 <div className='flex flex-col gap-5 sm:gap-8 lg:gap-0 lg:flex-row rounded-2xl bg-[#0f1731] p-5 sm:p-10'>
                     <div className='flex flex-col sm:flex-row gap-5 lg:w-[50%] pr-3 sm:pr-10'>
@@ -124,14 +193,52 @@ const Internship = () => {
                 </div>
             </motion.div>
 
-            <motion.div initial={{opacity: 0, x: -200}} whileInView={{opacity: 1, x: 0}} transition={{duration: 2}} viewport={{once: true}}
+            <motion.div
+                initial = {{
+                    opacity: 0,
+                    x: -200
+                }}
+                whileInView = {{
+                    opacity: 1,
+                    x: 0
+                }}
+                transition  = {{
+                    duration: 2,
+                    ease: 'easeInOut'
+                }}
+                viewport={{
+                    once: true
+                }}
+
             className='flex gap-4 mt-35 mb-5'>
                 <div className='w-1 bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600'></div>
                 <h3 className='text-white text-[24px] xs:text-[26px] sm:text-[28px] md:text-[30px] lg:text-[34px] xl:text-[36px] font-bold'>What I learned</h3>
             </motion.div>
 
-            <div className='flex flex-col w-full xs:w-[70%] md:flex-row md:w-full gap-4 xs:gap-8 md:gap-5 lg:gap-10 items-center'>
-                <motion.div initial={{opacity: 0, x: -100, scale: 0.5}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.8}}
+            <div className='flex flex-col w-full xs:w-[70%] md:flex-row md:w-full gap-3 xs:gap-4 md:gap-5 lg:gap-10 items-center'>
+                <motion.div
+                    initial = {{
+                        opacity: 0,
+                        x:  screenSize === 'extraLarge'? -150 : 
+                            screenSize === 'large'? -150 :
+                            screenSize === 'medium'? -100 :
+                            screenSize === 'small'? -100 : -100,
+                        scale: 0.3
+                    }}
+                    whileInView = {{
+                        opacity: 1,
+                        x: 0,
+                        scale: 1
+                    }}
+                    transition  = {{
+                        duration: 2,
+                        ease: 'easeInOut'
+                    }}
+                    viewport={{
+                        once: true,
+                        amount: 0.9
+                    }}
+
                 className='rounded-2xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5 mt-10'>
                     <div className='flex flex-col gap-3 md:gap-5 p-3 lg:p-5 xl:p-8 rounded-2xl bg-[#0f1731]'>
                         <div className='flex gap-5 md:gap-2 lg:gap-5 items-center'>
@@ -148,7 +255,29 @@ const Internship = () => {
                     </div>
                 </motion.div>
 
-                <motion.div initial={{opacity: 0, y:0, scale: 0.3}} whileInView={{opacity: 1, y: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.8}}
+                <motion.div
+                    initial = {{
+                        opacity: 0,
+                        x:  screenSize === 'extraLarge'? 0 : 
+                            screenSize === 'large'? 0 :
+                            screenSize === 'medium'? 0 :
+                            screenSize === 'small'? -100 : -100,
+                        scale: 0.3
+                    }}
+                    whileInView = {{
+                        opacity: 1,
+                        x: 0,
+                        scale: 1
+                    }}
+                    transition  = {{
+                        duration: 2,
+                        ease: 'easeInOut'
+                    }}
+                    viewport={{
+                        once: true,
+                        amount: 0.9
+                    }}
+
                 className='rounded-2xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5 mt-10'>
                     <div className='flex flex-col gap-3 md:gap-5 p-3 lg:p-5 xl:p-8 rounded-2xl bg-[#0f1731]'>
                         <div className='flex gap-5 md:gap-2 lg:gap-5 items-center'>
@@ -165,7 +294,29 @@ const Internship = () => {
                     </div>
                 </motion.div>
 
-                <motion.div initial={{opacity: 0, x: 100, scale: 0.5}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.8}}
+                <motion.div
+                    initial = {{
+                        opacity: 0,
+                        x:  screenSize === 'extraLarge'? 150 :
+                            screenSize === 'large'? 100 :
+                            screenSize === 'medium'? 100 :
+                            screenSize === 'small'? -100 : -100,
+                        scale: 0.3
+                    }}
+                    whileInView = {{
+                        opacity: 1,
+                        x: 0,
+                        scale: 1
+                    }}
+                    transition  = {{
+                        duration: 2,
+                        ease: 'easeInOut'
+                    }}
+                    viewport={{
+                        once: true,
+                        amount: 0.9
+                    }}
+
                 className='rounded-2xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5 mt-10'>
                     <div className='flex flex-col gap-3 md:gap-5 p-3 lg:p-5 xl:p-8 rounded-2xl bg-[#0f1731]'>
                         <div className='flex gap-5 md:gap-2 lg:gap-5 items-center'>
@@ -186,7 +337,29 @@ const Internship = () => {
 
             <div className='flex flex-col w-full md:w-[80%] lg:flex-row lg:w-full gap-10 items-center mt-20 pt-20 py-10'>
 
-                <motion.div initial={{opacity: 0, x: -200, y: 100, scale: 0.5}} whileInView={{opacity: 1, x: 0, y: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.7}}
+                <motion.div
+                    initial = {{
+                        opacity: 0,
+                        x:  screenSize === 'extraLarge'? -200 : 
+                            screenSize === 'large'? -200 :
+                            screenSize === 'medium'? -200 :
+                            screenSize === 'small'? -150 : -150,
+                        scale: 0.3
+                    }}
+                    whileInView = {{
+                        opacity: 1,
+                        x: 0,
+                        scale: 1
+                    }}
+                    transition  = {{
+                        duration: 2,
+                        ease: 'easeInOut'
+                    }}
+                    viewport={{
+                        once: true,
+                        amount: 0.9
+                    }}
+
                 className='rounded-2xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5 w-full'>
                     <div className='flex px-3 py-2 sm:px-5 sm:py-4 rounded-2xl bg-[#0f1731] gap-3'>
                         <div className='h-10 w-12 xs:h-11 xs:w-13 sm:h-13 sm:w-15 xl:h-15 xl:w-17 rounded-lg overflow-hidden'>
@@ -213,7 +386,29 @@ const Internship = () => {
                     </div>
                 </motion.div>
 
-                <motion.div initial={{opacity: 0, x: 200, y: 100, scale: 0.5}} whileInView={{opacity: 1, x: 0, y: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.7}}
+                <motion.div
+                    initial = {{
+                        opacity: 0,
+                        x:  screenSize === 'extraLarge'? 200 : 
+                            screenSize === 'large'? 200 :
+                            screenSize === 'medium'? -200 :
+                            screenSize === 'small'? -150 : -150,
+                        scale: 0.3
+                    }}
+                    whileInView = {{
+                        opacity: 1,
+                        x: 0,
+                        scale: 1
+                    }}
+                    transition  = {{
+                        duration: 2,
+                        ease: 'easeInOut'
+                    }}
+                    viewport={{
+                        once: true,
+                        amount: 0.9
+                    }}
+
                 className='rounded-2xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5 w-full'>
                     <div className='flex px-3 py-2 sm:px-5 sm:py-4 rounded-2xl bg-[#0f1731] gap-3'>
                         <div className='flex justify-center items-center'>
