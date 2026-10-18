@@ -68,20 +68,20 @@ const Contact = () => {
     }
 
     return (
-        <div className='px-10 pb-10 pt-20 overflow-hidden bg-[linear-gradient(135deg,#080D1F_0%,#101A35_35%,#172554_65%,#24164F_100%)]'>
+        <div className='p-5 sm:px-10 pb-10 pt-20 overflow-hidden bg-[linear-gradient(135deg,#080D1F_0%,#101A35_35%,#172554_65%,#24164F_100%)]'>
             <motion.div initial={{opacity: 0, y: -200, scale: 0.4}} whileInView={{opacity: 1, y: 0, scale: 1}} transition={{duration: 2}} viewport={{ once: true, amount: 0.8}}
             className='flex flex-col justify-center items-center py-30 '>
-                <h1 className='text-[50px] font-bold bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2] bg-clip-text text-transparent'>CONTACT ME</h1>
+                <h1 className='text-[36px] xs:text-[38px] sm:text-[40px] md:text-[42px] lg:text-[46px] xl:text-[50px] font-bold bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2] bg-clip-text text-transparent'>CONTACT ME</h1>
 
-                <div className='h-1 w-40 bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2] rounded-4xl'></div>
+                <div className='h-1 w-20 xs:w-25 md:w-30 lg:w-35 xl:w-40 bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2] rounded-4xl'></div>
 
-                <h3 className='text-[20px] font-semibold text-gray-300 mt-4'>Let's build something together</h3>
+                <h3 className='text-[15px] xs:text-[16px] sm:text-[17px] md:text-[18px] lg:text-[19px] xl:text-[20px] font-semibold text-gray-300 mt-4'>Let's build something together</h3>
             </motion.div>
 
 
-            <div className='flex justify-center items-center gap-30 mt-15'>
+            <div className='flex flex-col lg:flex-row justify-center items-center lg:items-start gap-20 lg:gap-10 xl:gap-30 mt-15'>
                 <motion.div initial={{opacity: 0, x: -200, scale: 0.3}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.7}}
-                className='rounded-2xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5'>
+                className='rounded-2xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5 w-full xs:w-[85%] md:w-[65%] lg:w-full'>
                         <div className='flex flex-col px-5 py-3 rounded-2xl bg-[#0f1731]'>
                             
                             <h2 className='bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#FF4D6D] bg-clip-text text-transparent text-[20px] font-bold'>GET IN TOUCH</h2>
@@ -156,17 +156,17 @@ const Contact = () => {
 
                             </div>
 
-                            <div className='h-0.5 w-full bg-[#3239b9d2] rounded-full mt-8'></div>
+                            <div className='h-0.5 w-full bg-[#3239b9d2] rounded-full mt-5 lg:mt-5 xl:mt-8'></div>
 
-                            <p className='text-green-500 text-[16px] mt-4'>Available for opportunities</p>
+                            <p className='text-green-500 text-[16px] mt-4 lg:mt-1 xl:mt-4'>Available for opportunities</p>
                             <p className='text-[#8e9bad] text-[12px] font-semibold mt-2'>I'm currently open to internships, full-time, freelance projects and collaborations</p>
 
                         </div>
                 </motion.div>
 
                 <motion.div initial={{opacity: 0, x: 200, scale: 0.3}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.7}}
-                    className='rounded-2xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5'>
-                        <div className='flex flex-col pl-4 pr-10 py-4 rounded-2xl bg-[#0f1731]'>
+                    className='rounded-2xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5 w-full xs:w-[85%] sm:w-auto'>
+                        <div className='flex flex-col p-4 rounded-2xl bg-[#0f1731]'>
 
                             <h2 className='bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#FF4D6D] bg-clip-text text-transparent text-[18px] font-bold'>SEND A MESSAGE</h2>
 
@@ -175,20 +175,20 @@ const Contact = () => {
                             <form onSubmit={handleSubmit}>
                                 <div className='flex flex-col w-full justify-center items-center gap-5 mt-2'>
 
-                                    <div className='flex gap-5'>
-                                        <div className='flex justify-center items-center border-2 border-[#3239b9d2] px-4 py-2 rounded-xl gap-5'>
+                                    <div className='flex flex-col w-full sm:flex-row gap-5'>
+                                        <div className='flex justify-start sm:justify-center items-center border-2 border-[#3239b9d2] px-4 py-2 rounded-xl gap-5'>
                                             <div className='flex'><FontAwesomeIcon icon={faUser} className='text-[18px]' color='#8e9bad'/></div>
 
-                                            <div className='flex flex-col gap-2'>
+                                            <div className='flex flex-col gap-2 w-full'>
                                                 <h3 className='text-[14px] text-white font-bold pl-2'>Your Name</h3>
                                                 <input type="text" name='name' placeholder='Rachit Singh Rawat' required className='text-[#8e9bad] font-semibold border-none text-[14px] pl-2'/>
                                             </div>
                                         </div>
 
-                                        <div className='flex justify-center items-center border-2 border-[#3239b9d2] px-4 py-2 rounded-xl gap-5'>
+                                        <div className='flex justify-start sm:justify-center items-center border-2 border-[#3239b9d2] px-4 py-2 rounded-xl gap-5'>
                                             <div className='flex'><FontAwesomeIcon icon={faEnvelope} className='text-[18px]' color='#8e9bad'/></div>
 
-                                            <div className='flex flex-col gap-2'>
+                                            <div className='flex flex-col gap-2 w-full'>
                                                 <h3 className='text-[14px] text-white font-bold pl-2'>Your Email</h3>
                                                 <input type="email" name='email' placeholder='rachitrawat720@gmail.com' required className='text-[#8e9bad] font-semibold border-none text-[14px] pl-2'/>
                                             </div>
@@ -237,39 +237,39 @@ const Contact = () => {
             <motion.div initial={{opacity: 0, y: 200, scale: 0.3}} whileInView={{opacity: 1, y: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.7}}
             className='flex flex-col'>
                 <div className='flex items-center justify-center gap-4 pt-40'>
-                    <div className='flex items-center justify-center h-0.5 w-40 bg-[#3239b9d2] rounded-full'></div>
+                    <div className='flex items-center justify-center h-0.5 w-17 xs:w-25 sm:w-40 bg-[#3239b9d2] rounded-full'></div>
 
-                    <h3 className='text-[25px] font-bold bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2] bg-clip-text text-transparent'>FIND ME ONLINE</h3>
+                    <h3 className='text-[20px] sm:text-[22px] md:text-[25px] font-bold bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2] bg-clip-text text-transparent'>FIND ME ONLINE</h3>
                     
 
-                    <div className=' flex items-center justify-center h-0.5 w-40 bg-[#3239b9d2] rounded-full'></div>
+                    <div className=' flex items-center justify-center h-0.5 w-17 xs:w-25 sm:w-40 bg-[#3239b9d2] rounded-full'></div>
                 </div>
 
                 <div className='flex gap-8 justify-center items-center pt-5'>
                     <div className='flex flex-col justify-center items-center gap-4'>
-                        <a href='https://www.linkedin.com/in/rachit-singh-rawat/' target='_blank' rel="noopener noreferrer" className='group block '><div className='w-11 h-11 border-2 border-[#3e536a] bg-linear-to-br from-[#2b3b4c] to-[#212e3f] rounded-md flex justify-center items-center transition-transform duration-300 ease-in-out group-hover:scale-150'><img src={linkedin_logo} className='w-7 h-7 rounded-md' alt="" /></div></a>
+                        <a href='https://www.linkedin.com/in/rachit-singh-rawat/' target='_blank' rel="noopener noreferrer" className='group block '><div className='w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 border-2 border-[#3e536a] bg-linear-to-br from-[#2b3b4c] to-[#212e3f] rounded-md flex justify-center items-center transition-transform duration-300 ease-in-out group-hover:scale-150'><img src={linkedin_logo} className='w-6 h-6 md:w-7 md:h-7 rounded-md' alt="" /></div></a>
 
-                        <p className='text-white text-[14px] font-bold'>LinkedIn</p>
+                        <p className='text-white text-[12px] sm:text-[13px] md:text-[14px] font-bold'>LinkedIn</p>
                     </div>
 
                     <div className='flex flex-col justify-center items-center gap-4'>
-                        <a href='https://github.com/RachitRawat720' target='_blank' rel="noopener noreferrer" className='group block'><div className='w-11 h-11 border-2 border-[#3e536a] bg-linear-to-br from-[#2b3b4c] to-[#212e3f] rounded-md flex items-center justify-center transition-transform duration-300 ease-in-out group-hover:scale-150'><img src={github_logo} className='w-7 h-7 rounded-md' alt="" /></div></a>
+                        <a href='https://github.com/RachitRawat720' target='_blank' rel="noopener noreferrer" className='group block'><div className='w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 border-2 border-[#3e536a] bg-linear-to-br from-[#2b3b4c] to-[#212e3f] rounded-md flex items-center justify-center transition-transform duration-300 ease-in-out group-hover:scale-150'><img src={github_logo} className='w-6 h-6 md:w-7 md:h-7 rounded-md' alt="" /></div></a>
                         
-                        <p className='text-white text-[14px] font-bold'>GitHub</p>
+                        <p className='text-white text-[12px] sm:text-[13px] md:text-[14px] font-bold'>GitHub</p>
                     </div>
 
                     <div className='flex flex-col justify-center items-center gap-4'>
-                        <a href='mailto:rachitrawat720@gmail.com' target='_blank' rel="noopener noreferrer" className='group block'><div className='w-13 h-11 border-2 border-[#3e536a] bg-linear-to-br from-[#2b3b4c] to-[#212e3f] rounded-md flex items-center justify-center transition-transform duration-300 ease-in-out group-hover:scale-150'><img src={email_logo} className='w-9 h-7 rounded-md' alt="" /></div></a>
+                        <a href='mailto:rachitrawat720@gmail.com' target='_blank' rel="noopener noreferrer" className='group block'><div className='w-11 h-9 sm:w-12 sm:h-10 md:w-13 md:h-11 border-2 border-[#3e536a] bg-linear-to-br from-[#2b3b4c] to-[#212e3f] rounded-md flex items-center justify-center transition-transform duration-300 ease-in-out group-hover:scale-150'><img src={email_logo} className='w-8 h-6 md:w-9 md:h-7 rounded-md' alt="" /></div></a>
 
-                        <p className='text-white text-[14px] font-bold'>Email</p>
+                        <p className='text-white text-[12px] sm:text-[13px] md:text-[14px] font-bold'>Email</p>
                     </div>
                 </div>
             </motion.div>
 
             <motion.div initial={{opacity: 0, y: 100, scale: 0.3}} whileInView={{opacity: 1, y: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.7}} 
             className='flex flex-col justify-center items-center mt-20 mb-20'>
-                <h2 className='text-[35px] font-bold text-[#a5b0be]'>Thanks for stopping by.</h2>
-                <h3 className='text-[20px] text-[#8099c1] font-bold'>Let's create something great together</h3>
+                <h2 className='text-[25px] sm:text-[30px] md:text-[35px] font-bold text-[#a5b0be]'>Thanks for stopping by.</h2>
+                <h3 className='text-[15px] sm:text-[17px] md:text-[20px] text-[#8099c1] font-bold'>Let's create something great together</h3>
             </motion.div>
 
             <MoveToTop />
