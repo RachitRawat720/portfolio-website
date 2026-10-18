@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faComment, faEnvelope, faLocationDot, faPaperPlane, faTag, faUser} from '@fortawesome/free-solid-svg-icons'
@@ -67,9 +67,59 @@ const Contact = () => {
         setLoading(false)
     }
 
+    const [screenSize, setScreenSize] = useState(() => {
+                    if(window.innerWidth < 640) return 'extraSmall'
+                    if(window.innerWidth < 768) return 'small'
+                    if(window.innerWidth < 1024) return 'medium'
+                    if(window.innerWidth < 1280) return 'large'
+                    return 'extraLarge'
+                })
+                
+        useEffect(() => {
+            const handleResize = () => {
+                if(window.innerWidth < 640){
+                    setScreenSize('extraSmall')
+                }
+                else if(window.innerWidth < 768){
+                    setScreenSize('small')
+                }
+                else if(window.innerWidth < 1024){
+                    setScreenSize('medium')
+                }
+                else if(window.innerWidth < 1280){
+                    setScreenSize('large')
+                }
+                else{
+                    setScreenSize('extraLarge')
+                }
+            }
+                
+            window.addEventListener('resize', handleResize)
+                
+            return () => window.removeEventListener('resize', handleResize)
+        }, [])
+
     return (
         <div className='p-5 sm:px-10 pb-10 pt-20 overflow-hidden bg-[linear-gradient(135deg,#080D1F_0%,#101A35_35%,#172554_65%,#24164F_100%)]'>
-            <motion.div initial={{opacity: 0, y: -200, scale: 0.4}} whileInView={{opacity: 1, y: 0, scale: 1}} transition={{duration: 2}} viewport={{ once: true, amount: 0.8}}
+            <motion.div
+                initial = {{
+                    opacity: 0,
+                    y: -200,
+                    scale: 0.3
+                }}
+                whileInView = {{
+                    opacity: 1,
+                    y: 0,
+                    scale: 1
+                }}
+                transition  = {{
+                    duration: 2,
+                    ease: 'easeInOut'
+                }}
+                viewport={{
+                    once: true,
+                }}
+
             className='flex flex-col justify-center items-center py-30 '>
                 <h1 className='text-[36px] xs:text-[38px] sm:text-[40px] md:text-[42px] lg:text-[46px] xl:text-[50px] font-bold bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2] bg-clip-text text-transparent'>CONTACT ME</h1>
 
@@ -80,7 +130,29 @@ const Contact = () => {
 
 
             <div className='flex flex-col lg:flex-row justify-center items-center lg:items-start gap-20 lg:gap-10 xl:gap-30 mt-15'>
-                <motion.div initial={{opacity: 0, x: -200, scale: 0.3}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.7}}
+                <motion.div
+                    initial = {{
+                        opacity: 0,
+                        x:  screenSize === 'extraLarge'? -200 : 
+                            screenSize === 'large'? -150 :
+                            screenSize === 'medium'? -200 :
+                            screenSize === 'small'? -200 : -150,
+                        scale: 0.3
+                    }}
+                    whileInView = {{
+                        opacity: 1,
+                        x: 0,
+                        scale: 1
+                    }}
+                    transition  = {{
+                        duration: 2,
+                        ease: 'easeInOut'
+                    }}
+                    viewport={{
+                        once: true,
+                        amount: 0.8
+                    }}
+
                 className='rounded-2xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5 w-full xs:w-[85%] md:w-[65%] lg:w-full'>
                         <div className='flex flex-col px-5 py-3 rounded-2xl bg-[#0f1731]'>
                             
@@ -164,7 +236,29 @@ const Contact = () => {
                         </div>
                 </motion.div>
 
-                <motion.div initial={{opacity: 0, x: 200, scale: 0.3}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.7}}
+                <motion.div
+                    initial = {{
+                        opacity: 0,
+                        x:  screenSize === 'extraLarge'? 200 : 
+                            screenSize === 'large'? 150 :
+                            screenSize === 'medium'? 200 :
+                            screenSize === 'small'? 200 : 150,
+                        scale: 0.3
+                    }}
+                    whileInView = {{
+                        opacity: 1,
+                        x: 0,
+                        scale: 1
+                    }}
+                    transition  = {{
+                        duration: 2,
+                        ease: 'easeInOut'
+                    }}
+                    viewport={{
+                        once: true,
+                        amount: 0.8
+                    }}
+
                     className='rounded-2xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5 w-full xs:w-[85%] sm:w-auto'>
                         <div className='flex flex-col p-4 rounded-2xl bg-[#0f1731]'>
 
