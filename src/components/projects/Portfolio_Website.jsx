@@ -15,35 +15,35 @@ import MoveToTop from '../MoveToTop'
 
 const Portfolio_Website = () => {
     return (
-        <div className='px-10 overflow-hidden py-8 gap-5 bg-[linear-gradient(135deg,#080D1F_0%,#101A35_35%,#172554_65%,#24164F_100%)] pb-10'>
+        <div className='px-5 sm:px-10 overflow-hidden py-8 gap-5 bg-[linear-gradient(135deg,#080D1F_0%,#101A35_35%,#172554_65%,#24164F_100%)] pb-10'>
             
             <motion.div initial={{opacity: 0, x: -500, y: -100, scale: 0.3}} whileInView={{opacity: 1, x: 0, y: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true}}
-            className='flex flex-col ml-40 pt-20 pb-40'>
-                <Link to = '/projects' className='w-fit border-2 border-white text-white hover:text-black hover:bg-white transition-colors duration-200 rounded-4xl flex gap-1 px-2 py-1 justify-center items-center text-[12px] hover:cursor-pointer font-semibold'><FontAwesomeIcon icon={faArrowLeft} />Back to Projects</Link>
+            className='flex flex-col sm:ml-20 md:ml-30 lg:ml-40 pt-20 pb-20 sm:pb-40 '>
+                <Link to = '/projects' className='w-fit border-2 border-white text-white hover:text-black hover:bg-white transition-colors duration-200 rounded-4xl flex gap-1 px-2 py-1 justify-center items-center text-[9px] md:text-[10px] lg:text-[11px] xl:text-[12px] hover:cursor-pointer font-semibold'><FontAwesomeIcon icon={faArrowLeft} />Back to Projects</Link>
 
-                <h2 className='mt-10 text-[40px] font-bold bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2] bg-clip-text text-transparent'>Portfolio Website</h2>
+                <h2 className='mt-10 text-[26px] sm:text-[28px] md:text-[32px] lg:text-[36px] xl:text-[40px] font-bold bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2] bg-clip-text text-transparent'>Portfolio Website</h2>
                 
                 <div className='mt-1 h-1 w-45 rounded-full bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2]'></div>
 
-                <p className='text-[15px] text-white mt-6 font-semibold pr-170'>
+                <p className='text-[12px] sm:text-[13px] lg:text-[14px] xl:text-[15px] text-white mt-6 font-semibold w-[70%] xs:w-[55%] sm:w-[50%] md:w-[45%] lg:w-[40%] xl:w-[35%]'>
                     A personal portfolio website to showcase my skills, projects, internship and contact information with a modern and responsive design.
                 </p>
 
                 <div className='flex mt-5 gap-5'>
-                    <a href='https://custom-notes-saver.vercel.app/' target='_blank' rel='noopener noreferrer'><button className='bg-linear-to-r from-[#1E40AF] via-[#4338CA] to-[#7C3AED] text-white rounded-4xl flex gap-1 px-4 py-2 justify-center items-center text-[16px] hover:cursor-pointer font-semibold'>Live Demo<FontAwesomeIcon icon={faArrowUpRightFromSquare} /></button></a>
+                    <a href='https://custom-notes-saver.vercel.app/' target='_blank' rel='noopener noreferrer'><button className='bg-linear-to-r from-[#1E40AF] via-[#4338CA] to-[#7C3AED] text-white rounded-4xl flex gap-1 px-4 py-1 md:py-2 justify-center items-center text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] hover:cursor-pointer font-semibold'>Live Demo<FontAwesomeIcon icon={faArrowUpRightFromSquare} className='text-[13px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[20px]'/></button></a>
 
-                    <a href='https://github.com/RachitRawat720/portfolio-website' target='_blank' rel='noopener noreferrer'><button className='border-2 border-[#4338CA] text-white rounded-4xl flex gap-1 px-4 py-2 justify-center items-center text-[16px] hover:cursor-pointer font-semibold hover:bg-linear-to-r from-[#1E40AF] via-[#4338CA] to-[#7C3AED]'><FontAwesomeIcon icon={faGithub} className='text-[20px]'/>GitHub</button></a>
+                    <a href='https://github.com/RachitRawat720/portfolio-website' target='_blank' rel='noopener noreferrer'><button className='border-2 border-[#4338CA] text-white rounded-4xl flex gap-1 px-4 py-1 md:py-2 justify-center items-center text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] hover:cursor-pointer font-semibold hover:bg-linear-to-r from-[#1E40AF] via-[#4338CA] to-[#7C3AED]'><FontAwesomeIcon icon={faGithub} className='text-[13px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[20px]'/>GitHub</button></a>
                 </div>
             </motion.div>
 
             <div>
                 <motion.div initial={{opacity: 0, scale: 0.2, x: -500}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.8}}>
-                    <h2 className='ml-40 text-[35px] font-bold text-white'>Screenshots</h2>
-                    <div className='ml-40 mt-1 h-1 w-25 rounded-full bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2]'></div>
+                    <h2 className='text-[26px] xs:text-[28px] sm:text-[30px] md:text-[32px] lg:text-[35px] font-bold text-white'>Screenshots</h2>
+                    <div className='mt-1 h-1 w-25 rounded-full bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2]'></div>
                 </motion.div>
 
                 <motion.div initial={{opacity: 0, scale: 0.2}} whileInView={{opacity: 1, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.2}}
-                className='grid grid-cols-2 gap-20 pt-15'>
+                className='grid grid-cols-1 lg:grid-cols-2 gap-10 xs:gap-15 sm:gap-20 pt-15'>
                     <div className='rounded-2xl overflow-hidden border-2 border-[#5f8dce]'><img src={Home} alt="Home Screenshot" className='rounded-2xl'/></div>
                     <div className='rounded-2xl overflow-hidden border-2 border-[#5f8dce]'><img src={About} alt="About Screenshot" className='rounded-2xl'/></div>
                     <div className='rounded-2xl overflow-hidden border-2 border-[#5f8dce]'><img src={Skills} alt="Skills Screenshot"  className='rounded-2xl'/></div>
