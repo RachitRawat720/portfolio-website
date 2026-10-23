@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
@@ -14,11 +15,62 @@ import MoveToTop from '../MoveToTop'
 
 
 const Portfolio_Website = () => {
+
+    const [screenSize, setScreenSize] = useState(() => {
+                if(window.innerWidth < 640) return 'extraSmall'
+                if(window.innerWidth < 768) return 'small'
+                if(window.innerWidth < 1024) return 'medium'
+                if(window.innerWidth < 1280) return 'large'
+                return 'extraLarge'
+            })
+            
+        useEffect(() => {
+            const handleResize = () => {
+                if(window.innerWidth < 640){
+                    setScreenSize('extraSmall')
+                }
+                else if(window.innerWidth < 768){
+                    setScreenSize('small')
+                }
+                else if(window.innerWidth < 1024){
+                    setScreenSize('medium')
+                }
+                else if(window.innerWidth < 1280){
+                    setScreenSize('large')
+                }
+                else{
+                    setScreenSize('extraLarge')
+                }
+            }
+            
+            window.addEventListener('resize', handleResize)
+            
+            return () => window.removeEventListener('resize', handleResize)
+        }, [])
+
     return (
         <div className='px-5 sm:px-10 overflow-hidden py-8 gap-5 bg-[linear-gradient(135deg,#080D1F_0%,#101A35_35%,#172554_65%,#24164F_100%)] pb-10'>
             
-            <motion.div initial={{opacity: 0, x: -500, y: -100, scale: 0.3}} whileInView={{opacity: 1, x: 0, y: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true}}
-            className='flex flex-col sm:ml-20 md:ml-30 lg:ml-40 pt-20 pb-20 sm:pb-40 '>
+            <motion.div
+                initial = {{
+                    opacity: 0,
+                    y:  -200,
+                    scale: 0.3
+                }}
+                whileInView = {{
+                    opacity: 1,
+                    y: 0,
+                    scale: 1
+                }}
+                transition  = {{
+                    duration: 2,
+                    ease: 'easeInOut'
+                }}
+                viewport={{
+                    once: true
+                }}
+
+            className='flex flex-col sm:ml-20 md:ml-30 lg:ml-40 pt-20 pb-40 '>
                 <Link to = '/projects' className='w-fit border-2 border-white text-white hover:text-black hover:bg-white transition-colors duration-200 rounded-4xl flex gap-1 px-2 py-1 justify-center items-center text-[9px] md:text-[10px] lg:text-[11px] xl:text-[12px] hover:cursor-pointer font-semibold'><FontAwesomeIcon icon={faArrowLeft} />Back to Projects</Link>
 
                 <h2 className='mt-10 text-[26px] sm:text-[28px] md:text-[32px] lg:text-[36px] xl:text-[40px] font-bold bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2] bg-clip-text text-transparent'>Portfolio Website</h2>
@@ -37,13 +89,47 @@ const Portfolio_Website = () => {
             </motion.div>
 
             <div>
-                <motion.div initial={{opacity: 0, scale: 0.2, x: -500}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.8}}>
+                <motion.div
+                    initial = {{
+                        opacity: 0,
+                        scale: 0.3
+                    }}
+                    whileInView = {{
+                        opacity: 1,
+                        scale: 1
+                    }}
+                    transition  = {{
+                        duration: 2,
+                        ease: 'easeInOut'
+                    }}
+                    viewport={{
+                        once: true,
+                        amount: 0.9
+                    }}>
+
                     <h2 className='text-[26px] xs:text-[28px] sm:text-[30px] md:text-[32px] lg:text-[35px] font-bold text-white'>Screenshots</h2>
                     <div className='mt-1 h-1 w-25 rounded-full bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2]'></div>
                 </motion.div>
 
-                <motion.div initial={{opacity: 0, scale: 0.2}} whileInView={{opacity: 1, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.2}}
-                className='grid grid-cols-1 lg:grid-cols-2 gap-10 xs:gap-15 sm:gap-20 pt-15'>
+                <motion.div 
+                    initial = {{
+                        opacity: 0,
+                        scale:  screenSize === 'extraLarge' ? 0.5 :
+                                screenSize === 'large' ? 0.5 : 0.8
+                    }}
+                    whileInView = {{
+                        opacity: 1,
+                        scale: 1
+                    }}
+                    transition  = {{
+                        duration: 2,
+                        ease: 'easeInOut'
+                    }}
+                    viewport={{
+                        once: true
+                    }}
+
+                className='grid grid-cols-1 lg:grid-cols-2 gap-10 xs:gap-15 sm:gap-20 pt-15 sm:px-8 md:px-20 lg:px-0'>
                     <div className='rounded-2xl overflow-hidden border-2 border-[#5f8dce]'><img src={Home} alt="Home Screenshot" className='rounded-2xl'/></div>
                     <div className='rounded-2xl overflow-hidden border-2 border-[#5f8dce]'><img src={About} alt="About Screenshot" className='rounded-2xl'/></div>
                     <div className='rounded-2xl overflow-hidden border-2 border-[#5f8dce]'><img src={Skills} alt="Skills Screenshot"  className='rounded-2xl'/></div>
@@ -55,7 +141,26 @@ const Portfolio_Website = () => {
             
             <div className='grid xs:px-10 sm:px-20 md:px-0 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 mt-50'>
 
-                <motion.div initial={{opacity: 0, x: -100, scale: 0.5}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.8}}
+                <motion.div 
+                    initial = {{
+                        opacity: 0,
+                        x:  screenSize === 'extraLarge' ? -150 : "",
+                        scale: 0.3
+                    }}
+                    whileInView = {{
+                        opacity: 1,
+                        x: 1,
+                        scale: 1
+                    }}
+                    transition  = {{
+                        duration: 2,
+                        ease: 'easeInOut'
+                    }}
+                    viewport={{
+                        once: true,
+                        amount: 0.6
+                    }}
+
                 className='rounded-xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5'>
                     <div className='h-full flex flex-col px-4 py-4 xs:px-5 xs:py-8 rounded-xl bg-[#0f1731]'>
                         <div className='flex gap-5 items-center'>
@@ -73,7 +178,24 @@ const Portfolio_Website = () => {
                     </div>
                 </motion.div>
 
-                <motion.div initial={{opacity: 0, scale: 0.3}} whileInView={{opacity: 1, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.8}} 
+                <motion.div
+                    initial = {{
+                        opacity: 0,
+                        scale: 0.3
+                    }}
+                    whileInView = {{
+                        opacity: 1,
+                        scale: 1
+                    }}
+                    transition  = {{
+                        duration: 2,
+                        ease: 'easeInOut'
+                    }}
+                    viewport={{
+                        once: true,
+                        amount: 0.6
+                    }}
+
                 className='rounded-xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5'>
                     <div className='h-full flex flex-col px-4 py-4 xs:px-5 xs:py-8 rounded-xl bg-[#0f1731]'>
                         <div className='flex gap-5 items-center'>
@@ -122,7 +244,26 @@ const Portfolio_Website = () => {
                     </div>
                 </motion.div>
 
-                <motion.div initial={{opacity: 0, x: 100, scale: 0.5}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.8}}
+                <motion.div
+                    initial = {{
+                        opacity: 0,
+                        x:  screenSize === 'extraLarge' ? 150 : "",
+                        scale: 0.3
+                    }}
+                    whileInView = {{
+                        opacity: 1,
+                        x: 1,
+                        scale: 1
+                    }}
+                    transition  = {{
+                        duration: 2,
+                        ease: 'easeInOut'
+                    }}
+                    viewport={{
+                        once: true,
+                        amount: 0.6
+                    }}
+                    
                 className='rounded-xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5'>
                     <div className='h-full flex flex-col px-4 py-4 xs:px-5 xs:py-8 rounded-xl bg-[#0f1731]'>
                         <div className='flex gap-5 items-center'>
@@ -155,7 +296,26 @@ const Portfolio_Website = () => {
 
             <div className='grid xs:px-10 sm:px-20 md:px-0 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 mt-50 pb-20'>
 
-                <motion.div initial={{opacity: 0, x: -100, scale: 0.5}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.8}}
+                <motion.div
+                    initial = {{
+                        opacity: 0,
+                        x:  screenSize === 'extraLarge' ? -150 : "",
+                        scale: 0.3
+                    }}
+                    whileInView = {{
+                        opacity: 1,
+                        x: 1,
+                        scale: 1
+                    }}
+                    transition  = {{
+                        duration: 2,
+                        ease: 'easeInOut'
+                    }}
+                    viewport={{
+                        once: true,
+                        amount: 0.6
+                    }}
+
                 className='rounded-xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5'>
                     <div className='h-full flex flex-col px-4 py-4 xs:px-5 xs:py-8 rounded-xl bg-[#0f1731]'>
                         <div className='flex gap-5 items-center'>
@@ -181,7 +341,24 @@ const Portfolio_Website = () => {
                     </div>
                 </motion.div>
 
-                <motion.div initial={{opacity: 0, scale: 0.3}} whileInView={{opacity: 1, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.8}} S
+                <motion.div 
+                    initial = {{
+                        opacity: 0,
+                        scale: 0.3
+                    }}
+                    whileInView = {{
+                        opacity: 1,
+                        scale: 1
+                    }}
+                    transition  = {{
+                        duration: 2,
+                        ease: 'easeInOut'
+                    }}
+                    viewport={{
+                        once: true,
+                        amount: 0.6
+                    }}
+
                 className='rounded-xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5'>
                     <div className='h-full flex flex-col px-4 py-4 xs:px-5 xs:py-8 rounded-xl bg-[#0f1731]'>
                         <div className='flex gap-5 items-center'>
@@ -226,7 +403,26 @@ const Portfolio_Website = () => {
                     </div>
                 </motion.div>
 
-                <motion.div initial={{opacity: 0, x: 100, scale: 0.5}} whileInView={{opacity: 1, x: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.8}}
+                <motion.div 
+                    initial = {{
+                        opacity: 0,
+                        x:  screenSize === 'extraLarge' ? 150 : "",
+                        scale: 0.3
+                    }}
+                    whileInView = {{
+                        opacity: 1,
+                        x: 1,
+                        scale: 1
+                    }}
+                    transition  = {{
+                        duration: 2,
+                        ease: 'easeInOut'
+                    }}
+                    viewport={{
+                        once: true,
+                        amount: 0.6
+                    }}
+
                 className='rounded-xl bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 p-0.5'>
                     <div className='h-full flex flex-col px-4 py-4 xs:px-5 xs:py-8 rounded-xl bg-[#0f1731]'>
                         <div className='flex gap-5 items-center'>
@@ -278,8 +474,8 @@ const Portfolio_Website = () => {
                 </motion.div>
             </div>
 
-            <div className='flex gap-5 items-center justify-center'>
-                <Link to = '/projects' className='mt-15 w-fit border-2 border-white text-white hover:text-black hover:bg-white transition-colors duration-200 rounded-4xl flex gap-1 px-4 py-1 sm:py-2 justify-center items-center text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] hover:cursor-pointer font-semibold'><FontAwesomeIcon icon={faArrowLeft} />Back to Projects</Link>
+            <div className='flex flex-col items-center justify-center'>
+                <Link to = '/projects' className='mt-5 xs:mt-10 md:mt-15 w-fit border-2 border-white text-white hover:text-black hover:bg-white transition-colors duration-200 rounded-4xl flex gap-1 px-4 py-1 sm:py-2 justify-center items-center text-[10px] xs:text-[11px] sm:text-[13px] md:text-[14px] lg:text-[15px] hover:cursor-pointer font-semibold'><FontAwesomeIcon icon={faArrowLeft} />Back to Projects</Link>
                 <MoveToTop />
             </div>
 
