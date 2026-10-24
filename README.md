@@ -10,6 +10,15 @@ The portfolio features a clean user interface, a dark-themed design, smooth visu
 
 💻 **GitHub Repository:** [portfolio-website](https://github.com/RachitRawat720/portfolio-website)
 
+## 📸 Portfolio Preview
+
+![Home page](screenshots/Home.png)
+![About page](screenshots/About.png)
+![Skills page](screenshots/Skills.png)
+![Projects page](screenshots/Projects.png)
+![Internship page](screenshots/Internship.png)
+![Contact page](screenshots/Contact.png)
+
 ## ✨ Features
 
 - 🎨 **Modern UI:** Clean design with a dark theme and gradient accents.
