@@ -12,12 +12,25 @@ The portfolio features a clean user interface, a dark-themed design, smooth visu
 
 ## 📸 Portfolio Preview
 
-![Home page](screenshots/Home.png)
-![About page](screenshots/About.png)
-![Skills page](screenshots/Skills.png)
-![Projects page](screenshots/Projects.png)
-![Internship page](screenshots/Internship.png)
-![Contact page](screenshots/Contact.png)
+## 📸 Portfolio Preview
+
+### 🏠 Home Page
+![Home Page](screenshots/Home.png)
+
+### 👤 About Page
+![About Page](screenshots/About.png)
+
+### 🛠️ Skills Page
+![Skills Page](screenshots/Skills.png)
+
+### 💼 Projects Page
+![Projects Page](screenshots/Projects.png)
+
+### 🏢 Internship Page
+![Internship Page](screenshots/Internship.png)
+
+### 📬 Contact Page
+![Contact Page](screenshots/Contact.png)
 
 ## ✨ Features
 
@@ -49,6 +62,13 @@ The portfolio features a clean user interface, a dark-themed design, smooth visu
 portfolio-website/
 ├── public/
 │   └── assets/
+├── screenshots/
+│   ├── Home.png
+│   ├── About.png
+│   ├── Skills.png
+│   ├── Projects.png
+│   ├── Internship.png
+│   └── Contact.png
 ├── src/
 │   ├── components/
 │   ├── App.jsx
