@@ -360,7 +360,7 @@ const Contact = () => {
                 </div>
             </motion.div>
 
-            <motion.div initial={{opacity: 0, y: 100, scale: 0.3}} whileInView={{opacity: 1, y: 1, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.7}} 
+            <motion.div initial={{opacity: 0, scale: 0.3}} whileInView={{opacity: 1, scale: 1}} transition={{duration: 2}} viewport={{once: true, amount: 0.7}} 
             className='flex flex-col justify-center items-center mt-20 mb-20'>
                 <h2 className='text-[25px] sm:text-[30px] md:text-[35px] font-bold text-[#a5b0be]'>Thanks for stopping by.</h2>
                 <h3 className='text-[15px] sm:text-[17px] md:text-[20px] text-[#8099c1] font-bold'>Let's create something great together</h3>
