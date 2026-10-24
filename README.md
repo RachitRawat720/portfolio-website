@@ -1,16 +1,141 @@
-# React + Vite
+# 🚀 Personal Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive personal portfolio website built with **React.js, Vite, and Tailwind CSS** to showcase my skills, projects, internship experience, and professional journey as a developer.
 
-Currently, two official plugins are available:
+The portfolio features a clean user interface, a dark-themed design, smooth visual effects, and a responsive layout that adapts to different screen sizes.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🌐 Live Demo
 
-## React Compiler
+🔗 **Portfolio Website:** [Add your deployed website URL here](#)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+💻 **GitHub Repository:** [portfolio-website](https://github.com/RachitRawat720/portfolio-website)
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🎨 **Modern UI:** Clean design with a dark theme and gradient accents.
+- 📱 **Responsive Design:** Optimized for desktop, tablet, and mobile devices.
+- ⚛️ **React Components:** Reusable and maintainable component-based architecture.
+- 🎭 **Typing Animation:** Animated text effects to make the introduction more engaging.
+- 🧑‍💻 **About Me:** Introduction, background, and professional goals.
+- 🛠️ **Skills Section:** Showcase of technical skills and technologies.
+- 💼 **Projects Showcase:** Display of projects with descriptions and relevant links.
+- 🏢 **Internship Section:** Highlights of internship experience and practical work.
+- 📬 **Contact Section:** Provides ways to connect professionally.
+- ✨ **Interactive UI:** Smooth transitions, visual effects, and interactive navigation.
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| React.js | Building reusable UI components |
+| Vite | Development server and build tooling |
+| JavaScript (ES6+) | Application logic and interactivity |
+| Tailwind CSS | Responsive styling and UI design |
+| HTML5 | Web page structure |
+| Git & GitHub | Version control and source code management |
+
+## 📂 Project Structure
+
+```text
+portfolio-website/
+├── public/
+│   └── assets/
+├── src/
+│   ├── components/
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+├── index.html
+├── package.json
+├── vite.config.js
+├── README.md
+└── .gitignore
+```
+
+*Note: The structure above is illustrative. Adjust it to match the actual folders and files in your repository.*
+
+## 🚀 Getting Started
+
+Follow these steps to run the project locally.
+
+### Prerequisites
+
+Make sure you have installed:
+
+- [Node.js](https://nodejs.org/)
+- npm (included with Node.js)
+- Git
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/RachitRawat720/portfolio-website.git
+```
+
+### 2. Navigate to the project directory
+
+```bash
+cd portfolio-website
+```
+
+### 3. Install dependencies
+
+```bash
+npm install
+```
+
+### 4. Start the development server
+
+```bash
+npm run dev
+```
+
+### 5. Open in your browser
+
+Open the local URL displayed in your terminal, usually:
+
+```text
+http://localhost:5173
+```
+
+## 🏗️ Build for Production
+
+To create an optimized production build, run:
+
+```bash
+npm run build
+```
+
+To preview the production build locally, run:
+
+```bash
+npm run preview
+```
+
+The generated production files will be available in the `dist/` directory.
+
+## 🎯 Purpose of the Project
+
+The purpose of this project is to build a professional online presence where recruiters, developers, and potential collaborators can explore my technical skills, projects, and internship experience.
+
+It also serves as a practical demonstration of my knowledge of React.js, responsive web design, component-based development, and modern front-end technologies.
+
+## 👨‍💻 About Me
+
+Hi! I'm **Rachit Rawat**, an aspiring developer passionate about building responsive, interactive, and user-friendly web applications.
+
+I enjoy learning new technologies, solving problems, and developing projects that strengthen my front-end and full-stack development skills.
+
+## 🤝 Connect With Me
+
+- **GitHub:** [RachitRawat720](https://github.com/RachitRawat720)
+- **LinkedIn:** [Add your LinkedIn profile URL](#)
+- **Portfolio:** [Add your live portfolio URL](#)
+
+## ⭐ Show Your Support
+
+If you find this project interesting, consider giving the repository a ⭐ on GitHub!
+
+---
+
+**Built with ❤️ by Rachit Rawat**
