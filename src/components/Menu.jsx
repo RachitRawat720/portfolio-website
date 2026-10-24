@@ -6,24 +6,24 @@ import { faXmark } from '@fortawesome/free-solid-svg-icons'
 const Menu = ({isMenuOpen, setIsMenuOpen}) => {
     return (
         <div className='fixed inset-0 pointer-events-none z-100'>
-            <div className = {`bg-linear-to-br from-[#202a65] to-[#0c1239] absolute top-0 right-0 w-[70%] h-full transition-transform duration-300 ease-in-out flex px-10 py-15 justify-between pointer-events-auto ${isMenuOpen? "translate-x-0" : "translate-x-full"}`}>
+            <div className = {`bg-linear-to-br from-[#202a65] to-[#0c1239] absolute top-0 right-0 w-[80%] h-full transition-transform duration-300 ease-in-out flex pl-8 xs:pl-10 pr-8 xs:pr-10 sm:pr-25 py-15 justify-between pointer-events-auto ${isMenuOpen? "translate-x-0" : "translate-x-full"}`}>
 
                 <div className='flex flex-col gap-2'>
-                    <NavLink to={"/"} className={({isActive}) => `${isActive ? "text-cyan-400 text-[30px] font-semibold border-b-3 w-fit" : " text-white text-[22px] font-semibold"}`}>Home</NavLink>
+                    <NavLink to={"/"} className={({isActive}) => `${isActive ? "text-cyan-400 text-[24px] xs:text-[26px] sm:text-[28px] font-semibold border-b-3 w-fit" : " text-white text-[14px] xs:text-[16px] sm:text-[18px] font-semibold"}`}>Home</NavLink>
 
-                    <NavLink to={"/about"} className={({isActive}) => `${isActive ? "text-cyan-400 text-[30px] font-semibold border-b-3 w-fit" : "text-white text-[22px] font-semibold"}`}>About</NavLink>
+                    <NavLink to={"/about"} className={({isActive}) => `${isActive ? "text-cyan-400 text-[30px] font-semibold border-b-3 w-fit" : "text-white text-[14px] xs:text-[16px] sm:text-[18px] font-semibold"}`}>About</NavLink>
 
-                    <NavLink to={"/skills"} className={({isActive}) => `${isActive ? "text-cyan-400 text-[30px] font-semibold border-b-3 w-fit" : "text-white text-[22px] font-semibold"}`}>Skills</NavLink>
+                    <NavLink to={"/skills"} className={({isActive}) => `${isActive ? "text-cyan-400 text-[30px] font-semibold border-b-3 w-fit" : "text-white text-[14px] xs:text-[16px] sm:text-[18px] font-semibold"}`}>Skills</NavLink>
 
-                    <NavLink to={"/projects"} className={({isActive}) => `${isActive ? "text-cyan-400 text-[30px] font-semibold border-b-3 w-fit" : "text-white text-[22px] font-semibold"}`}>Projects</NavLink>
+                    <NavLink to={"/projects"} className={({isActive}) => `${isActive ? "text-cyan-400 text-[30px] font-semibold border-b-3 w-fit" : "text-white text-[14px] xs:text-[16px] sm:text-[18px] font-semibold"}`}>Projects</NavLink>
 
-                    <NavLink to={"/internship"} className={({isActive}) => `${isActive ? "text-cyan-400 text-[30px] font-semibold border-b-3 w-fit" : "text-white text-[22px] font-semibold"}`}>Internship</NavLink>
+                    <NavLink to={"/internship"} className={({isActive}) => `${isActive ? "text-cyan-400 text-[30px] font-semibold border-b-3 w-fit" : "text-white text-[14px] xs:text-[16px] sm:text-[18px] font-semibold"}`}>Internship</NavLink>
 
-                    <NavLink to={"/contact"} className={({isActive}) => `${isActive ? "text-cyan-400 text-[30px] font-semibold border-b-3 w-fit" : "text-white text-[22px] font-semibold"}`}>Contact</NavLink>
+                    <NavLink to={"/contact"} className={({isActive}) => `${isActive ? "text-cyan-400 text-[30px] font-semibold border-b-3 w-fit" : "text-white text-[14px] xs:text-[16px] sm:text-[18px] font-semibold"}`}>Contact</NavLink>
                 </div>
 
                 <div>
-                    <FontAwesomeIcon icon={faXmark} className='text-[30px] text-white' onClick={() => setIsMenuOpen(false)}/>
+                    <FontAwesomeIcon icon={faXmark} className='text-[22px] xs:text-[26px] sm:text-[30px] text-white' onClick={() => setIsMenuOpen(false)}/>
                 </div>
             </div>
         </div>
