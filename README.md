@@ -47,14 +47,22 @@ The portfolio features a clean user interface, a dark-themed design, smooth visu
 
 ## 🛠️ Tech Stack
 
-| Technology | Purpose |
-|---|---|
-| React.js | Building reusable UI components |
-| Vite | Development server and build tooling |
-| JavaScript (ES6+) | Application logic and interactivity |
-| Tailwind CSS | Responsive styling and UI design |
-| HTML5 | Web page structure |
-| Git & GitHub | Version control and source code management |
+### Frontend
+- **React.js** – Component-based UI development
+- **JavaScript (ES6+)** – Application logic and interactivity
+- **HTML5** – Web page structure
+- **CSS3** – Styling and animations
+- **Tailwind CSS** – Responsive UI design
+
+### Libraries & Services
+- **Framer Motion** – Smooth animations and interactive transitions
+- **Font Awesome** – Scalable icons for the user interface
+- **Web3Forms** – Contact form submissions without a custom backend
+
+### Development Tools & Deployment
+- **Vite** – Development server and production build tool
+- **Git & GitHub** – Version control and source code management
+- **Vercel** – Website deployment and hosting
 
 ## 📂 Project Structure
 
