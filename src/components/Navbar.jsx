@@ -20,17 +20,17 @@ const Navbar = () => {
 
             <div className='text-white font-semibold w-full flex items-center justify-center'>
                 <div className='hidden md:flex items-center justify-evenly w-full text-2xl'>
-                    <NavLink to={"/"} className={({isActive}) => `${isActive ? "text-cyan-300 border-2 border-cyan-400 rounded-full px-5 py-1" : "text-white text-[15px] xs:text-[16px] sm:text-[17px] md:text-[18px] lg:text-[19px] xl:text-[20px]"}`}>Home</NavLink>
+                    <NavLink to={"/"} className={({isActive}) => `${isActive ? "text-cyan-300 md:text-[26px] lg:text-[28px] xl:text-[30px] border-b-3 rounded-md px-3 pb-1 border-cyan-400" : "text-white md:text-[16px] lg:text-[16px] xl:text-[18px]"}`}>Home</NavLink>
 
-                    <NavLink to={"/about"} className={({isActive}) => `${isActive ? "text-cyan-300 border-2 border-cyan-400 rounded-full px-5 py-1" : "text-white text-[15px] xs:text-[16px] sm:text-[17px] md:text-[18px] lg:text-[19px] xl:text-[20px]"}`}>About</NavLink>
+                    <NavLink to={"/about"} className={({isActive}) => `${isActive ? "text-cyan-300 border-b-3 rounded-md px-3 pb-1 border-cyan-400" : "text-white md:text-[16px] lg:text-[16px] xl:text-[18px]"}`}>About</NavLink>
 
-                    <NavLink to={"/skills"} className={({isActive}) => `${isActive ? "text-cyan-300 border-2 border-cyan-400 rounded-full px-5 py-1" : "text-white text-[15px] xs:text-[16px] sm:text-[17px] md:text-[18px] lg:text-[19px] xl:text-[20px]"}`}>Skills</NavLink>
+                    <NavLink to={"/skills"} className={({isActive}) => `${isActive ? "text-cyan-300 border-b-3 rounded-md px-3 pb-1 border-cyan-400" : "text-white md:text-[16px] lg:text-[16px] xl:text-[18px]"}`}>Skills</NavLink>
 
-                    <NavLink to={"/projects"} className={({isActive}) => `${isActive ? "text-cyan-300 border-2 border-cyan-400 rounded-full px-5 py-1" : "text-white text-[15px] xs:text-[16px] sm:text-[17px] md:text-[18px] lg:text-[19px] xl:text-[20px]"}`}>Projects</NavLink>
+                    <NavLink to={"/projects"} className={({isActive}) => `${isActive ? "text-cyan-300 border-b-3 rounded-md px-3 pb-1 border-cyan-400" : "text-white md:text-[16px] lg:text-[16px] xl:text-[18px]"}`}>Projects</NavLink>
 
-                    <NavLink to={"/internship"} className={({isActive}) => `${isActive ? "text-cyan-300 border-2 border-cyan-400 rounded-full px-5 py-1" : "text-white text-[15px] xs:text-[16px] sm:text-[17px] md:text-[18px] lg:text-[19px] xl:text-[20px]"}`}>Internship</NavLink>
+                    <NavLink to={"/internship"} className={({isActive}) => `${isActive ? "text-cyan-300 border-b-3 rounded-md px-3 pb-1 border-cyan-400" : "text-white md:text-[16px] lg:text-[16px] xl:text-[18px]"}`}>Internship</NavLink>
 
-                    <NavLink to={"/contact"} className={({isActive}) => `${isActive ? "text-cyan-300 border-2 border-cyan-400 rounded-full px-5 py-1" : "text-white text-[15px] xs:text-[16px] sm:text-[17px] md:text-[18px] lg:text-[19px] xl:text-[20px]"}`}>Contact</NavLink>
+                    <NavLink to={"/contact"} className={({isActive}) => `${isActive ? "text-cyan-300 border-b-3 rounded-md px-3 pb-1 border-cyan-400" : "text-white md:text-[16px] lg:text-[16px] xl:text-[18px]"}`}>Contact</NavLink>
                 </div>
             </div>
 
