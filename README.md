@@ -12,8 +12,6 @@ The portfolio features a clean user interface, a dark-themed design, smooth visu
 
 ## 📸 Portfolio Preview
 
-## 📸 Portfolio Preview
-
 ### 🏠 Home Page
 ![Home Page](screenshots/Home.png)
 
@@ -26,11 +24,11 @@ The portfolio features a clean user interface, a dark-themed design, smooth visu
 ### 💼 Projects Page
 ![Projects Page](screenshots/Projects.png)
 
-### 🏢 Internship Page
-![Internship Page](screenshots/Internship.png)
+### 🏢 Internship Section
+![Internship Section](screenshots/Internship.png)
 
-### 📬 Contact Page
-![Contact Page](screenshots/Contact.png)
+### 📬 Contact Section
+![Contact Section](screenshots/Contact.png)
 
 ## ✨ Features
 
@@ -66,7 +64,7 @@ The portfolio features a clean user interface, a dark-themed design, smooth visu
 
 ## 📂 Project Structure
 
-```text
+``text
 portfolio-website/
 ├── public/
 │   └── assets/
@@ -87,7 +85,7 @@ portfolio-website/
 ├── vite.config.js
 ├── README.md
 └── .gitignore
-```
+``
 
 *Note: The structure above is illustrative. Adjust it to match the actual folders and files in your repository.*
 
