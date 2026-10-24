@@ -73,7 +73,7 @@ const custom_notes_saver = () => {
 
                 <h2 className='mt-10 text-[26px] sm:text-[28px] md:text-[32px] lg:text-[36px] xl:text-[40px] font-bold bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2] bg-clip-text text-transparent'>Custom Notes Saver</h2>
                 
-                <div className='mt-1 h-1 w-45 rounded-full bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2]'></div>
+                <div className='mt-1 h-1 w-30 xs:w-35 md:w-40 lg:w-45 rounded-full bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2]'></div>
 
                 <p className='text-[12px] sm:text-[13px] lg:text-[14px] xl:text-[15px] text-white mt-6 font-semibold'>
                     A responsive notes management application for
@@ -467,7 +467,7 @@ const custom_notes_saver = () => {
                 </motion.div>
             </div>
             
-            <div className='flex gap-5 items-center justify-center'>
+            <div className='flex flex-col gap-5 items-center justify-center'>
                 <Link to = '/projects' className='mt-5 xs:mt-10 md:mt-15 w-fit border-2 border-white text-white hover:text-black hover:bg-white transition-colors duration-200 rounded-4xl flex gap-1 px-4 py-1 sm:py-2 justify-center items-center text-[10px] xs:text-[11px] sm:text-[13px] md:text-[14px] lg:text-[15px] hover:cursor-pointer font-semibold'><FontAwesomeIcon icon={faArrowLeft} />Back to Projects</Link>
                 <MoveToTop />
             </div>
