@@ -158,7 +158,7 @@ I enjoy learning new technologies, solving problems, and developing projects tha
 ## 🤝 Connect With Me
 
 - **GitHub:** [RachitRawat720](https://github.com/RachitRawat720)
-- **LinkedIn:** [Add your LinkedIn profile URL](#)
+- **LinkedIn:** [Rachit-Singh-Rawat](https://www.linkedin.com/in/Rachit-Singh-Rawat)
 - **Portfolio:** [Live link](https://rachit-rawat-portfolio.vercel.app/)
 
 ## ⭐ Show Your Support
