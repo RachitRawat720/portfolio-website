@@ -64,7 +64,7 @@ The portfolio features a clean user interface, a dark-themed design, smooth visu
 
 ## 📂 Project Structure
 
-``text
+```text
 portfolio-website/
 ├── public/
 │   └── assets/
@@ -85,7 +85,7 @@ portfolio-website/
 ├── vite.config.js
 ├── README.md
 └── .gitignore
-``
+```
 
 *Note: The structure above is illustrative. Adjust it to match the actual folders and files in your repository.*
 
