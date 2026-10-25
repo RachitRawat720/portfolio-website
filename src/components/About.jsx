@@ -74,7 +74,7 @@ const about = () => {
                 viewport={{ 
                     once: true
                 }}
-                className='flex flex-col justify-center items-center pt-40 pb-50 '>
+                className='flex flex-col justify-center items-center pt-50 pb-60 '>
                 <h1 className='text-[22px] xs:text-[26px] sm:text-[30px] md:text-[36px] lg:text-[40px] xl:text-[50px] font-bold bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2] bg-clip-text text-transparent'>GET TO KNOW ME BETTER</h1>
 
                 <div className='h-1 w-18 xs:w-20 sm:w-30 md:w-40 bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2] rounded-4xl'></div>
