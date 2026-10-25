@@ -69,7 +69,7 @@ const E_Commerce = () => {
                     once: true
                 }}
 
-            className='flex flex-col sm:ml-20 md:ml-30 lg:ml-40 pt-40 pb-50'>
+            className='flex flex-col sm:ml-20 md:ml-30 lg:ml-40 pt-40 pb-60'>
                 <Link to = '/projects' className='w-fit border-2 border-white text-white rounded-4xl flex gap-1 px-2 py-1 justify-center items-center text-[12px] hover:cursor-pointer hover:text-black hover:bg-white transition-colors duration-200 font-semibold'><FontAwesomeIcon icon={faArrowLeft} />Back to Projects</Link>
 
                 <h2 className='mt-10 text-[26px] sm:text-[28px] md:text-[32px] lg:text-[36px] xl:text-[40px] font-bold bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2] bg-clip-text text-transparent'>E-Commerce Website</h2>
