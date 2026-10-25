@@ -75,7 +75,7 @@ const Internship = () => {
                     once: true
                 }}
                 
-            className='flex flex-col justify-center items-center py-25'>
+            className='flex flex-col justify-center items-center pt-40 pb-50'>
 
                 <h1 className='text-[32px] xs:text-[36px] sm:text-[40px] md:text-[42px] lg:text-[46px] xl:text-[50px] font-bold bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2] bg-clip-text text-transparent'>INTERNSHIP</h1>
 

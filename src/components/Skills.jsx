@@ -38,7 +38,7 @@ const Skills = () => {
         }, [])
 
     return (
-        <div className='pt-20 pb-10 overflow-hidden bg-[linear-gradient(135deg,#080D1F_0%,#101A35_35%,#172554_65%,#24164F_100%)]'>
+        <div className='pt-30 pb-50 overflow-hidden bg-[linear-gradient(135deg,#080D1F_0%,#101A35_35%,#172554_65%,#24164F_100%)]'>
             <motion.div
                 initial = {{
                     opacity: 0,

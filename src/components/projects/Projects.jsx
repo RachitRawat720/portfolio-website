@@ -15,7 +15,7 @@ const Projects = () => {
     return (
         <div className='px-6 xs:px-10 overflow-hidden bg-[linear-gradient(135deg,#080D1F_0%,#101A35_35%,#172554_65%,#24164F_100%)] pb-10'>
             <motion.div initial={{opacity: 0, y: -200, scale: 0.3}} whileInView={{opacity: 1, y: 0, scale: 1}} transition={{duration: 2}} viewport={{once: true}}
-            className='flex flex-col justify-center items-center py-40'>
+            className='flex flex-col justify-center items-center pt-40 pb-50'>
 
                 <h1 className='text-[28px] xs:text-[32px] sm:text-[36px] md:text-[40px] lg:text-[44px] xl:text-[50px] font-bold bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2] bg-clip-text text-transparent'>FEATURED PROJECTS</h1>
 

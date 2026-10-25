@@ -74,7 +74,7 @@ const about = () => {
                 viewport={{ 
                     once: true
                 }}
-                className='flex flex-col justify-center items-center pt-20 pb-25 sm:pt-30 sm:pb-35 md:pt-40 md:pb-50 '>
+                className='flex flex-col justify-center items-center pt-40 pb-50 '>
                 <h1 className='text-[22px] xs:text-[26px] sm:text-[30px] md:text-[36px] lg:text-[40px] xl:text-[50px] font-bold bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2] bg-clip-text text-transparent'>GET TO KNOW ME BETTER</h1>
 
                 <div className='h-1 w-18 xs:w-20 sm:w-30 md:w-40 bg-linear-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3239b9d2] rounded-4xl'></div>
@@ -105,10 +105,10 @@ const about = () => {
                     }}
                 className='flex justify-center items-center xs:w-[80%] sm:w-[70%] md:w-[55%] lg:w-[50%] xl:w-[40%] overflow-hidden p-1 sm:p-2 border-[#3B82F6] border-2 rounded-2xl relative'>
                     <img src={img} alt="profile image" className='rounded-2xl w-full h-auto'/>
-                    <motion.div className='flex flex-col items-center justify-center absolute top-[80%] left-[24%] sm:left-[28%] md:left-[26%] lg:left-[24%] xl:left-[20%] bg-[#171a59d2] px-4 lg:px-8 py-0 rounded-xl'>
+                    <div className='flex flex-col items-center justify-center absolute top-[80%] left-[24%] sm:left-[28%] md:left-[26%] lg:left-[24%] xl:left-[20%] bg-[#171a59d2] px-4 lg:px-8 py-0 rounded-xl'>
                         <h3 className='font-semibold text-white text-[14px] xs:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[20px]'>Rachit Singh Rawat</h3>
                         <h4 className='text-green-500 text-[11px] xs:text-[11px] md:text-[12px] lg:text-[14px] xl:text-[16px]'>Available for opportunities</h4>
-                    </motion.div>
+                    </div>
                 </motion.div>
 
                 <motion.div
