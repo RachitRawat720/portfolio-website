@@ -88,11 +88,15 @@ const about = () => {
                         opacity: 0,
                         x:  screenSize === 'extraLarge'? -200 :
                             screenSize === 'large'? -200 : "",
+                        y:  screenSize === 'medium' ? 100 :
+                            screenSize === 'small' ? 100 :
+                            screenSize === 'extraSmall' ? 100 : "",
                         scale: 0.6
                     }}
                     whileInView = {{
                         opacity: 1,
                         x: 0,
+                        y: 1,
                         scale: 1
                     }}
                     transition  = {{
