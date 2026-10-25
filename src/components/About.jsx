@@ -88,7 +88,7 @@ const about = () => {
                         opacity: 0,
                         x:  screenSize === 'extraLarge'? -200 :
                             screenSize === 'large'? -200 : "",
-                        scale: 0.3
+                        scale: 0.6
                     }}
                     whileInView = {{
                         opacity: 1,
