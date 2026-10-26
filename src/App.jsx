@@ -53,10 +53,6 @@ const router = createBrowserRouter([
     path: "/projects/portfolio-website",
     element: <div><ScrollToTop /><Navbar /><Portfolio_Website /><Footer /></div>
   },
-  {
-    path: "/menu",
-    element: <div><Menu /></div>
-  }
 ])
 
 function App() {
